@@ -45,4 +45,14 @@ public class Participant extends Entity<Long>{
     public void setCnp(String cnp) {
         this.cnp = cnp;
     }
+
+    @Override
+    public String toString() {
+        return "Participant{" +
+                "nume='" + nume + '\'' +
+                ", capMotor=" + capMotor +
+                ", echipa=" + echipa +
+                ", cnp='" + cnp + '\'' +
+                '}';
+    }
 }

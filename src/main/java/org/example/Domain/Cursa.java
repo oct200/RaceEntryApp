@@ -25,4 +25,15 @@ public class Cursa extends Entity<Long>{
     public void setCapMotor(int capMotor) {
         this.capMotor = capMotor;
     }
+
+
+    @Override
+    public String toString() {
+        return "Cursa{" +
+                "numarParticipanti=" + numarParticipanti +
+                ", capMotor=" + capMotor +
+                '}';
+    }
+
+
 }

@@ -15,4 +15,11 @@ public class Echipa extends Entity<Long>{
     public void setNume(String nume) {
         this.nume = nume;
     }
+
+    @Override
+    public String toString() {
+        return "Echipa{" +
+                "nume='" + nume + '\'' +
+                '}';
+    }
 }
