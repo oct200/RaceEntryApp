@@ -1,0 +1,135 @@
+2025-03-18 14:49:55,872 [1] INFO Motociclete.Program - Hello logging world!
+2025-03-18 14:50:59,797 [1] INFO Motociclete.Program - Hello logging world!
+2025-03-18 14:51:15,370 [1] INFO Motociclete.Program - Hello logging world!
+2025-03-18 14:51:55,228 [1] INFO Motociclete.Program - Hello logging world!
+2025-03-18 16:15:31,570 [1] INFO Motociclete.Program - Hello logging world!
+2025-03-18 16:44:55,983 [1] INFO Motociclete.Program - Hello logging world!
+2025-03-18 16:47:06,099 [1] INFO Motociclete.Program - Hello logging world!
+2025-03-18 16:53:53,330 [1] INFO Motociclete.Program - Hello logging world!
+2025-03-18 16:54:14,876 [1] INFO Motociclete.Program - Hello logging world!
+2025-03-18 16:57:41,172 [1] INFO Motociclete.Program - Hello logging world!
+2025-03-18 16:58:29,759 [1] INFO Motociclete.Program - Hello logging world!
+2025-03-18 16:58:29,850 [1] INFO Motociclete.Repository.RepositoryDBUser - incepe init repo
+2025-03-18 16:58:29,851 [1] INFO Motociclete.Repository.RepositoryDBUser - RepositoryDBUser initialized
+2025-03-18 16:58:29,851 [1] INFO Motociclete.Repository.RepositoryDBUser - s-a facut repo
+2025-03-18 17:29:45,023 [1] INFO Motociclete.Program - Hello logging world!
+2025-03-18 17:29:45,052 [1] INFO Motociclete.Repository.RepositoryDBUser - incepe init repo
+2025-03-18 17:29:45,052 [1] INFO Motociclete.Repository.RepositoryDBUser - RepositoryDBUser initialized
+2025-03-18 17:29:45,052 [1] INFO Motociclete.Repository.RepositoryDBUser - s-a facut repo
+2025-03-18 17:29:45,206 [1] INFO Motociclete.Repository.RepositoryDBUser - Inserting new user
+2025-03-18 17:29:45,206 [1] INFO Motociclete.Repository.DBUtils - Accessing connection
+2025-03-18 17:29:45,206 [1] INFO Motociclete.Repository.DBUtils - Opening connection
+2025-03-18 17:29:46,889 [1] ERROR Motociclete.Repository.DBUtils - System.TypeInitializationException: The type initializer for 'Microsoft.Data.Sqlite.SqliteConnection' threw an exception. ---> System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Exception: Library e_sqlite3 not found
+plat: win
+suffix: DLL
+possibilities (3):
+    1) D:\GithubRepos\mpp-proiect-csharp-oct200\bin\Debug\runtimes\win-x86\native\e_sqlite3.dll
+    2) D:\GithubRepos\mpp-proiect-csharp-oct200\bin\Debug\e_sqlite3.dll
+    3) D:/GithubRepos/mpp-proiect-csharp-oct200/bin/Debug/e_sqlite3.dll
+win TryLoad: D:\GithubRepos\mpp-proiect-csharp-oct200\bin\Debug\runtimes\win-x86\native\e_sqlite3.dll
+thrown: System.ComponentModel.Win32Exception (0x80004005): The specified module could not be found
+   at SQLitePCL.NativeLibrary.TryLoad(String name, Loader plat, Action`1 log, IntPtr& h)
+win TryLoad: D:\GithubRepos\mpp-proiect-csharp-oct200\bin\Debug\e_sqlite3.dll
+thrown: System.ComponentModel.Win32Exception (0x80004005): The specified module could not be found
+   at SQLitePCL.NativeLibrary.TryLoad(String name, Loader plat, Action`1 log, IntPtr& h)
+win TryLoad: D:/GithubRepos/mpp-proiect-csharp-oct200/bin/Debug/e_sqlite3.dll
+thrown: System.ComponentModel.Win32Exception (0x80004005): The specified module could not be found
+   at SQLitePCL.NativeLibrary.TryLoad(String name, Loader plat, Action`1 log, IntPtr& h)
+NOT FOUND
+
+   at SQLitePCL.NativeLibrary.Load(String libraryName, Assembly assy, Int32 flags)
+   at SQLitePCL.Batteries_V2.MakeDynamic(String name, Int32 flags)
+   at SQLitePCL.Batteries_V2.DoDynamic_cdecl(String name, Int32 flags)
+   at SQLitePCL.Batteries_V2.Init()
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at Microsoft.Data.Sqlite.SqliteConnection..cctor()
+   --- End of inner exception stack trace ---
+   at Microsoft.Data.Sqlite.SqliteConnection..ctor(String connectionString)
+   at Motociclete.DataBaseUtils.SqliteConnectionFactory.createConnection(IDictionary`2 props) in D:\GithubRepos\mpp-proiect-csharp-oct200\DataBaseUtils\SqliteConnectionFactory.cs:line 17
+   at Motociclete.Repository.DBUtils.getNewConnection() in D:\GithubRepos\mpp-proiect-csharp-oct200\DataBaseUtils\DBUtils.cs:line 29
+2025-03-18 17:29:46,937 [1] INFO Motociclete.Repository.DBUtils - Connection opened
+2025-03-18 17:32:51,691 [1] INFO Motociclete.Program - Hello logging world!
+2025-03-18 17:32:51,702 [1] INFO Motociclete.Repository.RepositoryDBUser - incepe init repo
+2025-03-18 17:32:51,703 [1] INFO Motociclete.Repository.RepositoryDBUser - RepositoryDBUser initialized
+2025-03-18 17:32:51,703 [1] INFO Motociclete.Repository.RepositoryDBUser - s-a facut repo
+2025-03-18 17:32:51,878 [1] INFO Motociclete.Repository.RepositoryDBUser - Inserting new user
+2025-03-18 17:32:51,878 [1] INFO Motociclete.Repository.DBUtils - Accessing connection
+2025-03-18 17:32:51,878 [1] INFO Motociclete.Repository.DBUtils - Opening connection
+2025-03-18 17:32:52,289 [1] ERROR Motociclete.Repository.DBUtils - System.TypeInitializationException: The type initializer for 'Microsoft.Data.Sqlite.SqliteConnection' threw an exception. ---> System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Exception: Library e_sqlite3 not found
+plat: win
+suffix: DLL
+possibilities (3):
+    1) D:\GithubRepos\mpp-proiect-csharp-oct200\bin\Debug\runtimes\win-x86\native\e_sqlite3.dll
+    2) D:\GithubRepos\mpp-proiect-csharp-oct200\bin\Debug\e_sqlite3.dll
+    3) D:/GithubRepos/mpp-proiect-csharp-oct200/bin/Debug/e_sqlite3.dll
+win TryLoad: D:\GithubRepos\mpp-proiect-csharp-oct200\bin\Debug\runtimes\win-x86\native\e_sqlite3.dll
+thrown: System.ComponentModel.Win32Exception (0x80004005): The specified module could not be found
+   at SQLitePCL.NativeLibrary.TryLoad(String name, Loader plat, Action`1 log, IntPtr& h)
+win TryLoad: D:\GithubRepos\mpp-proiect-csharp-oct200\bin\Debug\e_sqlite3.dll
+thrown: System.ComponentModel.Win32Exception (0x80004005): The specified module could not be found
+   at SQLitePCL.NativeLibrary.TryLoad(String name, Loader plat, Action`1 log, IntPtr& h)
+win TryLoad: D:/GithubRepos/mpp-proiect-csharp-oct200/bin/Debug/e_sqlite3.dll
+thrown: System.ComponentModel.Win32Exception (0x80004005): The specified module could not be found
+   at SQLitePCL.NativeLibrary.TryLoad(String name, Loader plat, Action`1 log, IntPtr& h)
+NOT FOUND
+
+   at SQLitePCL.NativeLibrary.Load(String libraryName, Assembly assy, Int32 flags)
+   at SQLitePCL.Batteries_V2.MakeDynamic(String name, Int32 flags)
+   at SQLitePCL.Batteries_V2.DoDynamic_cdecl(String name, Int32 flags)
+   at SQLitePCL.Batteries_V2.Init()
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at Microsoft.Data.Sqlite.SqliteConnection..cctor()
+   --- End of inner exception stack trace ---
+   at Microsoft.Data.Sqlite.SqliteConnection..ctor(String connectionString)
+   at Motociclete.DataBaseUtils.SqliteConnectionFactory.createConnection(IDictionary`2 props) in D:\GithubRepos\mpp-proiect-csharp-oct200\DataBaseUtils\SqliteConnectionFactory.cs:line 17
+   at Motociclete.Repository.DBUtils.getNewConnection() in D:\GithubRepos\mpp-proiect-csharp-oct200\DataBaseUtils\DBUtils.cs:line 29
+2025-03-18 17:32:52,321 [1] INFO Motociclete.Repository.DBUtils - Connection opened
+2025-03-18 17:37:46,237 [1] INFO Motociclete.Program - Hello logging world!
+2025-03-18 17:37:46,261 [1] INFO Motociclete.Repository.RepositoryDBUser - incepe init repo
+2025-03-18 17:37:46,261 [1] INFO Motociclete.Repository.RepositoryDBUser - RepositoryDBUser initialized
+2025-03-18 17:37:46,261 [1] INFO Motociclete.Repository.RepositoryDBUser - s-a facut repo
+2025-03-18 17:37:46,379 [1] INFO Motociclete.Repository.RepositoryDBUser - Inserting new user
+2025-03-18 17:37:46,379 [1] INFO Motociclete.Repository.DBUtils - Accessing connection
+2025-03-18 17:37:46,379 [1] INFO Motociclete.Repository.DBUtils - Opening connection
+2025-03-18 17:37:47,709 [1] ERROR Motociclete.Repository.DBUtils - System.TypeInitializationException: The type initializer for 'Microsoft.Data.Sqlite.SqliteConnection' threw an exception. ---> System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Exception: Library e_sqlite3 not found
+plat: win
+suffix: DLL
+possibilities (3):
+    1) D:\GithubRepos\mpp-proiect-csharp-oct200\bin\Debug\runtimes\win-x86\native\e_sqlite3.dll
+    2) D:\GithubRepos\mpp-proiect-csharp-oct200\bin\Debug\e_sqlite3.dll
+    3) D:/GithubRepos/mpp-proiect-csharp-oct200/bin/Debug/e_sqlite3.dll
+win TryLoad: D:\GithubRepos\mpp-proiect-csharp-oct200\bin\Debug\runtimes\win-x86\native\e_sqlite3.dll
+thrown: System.ComponentModel.Win32Exception (0x80004005): The specified module could not be found
+   at SQLitePCL.NativeLibrary.TryLoad(String name, Loader plat, Action`1 log, IntPtr& h)
+win TryLoad: D:\GithubRepos\mpp-proiect-csharp-oct200\bin\Debug\e_sqlite3.dll
+thrown: System.ComponentModel.Win32Exception (0x80004005): The specified module could not be found
+   at SQLitePCL.NativeLibrary.TryLoad(String name, Loader plat, Action`1 log, IntPtr& h)
+win TryLoad: D:/GithubRepos/mpp-proiect-csharp-oct200/bin/Debug/e_sqlite3.dll
+thrown: System.ComponentModel.Win32Exception (0x80004005): The specified module could not be found
+   at SQLitePCL.NativeLibrary.TryLoad(String name, Loader plat, Action`1 log, IntPtr& h)
+NOT FOUND
+
+   at SQLitePCL.NativeLibrary.Load(String libraryName, Assembly assy, Int32 flags)
+   at SQLitePCL.Batteries_V2.MakeDynamic(String name, Int32 flags)
+   at SQLitePCL.Batteries_V2.DoDynamic_cdecl(String name, Int32 flags)
+   at SQLitePCL.Batteries_V2.Init()
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at Microsoft.Data.Sqlite.SqliteConnection..cctor()
+   --- End of inner exception stack trace ---
+   at Microsoft.Data.Sqlite.SqliteConnection..ctor(String connectionString)
+   at Motociclete.DataBaseUtils.SqliteConnectionFactory.createConnection(IDictionary`2 props) in D:\GithubRepos\mpp-proiect-csharp-oct200\DataBaseUtils\SqliteConnectionFactory.cs:line 17
+   at Motociclete.Repository.DBUtils.getNewConnection() in D:\GithubRepos\mpp-proiect-csharp-oct200\DataBaseUtils\DBUtils.cs:line 29
+2025-03-18 17:37:47,752 [1] INFO Motociclete.Repository.DBUtils - Connection opened
+2025-03-18 17:42:24,229 [1] INFO Motociclete.Program - Hello logging world!

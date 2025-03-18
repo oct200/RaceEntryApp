@@ -8,10 +8,10 @@ namespace Motociclete.Domain
 {
     public class Participant : Entity<long>
     {
-        string nume {  get; set; }
-        int capMotor {  get; set; }
-        Echipa echipa { get; set; }
-        string cnp {  get; set; }
+        public string nume {  get; set; }
+        public int capMotor {  get; set; }
+        public Echipa echipa { get; set; }
+        public string cnp {  get; set; }
 
         public Participant(long id, string nume, int capMotor, Echipa echipa, string cnp)
         {

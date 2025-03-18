@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace Motociclete.Domain
 {
     public class Cursa : Entity<long>
-    { 
-        int numarParticipanti {  get; set; }
-        int capMotor {  get; set; }
+    {
+        public int numarParticipanti {  get; set; }
+        public int capMotor {  get; set; }
 
         public Cursa(long id, int nrPa, int cap) {
             this.id = id;

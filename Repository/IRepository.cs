@@ -10,7 +10,7 @@ namespace Motociclete.Repository
     public interface IRepository<E,ID> where E : Entity<ID>
     {
 
-        void Insert(E entity);
+        ID Insert(E entity);
         void DeleteById(ID id);
         void UpdateById(ID id, E entity);
         List<E> GetAll();

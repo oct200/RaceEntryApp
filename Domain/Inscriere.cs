@@ -8,8 +8,8 @@ namespace Motociclete.Domain
 {
     public class Inscriere : Entity<long>
     {
-        Participant participant {  get; set; }
-        Cursa cursa { get; set; }
+        public Participant participant {  get; set; }
+        public Cursa cursa { get; set; }
 
         public Inscriere(long id,Participant participant, Cursa cursa)
         {

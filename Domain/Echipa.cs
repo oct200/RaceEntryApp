@@ -8,7 +8,7 @@ namespace Motociclete.Domain
 {
     public class Echipa : Entity<long>
     {
-        string nume {  get; set; }
+        public string nume {  get; set; }
         public Echipa(long id, string nume) {
             this.id = id;
             this.nume = nume;

@@ -8,14 +8,14 @@ namespace Motociclete.Domain
 {
     public class User : Entity<long>
     {
-        string username {  get; set; }
-        string password { get; set; }
+        public string username {  get; set; }
+        public string parola { get; set; }
 
         public User(long id, string username, string password)
         {
             this.id = id;
             this.username = username;
-            this.password = password;
+            this.parola = password;
         }
     }
 }
