@@ -39,12 +39,12 @@ namespace Motociclete.Repository
 
                         using (var cmd = new SqliteCommand(query, sqliteConn))
                         {
-                            cmd.Parameters.AddWithValue("@cursa_id", entity.Cursa.Id);
-                            cmd.Parameters.AddWithValue("@participant_id", entity.Participant.Id);
+                            cmd.Parameters.AddWithValue("@cursa_id", entity.Cursa.id);
+                            cmd.Parameters.AddWithValue("@participant_id", entity.Participant.id);
 
                             cmd.ExecuteNonQuery();
                             logger.Info("Inserted new Inscriere successfully");
-                            return entity.Id;
+                            return entity.id;
                         }
                     }
                 }
