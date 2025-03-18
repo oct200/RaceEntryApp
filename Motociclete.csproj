@@ -215,11 +215,16 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DataBaseUtils\DBUtils.cs" />
+    <Compile Include="Repository\CursaDBRepository.cs" />
+    <Compile Include="Repository\EchipaDBRepository.cs" />
+    <Compile Include="Repository\InscriereDBRepository.cs" />
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Repository\IRepositoryCursa.cs" />
     <Compile Include="Repository\IRepositoryEchipa.cs" />
+    <Compile Include="Repository\IRepositoryInscriere.cs" />
     <Compile Include="Repository\IRepositoryParticipant.cs" />
     <Compile Include="Repository\IRepositoryUser.cs" />
+    <Compile Include="Repository\ParticipantDBRepository.cs" />
     <Compile Include="Repository\RepositoryDBUser.cs" />
     <Compile Include="Service\ClasaDB.cs" />
     <Compile Include="Teste\Test.cs" />

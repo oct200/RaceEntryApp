@@ -8,13 +8,13 @@ namespace Motociclete.Domain
 {
     public class Cursa : Entity<long>
     {
-        public int numarParticipanti {  get; set; }
-        public int capMotor {  get; set; }
+        public int NumarParticipanti {  get; set; }
+        public int CapMotor {  get; set; }
 
         public Cursa(long id, int nrPa, int cap) {
             this.id = id;
-            this.numarParticipanti = nrPa;
-            this.capMotor = cap;
+            this.NumarParticipanti = nrPa;
+            this.CapMotor = cap;
         }
     }
 }

@@ -8,18 +8,18 @@ namespace Motociclete.Domain
 {
     public class Participant : Entity<long>
     {
-        public string nume {  get; set; }
-        public int capMotor {  get; set; }
-        public Echipa echipa { get; set; }
-        public string cnp {  get; set; }
+        public string Nume {  get; set; }
+        public int CapMotor {  get; set; }
+        public Echipa Echipa { get; set; }
+        public string Cnp {  get; set; }
 
         public Participant(long id, string nume, int capMotor, Echipa echipa, string cnp)
         {
             this.id = id;
-            this.nume = nume;
-            this.capMotor = capMotor;
-            this.echipa = echipa;
-            this.cnp = cnp;
+            this.Nume = nume;
+            this.CapMotor = capMotor;
+            this.Echipa = echipa;
+            this.Cnp = cnp;
         }
     }
 }
