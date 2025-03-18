@@ -25,12 +25,11 @@ namespace Motociclete.Teste
             RepositoryDBUser ru = new RepositoryDBUser(properties);
             Log.Info("s-a facut repo");
             User user1 = new User(100,"userTest", "parola");
-            ru.Insert(user1);
+            long id = ru.Insert(user1);
+            ru.DeleteById(id);
         }
         public bool CanConnectToDatabase(string connectionString)
         {
-            try
-            {
                 // Create a connection to the database
                 using (var connection = new SqliteConnection(connectionString))
                 {
@@ -41,13 +40,7 @@ namespace Motociclete.Teste
                     Console.WriteLine("Successfully connected to the database!");
                     return true;
                 }
-            }
-            catch (Exception ex)
-            {
-                // Handle exceptions (e.g., invalid connection string, network issues, etc.)
-                Console.WriteLine($"Failed to connect to the database. Error: {ex.Message}");
-                return false;
-            }
+           
         }
 
     }

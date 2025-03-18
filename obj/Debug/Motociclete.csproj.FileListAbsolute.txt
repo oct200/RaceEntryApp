@@ -111,5 +111,6 @@ D:\GithubRepos\mpp-proiect-csharp-oct200\bin\Debug\System.Data.SQLite.Linq.dll
 D:\GithubRepos\mpp-proiect-csharp-oct200\bin\Debug\EntityFramework.xml
 D:\GithubRepos\mpp-proiect-csharp-oct200\bin\Debug\EntityFramework.SqlServer.xml
 D:\GithubRepos\mpp-proiect-csharp-oct200\bin\Debug\System.Data.SQLite.xml
-D:\GithubRepos\mpp-proiect-csharp-oct200\obj\Debug\Motociclete.csproj.SuggestedBindingRedirects.cache
-D:\GithubRepos\mpp-proiect-csharp-oct200\obj\Debug\Motociclete.exe.config
+D:\GithubRepos\mpp-proiect-csharp-oct200\bin\Debug\runtimes\win-x86\native\e_sqlite3.dll
+D:\GithubRepos\mpp-proiect-csharp-oct200\bin\Debug\runtimes\win-x64\native\e_sqlite3.dll
+D:\GithubRepos\mpp-proiect-csharp-oct200\bin\Debug\runtimes\win-arm\native\e_sqlite3.dll

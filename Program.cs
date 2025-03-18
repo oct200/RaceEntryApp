@@ -32,7 +32,7 @@ namespace Motociclete
             Console.WriteLine(dbProperties["ConnectionString"]);
 
             Teste.Test t = new Teste.Test(dbProperties);
-            t.CanConnectToDatabase(dbProperties["ConnectionString"]);
+            t.runTests();
 
             /*Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

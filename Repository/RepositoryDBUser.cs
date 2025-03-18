@@ -38,7 +38,7 @@ namespace Motociclete.Repository
                             cmd.Parameters.AddWithValue("@id", id);
 
                             cmd.ExecuteNonQuery();
-                            logger.Info("inserare user realizata cu succes");
+                            logger.Info("Delete user realizat cu succes");
                             return;
                         }
                     }
@@ -76,7 +76,7 @@ namespace Motociclete.Repository
                 {
                     if (conn is SqliteConnection sqliteConn)
                     {
-                        string query = "INSERT INTO User(username, parola) VALUES (@username, @parola)";
+                        string query = "INSERT INTO User(username, parola) VALUES (@username, @parola) RETURNING id";
 
                         using (var cmd = new SqliteCommand(query, sqliteConn))
                         {

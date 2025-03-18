@@ -133,3 +133,55 @@ NOT FOUND
    at Motociclete.Repository.DBUtils.getNewConnection() in D:\GithubRepos\mpp-proiect-csharp-oct200\DataBaseUtils\DBUtils.cs:line 29
 2025-03-18 17:37:47,752 [1] INFO Motociclete.Repository.DBUtils - Connection opened
 2025-03-18 17:42:24,229 [1] INFO Motociclete.Program - Hello logging world!
+2025-03-18 18:09:50,321 [1] INFO Motociclete.Program - Hello logging world!
+2025-03-18 18:10:01,906 [1] INFO Motociclete.Program - Hello logging world!
+2025-03-18 18:14:37,776 [1] INFO Motociclete.Program - Hello logging world!
+2025-03-18 18:18:22,980 [1] INFO Motociclete.Program - Hello logging world!
+2025-03-18 18:18:59,675 [1] INFO Motociclete.Program - Hello logging world!
+2025-03-18 18:25:41,057 [1] INFO Motociclete.Program - Hello logging world!
+2025-03-18 18:26:22,251 [1] INFO Motociclete.Program - Hello logging world!
+2025-03-18 18:27:30,923 [1] INFO Motociclete.Program - Hello logging world!
+2025-03-18 18:27:30,954 [1] INFO Motociclete.Repository.RepositoryDBUser - incepe init repo
+2025-03-18 18:27:30,954 [1] INFO Motociclete.Repository.RepositoryDBUser - RepositoryDBUser initialized
+2025-03-18 18:27:30,956 [1] INFO Motociclete.Repository.RepositoryDBUser - s-a facut repo
+2025-03-18 18:27:31,063 [1] INFO Motociclete.Repository.RepositoryDBUser - Inserting new user
+2025-03-18 18:27:31,063 [1] INFO Motociclete.Repository.DBUtils - Accessing connection
+2025-03-18 18:27:31,063 [1] INFO Motociclete.Repository.DBUtils - Opening connection
+2025-03-18 18:27:31,363 [1] INFO Motociclete.Repository.DBUtils - Connection opened
+2025-03-18 18:27:31,385 [1] INFO Motociclete.Repository.DBUtils - Connection accessed
+2025-03-18 18:29:03,232 [1] INFO Motociclete.Program - Hello logging world!
+2025-03-18 18:29:03,243 [1] INFO Motociclete.Repository.RepositoryDBUser - incepe init repo
+2025-03-18 18:29:03,244 [1] INFO Motociclete.Repository.RepositoryDBUser - RepositoryDBUser initialized
+2025-03-18 18:29:03,244 [1] INFO Motociclete.Repository.RepositoryDBUser - s-a facut repo
+2025-03-18 18:29:03,335 [1] INFO Motociclete.Repository.RepositoryDBUser - Inserting new user
+2025-03-18 18:29:03,335 [1] INFO Motociclete.Repository.DBUtils - Accessing connection
+2025-03-18 18:29:03,336 [1] INFO Motociclete.Repository.DBUtils - Opening connection
+2025-03-18 18:29:03,775 [1] INFO Motociclete.Repository.DBUtils - Connection opened
+2025-03-18 18:29:03,819 [1] INFO Motociclete.Repository.DBUtils - Connection accessed
+2025-03-18 18:29:03,902 [1] ERROR Motociclete.Repository.RepositoryDBUser - eroare la insert user SQLite Error 19: 'UNIQUE constraint failed: User.username'.
+2025-03-18 18:30:35,394 [1] INFO Motociclete.Program - Hello logging world!
+2025-03-18 18:30:35,441 [1] INFO Motociclete.Repository.RepositoryDBUser - incepe init repo
+2025-03-18 18:30:35,441 [1] INFO Motociclete.Repository.RepositoryDBUser - RepositoryDBUser initialized
+2025-03-18 18:30:35,441 [1] INFO Motociclete.Repository.RepositoryDBUser - s-a facut repo
+2025-03-18 18:30:35,561 [1] INFO Motociclete.Repository.RepositoryDBUser - Inserting new user
+2025-03-18 18:30:35,561 [1] INFO Motociclete.Repository.DBUtils - Accessing connection
+2025-03-18 18:30:35,561 [1] INFO Motociclete.Repository.DBUtils - Opening connection
+2025-03-18 18:30:36,298 [1] INFO Motociclete.Repository.DBUtils - Connection opened
+2025-03-18 18:30:36,344 [1] INFO Motociclete.Repository.DBUtils - Connection accessed
+2025-03-18 18:30:36,366 [1] INFO Motociclete.Repository.RepositoryDBUser - inserare user realizata cu succes
+2025-03-18 18:32:49,803 [1] INFO Motociclete.Program - Hello logging world!
+2025-03-18 18:32:49,822 [1] INFO Motociclete.Repository.RepositoryDBUser - incepe init repo
+2025-03-18 18:32:49,824 [1] INFO Motociclete.Repository.RepositoryDBUser - RepositoryDBUser initialized
+2025-03-18 18:32:49,824 [1] INFO Motociclete.Repository.RepositoryDBUser - s-a facut repo
+2025-03-18 18:32:49,946 [1] INFO Motociclete.Repository.RepositoryDBUser - Inserting new user
+2025-03-18 18:32:49,946 [1] INFO Motociclete.Repository.DBUtils - Accessing connection
+2025-03-18 18:32:49,947 [1] INFO Motociclete.Repository.DBUtils - Opening connection
+2025-03-18 18:32:50,337 [1] INFO Motociclete.Repository.DBUtils - Connection opened
+2025-03-18 18:32:50,364 [1] INFO Motociclete.Repository.DBUtils - Connection accessed
+2025-03-18 18:32:50,388 [1] INFO Motociclete.Repository.RepositoryDBUser - inserare user realizata cu succes
+2025-03-18 18:32:50,395 [1] INFO Motociclete.Repository.RepositoryDBUser - Deleting new user
+2025-03-18 18:32:50,395 [1] INFO Motociclete.Repository.DBUtils - Accessing connection
+2025-03-18 18:32:50,395 [1] INFO Motociclete.Repository.DBUtils - Opening connection
+2025-03-18 18:32:50,395 [1] INFO Motociclete.Repository.DBUtils - Connection opened
+2025-03-18 18:32:50,395 [1] INFO Motociclete.Repository.DBUtils - Connection accessed
+2025-03-18 18:32:50,398 [1] INFO Motociclete.Repository.RepositoryDBUser - Delete user realizat cu succes
