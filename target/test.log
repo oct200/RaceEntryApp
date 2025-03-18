@@ -67,3 +67,42 @@
 18 Mar 2025 13:48:01,642 TRACE org.example.Repository.JdbcUtils 35 getConnection - Enter
 18 Mar 2025 13:48:01,642 TRACE org.example.Repository.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1caa0244)
 18 Mar 2025 13:48:01,645 TRACE org.example.Repository.UserDBRepository 62 deleteById - Exit: Deleted user with id3
+18 Mar 2025 18:33:38,962 INFO  org.example.Repository.UserDBRepository 20 <init> - Initializing AngajatDBRepository with properties: {url=jdbc:sqlite:Moto.sqlite}
+18 Mar 2025 18:33:38,969 TRACE org.example.Repository.UserDBRepository 30 insert - Enter Inserting new user
+18 Mar 2025 18:33:38,970 TRACE org.example.Repository.JdbcUtils 35 getConnection - Enter
+18 Mar 2025 18:33:38,970 TRACE org.example.Repository.JdbcUtils 21 getNewConnection - Enter
+18 Mar 2025 18:33:38,970 INFO  org.example.Repository.JdbcUtils 23 getNewConnection - Connecting to jdbc:sqlite:Moto.sqlite
+18 Mar 2025 18:33:39,513 TRACE org.example.Repository.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1caa0244)
+18 Mar 2025 18:33:39,521 TRACE org.example.Repository.UserDBRepository 39 insert - Exit: Inserted new user with id4
+18 Mar 2025 18:33:39,521 TRACE org.example.Repository.UserDBRepository 56 deleteById - Enter Inserting new user
+18 Mar 2025 18:33:39,521 TRACE org.example.Repository.JdbcUtils 35 getConnection - Enter
+18 Mar 2025 18:33:39,521 TRACE org.example.Repository.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1caa0244)
+18 Mar 2025 18:33:39,525 TRACE org.example.Repository.UserDBRepository 62 deleteById - Exit: Deleted user with id4
+18 Mar 2025 19:25:08,241 INFO  org.example.Repository.UserDBRepository 20 <init> - Initializing AngajatDBRepository with properties: {url=jdbc:sqlite:Moto.sqlite}
+18 Mar 2025 19:25:08,246 TRACE org.example.Repository.UserDBRepository 48 insert - Enter Inserting new user
+18 Mar 2025 19:25:08,246 TRACE org.example.Repository.JdbcUtils 35 getConnection - Enter
+18 Mar 2025 19:25:08,246 TRACE org.example.Repository.JdbcUtils 21 getNewConnection - Enter
+18 Mar 2025 19:25:08,246 INFO  org.example.Repository.JdbcUtils 23 getNewConnection - Connecting to jdbc:sqlite:Moto.sqlite
+18 Mar 2025 19:25:08,820 TRACE org.example.Repository.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1caa0244)
+18 Mar 2025 19:25:08,829 TRACE org.example.Repository.UserDBRepository 57 insert - Exit: Inserted new user with id5
+18 Mar 2025 19:25:08,829 TRACE org.example.Repository.UserDBRepository 74 deleteById - Enter Inserting new user
+18 Mar 2025 19:25:08,830 TRACE org.example.Repository.JdbcUtils 35 getConnection - Enter
+18 Mar 2025 19:25:08,830 TRACE org.example.Repository.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1caa0244)
+18 Mar 2025 19:25:08,833 TRACE org.example.Repository.UserDBRepository 80 deleteById - Exit: Deleted user with id5
+18 Mar 2025 19:25:20,511 INFO  org.example.Repository.UserDBRepository 20 <init> - Initializing AngajatDBRepository with properties: {url=jdbc:sqlite:Moto.sqlite}
+18 Mar 2025 19:25:20,517 TRACE org.example.Repository.UserDBRepository 48 insert - Enter Inserting new user
+18 Mar 2025 19:25:20,518 TRACE org.example.Repository.JdbcUtils 35 getConnection - Enter
+18 Mar 2025 19:25:20,518 TRACE org.example.Repository.JdbcUtils 21 getNewConnection - Enter
+18 Mar 2025 19:25:20,518 INFO  org.example.Repository.JdbcUtils 23 getNewConnection - Connecting to jdbc:sqlite:Moto.sqlite
+18 Mar 2025 19:25:20,751 TRACE org.example.Repository.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1caa0244)
+18 Mar 2025 19:25:20,764 TRACE org.example.Repository.UserDBRepository 57 insert - Exit: Inserted new user with id6
+18 Mar 2025 19:26:28,300 INFO  org.example.Repository.UserDBRepository 20 <init> - Initializing AngajatDBRepository with properties: {url=jdbc:sqlite:Moto.sqlite}
+18 Mar 2025 19:26:28,305 TRACE org.example.Repository.UserDBRepository 48 insert - Enter Inserting new user
+18 Mar 2025 19:26:28,305 TRACE org.example.Repository.JdbcUtils 35 getConnection - Enter
+18 Mar 2025 19:26:28,306 TRACE org.example.Repository.JdbcUtils 21 getNewConnection - Enter
+18 Mar 2025 19:26:28,306 INFO  org.example.Repository.JdbcUtils 23 getNewConnection - Connecting to jdbc:sqlite:Moto.sqlite
+18 Mar 2025 19:26:28,581 TRACE org.example.Repository.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1caa0244)
+18 Mar 2025 19:26:28,586 ERROR org.example.Repository.UserDBRepository 61 insert - error at insertion: org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_UNIQUE]  A UNIQUE constraint failed (UNIQUE constraint failed: User.username)
+18 Mar 2025 19:26:28,586 TRACE org.example.Repository.UserDBRepository 74 deleteById - Enter Inserting new user
+18 Mar 2025 19:26:28,586 TRACE org.example.Repository.JdbcUtils 35 getConnection - Enter
+18 Mar 2025 19:26:28,586 TRACE org.example.Repository.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1caa0244)

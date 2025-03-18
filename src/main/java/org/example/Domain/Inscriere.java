@@ -11,11 +11,11 @@ public class Inscriere extends Entity <Pair<Long,Long>>{
         this.participant = participant;
     }
 
-    public Cursa getEchipa() {
+    public Cursa getCursa() {
         return cursa;
     }
 
-    public void setEchipa(Cursa echipa) {
+    public void setCursa(Cursa echipa) {
         this.cursa = echipa;
     }
 

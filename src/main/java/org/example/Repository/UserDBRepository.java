@@ -22,7 +22,25 @@ public class UserDBRepository implements UserRepositoryInterface {
     }
     @Override
     public User getUserByUsername(String username) {
-        return null;
+        logger.traceEntry("Inserting new user");
+        Connection conn = dbUtils.getConnection();
+
+        try (PreparedStatement prepStmt = conn.prepareStatement("SELECT FROM User WHERE username = ? ")) {
+            ResultSet rs = prepStmt.executeQuery();
+            if (rs.next()) {
+                logger.traceEntry("Found user with username: {}", username);
+                rs.close();
+                return new User(rs.getLong(1), rs.getString(2), rs.getString(3));
+            } else {
+                logger.traceEntry("No user found with username: {}", username);
+                rs.close();
+                return null;
+            }
+        }
+        catch (SQLException e) {
+            logger.error("eroare la getUserByUsername " + e.getMessage());
+            return null;
+        }
     }
 
     @Override

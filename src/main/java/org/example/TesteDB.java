@@ -8,5 +8,6 @@ public class TesteDB {
         User user1 = new User(Long.valueOf(1),"userTest","pass");
         Long id = repo.insert(new User(Long.valueOf(1),"userTest","pass"));
         repo.deleteById(id);
+
     }
 }
