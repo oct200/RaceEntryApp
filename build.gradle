@@ -11,6 +11,7 @@ repositories {
 
 dependencies {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 
@@ -27,6 +28,11 @@ application {
 test {
     useJUnitPlatform()
 }
+=======
+    testImplementation enforcedPlatform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+>>>>>>> Stashed changes
 =======
     testImplementation enforcedPlatform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
