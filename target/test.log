@@ -1,5 +1,6 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 18 Mar 2025 13:35:13,665 INFO  org.example.Repository.UserDBRepository 20 <init> - Initializing AngajatDBRepository with properties: {}
 18 Mar 2025 13:35:13,671 TRACE org.example.Repository.UserDBRepository 30 insert - Enter Inserting new user
 18 Mar 2025 13:35:13,672 TRACE org.example.Repository.JdbcUtils 41 getConnection - Enter
@@ -109,6 +110,8 @@
 18 Mar 2025 19:26:28,586 TRACE org.example.Repository.JdbcUtils 35 getConnection - Enter
 18 Mar 2025 19:26:28,586 TRACE org.example.Repository.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1caa0244)
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 18 Mar 2025 13:35:13,665 INFO  org.example.UserDBRepository 20 <init> - Initializing AngajatDBRepository with properties: {}
@@ -2559,6 +2562,9 @@
 08 Apr 2025 14:14:37,709 INFO  jsonprotocol.ChatJsonConcurrentServer 16 <init> - Chat-ChatJsonConcurrentServer
 08 Apr 2025 14:14:37,715 INFO  org.example.utils.AbstractServer 22 start - Waiting for clients ...
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

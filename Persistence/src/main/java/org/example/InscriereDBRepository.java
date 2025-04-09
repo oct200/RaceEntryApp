@@ -1,6 +1,7 @@
 package org.example;
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:src/main/java/org/example/Repository/InscriereDBRepository.java
 import org.example.Domain.Echipa;
 import org.example.Domain.Inscriere;
@@ -13,12 +14,19 @@ import org.example.Domain.Participant;
 >>>>>>> Stashed changes
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+=======
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+>>>>>>> Stashed changes
 import org.model.Cursa;
 import org.model.Inscriere;
 import org.model.Pair;
 import org.model.Participant;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes:Persistence/src/main/java/org/example/InscriereDBRepository.java
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 

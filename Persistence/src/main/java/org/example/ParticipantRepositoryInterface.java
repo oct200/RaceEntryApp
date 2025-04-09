@@ -1,5 +1,10 @@
 package org.example;
 
+<<<<<<< Updated upstream
+=======
+
+import org.model.Participant;
+>>>>>>> Stashed changes
 
 import org.model.Participant;
 
