@@ -9,6 +9,20 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/GUI" />
+            <option value="$PROJECT_DIR$/Model" />
+            <option value="$PROJECT_DIR$/Networking" />
+            <option value="$PROJECT_DIR$/Persistence" />
+            <option value="$PROJECT_DIR$/Server" />
+            <option value="$PROJECT_DIR$/Service" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/GUIClientNou" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/GUIClientNou" />
           </set>
         </option>
       </GradleProjectSettings>
