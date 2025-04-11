@@ -1,34 +1,11 @@
 package org.example;
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream:src/main/java/org/example/Repository/InscriereDBRepository.java
-import org.example.Domain.Echipa;
-import org.example.Domain.Inscriere;
-import org.example.Domain.Pair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.example.Domain.Participant;
-=======
-=======
->>>>>>> Stashed changes
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-=======
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
->>>>>>> Stashed changes
 import org.model.Cursa;
 import org.model.Inscriere;
 import org.model.Pair;
 import org.model.Participant;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes:Persistence/src/main/java/org/example/InscriereDBRepository.java
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -40,48 +17,6 @@ import java.util.Properties;
 import java.util.List;
 
 public class InscriereDBRepository implements InscriereRepositoryInterface {
-<<<<<<< Updated upstream
-    private static final Logger logger = LogManager.getLogger(CursaDBRepository.class);
-    private JdbcUtils dbUtils;
-    ParticipantDBRepository pRepo;
-    EchipaDBRepository eRepo;
-
-    public InscriereDBRepository(Properties properties,ParticipantDBRepository pdbRepo,EchipaDBRepository peRepo) {
-        logger.info("Initializing AngajatDBRepository with properties: {}", properties);
-        dbUtils = new JdbcUtils(properties);
-        this.pRepo = pdbRepo;
-        this.eRepo = peRepo;
-    }
-    @Override
-    public Pair<Long, Long> insert(Inscriere entity) {
-        logger.traceEntry("Inserting new Participant");
-        Connection conn = dbUtils.getConnection();
-
-        try (PreparedStatement prepStmt = conn.prepareStatement("INSERT INTO Participant(cursa_id,participant_id) VALUES (?,?)")) {
-            prepStmt.setLong(1,entity.getCursa().getId());
-            prepStmt.setLong(2,entity.getParticipant().getId());
-            prepStmt.executeUpdate();
-            return entity.getId();
-        } catch (SQLException ex) {
-            logger.error("error at insertion: " + ex);
-            System.out.println("DB error: " + ex);
-        }
-        return null;
-    }
-
-    @Override
-    public void updateById(Pair<Long, Long> longLongPair, Inscriere entity) {
-
-    }
-
-    @Override
-    public void deleteById(Pair<Long, Long> longLongPair) {
-
-    }
-
-    @Override
-    public Inscriere getById(Pair<Long, Long> longLongPair) {
-=======
     private static final Logger logger = LogManager.getLogger(InscriereDBRepository.class);
     private final JdbcUtils dbUtils;
     private final ParticipantRepositoryInterface pRepo;
@@ -127,41 +62,17 @@ public class InscriereDBRepository implements InscriereRepositoryInterface {
     @Override
     public Inscriere getById(Pair<Long, Long> id) {
         // Not implemented
->>>>>>> Stashed changes
         return null;
     }
 
     @Override
     public List<Inscriere> getAll() {
-<<<<<<< Updated upstream
-        return List.of();
-=======
         // Not implemented
         return new ArrayList<>();
->>>>>>> Stashed changes
     }
 
     @Override
     public List<Participant> getParticipantiInscrisiByCursaId(Long id) {
-<<<<<<< Updated upstream
-        logger.info("starting getParticipantiInscrisiByCursaId");
-        List<Participant> participants = new ArrayList<>();
-        Connection conn = dbUtils.getConnection();
-        try (PreparedStatement prepStmt = conn.prepareStatement("SELECT * FROM Inscriere WHERE cursa_id = ?")){
-            prepStmt.setLong(1,id);
-            ResultSet rs = prepStmt.executeQuery();
-            while (rs.next()) {
-                participants.add(pRepo.getById(rs.getLong("participant_id")));
-            }
-            logger.info("getParticipantiInscrisiByCursaId terminat");
-            return participants;
-        } catch (Exception e) {
-            logger.error("eraore la getParticipantiInscrisiByCursaId " + e.getMessage());
-        }
-        return null;
-    }
-}
-=======
         logger.info("Fetching Participants for CursaId: {}", id);
         Connection conn = dbUtils.getConnection();
         List<Participant> participants = new ArrayList<>();
@@ -213,4 +124,3 @@ public class InscriereDBRepository implements InscriereRepositoryInterface {
     }
 }
 
->>>>>>> Stashed changes
