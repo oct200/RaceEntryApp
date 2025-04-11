@@ -1,0 +1,92 @@
+package org.example.guiclientnou;
+
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.example.Principal;
+import org.service.IService;
+
+import java.io.IOException;
+
+
+public class AdaugareParticipant {
+    private static final Logger logger = LogManager.getLogger(AdaugareParticipant.class);
+    private IService proxy;
+
+    @FXML
+    private TextField textFieldNume;
+    @FXML
+    private TextField textFieldEchipa;
+    @FXML
+    private TextField textFieldCNP;
+    @FXML
+    private TextField textFieldCapMotor;
+
+    public void setServiceAplicatie(IService proxy) {
+        this.proxy = proxy;
+    }
+
+    private int getCapMotorFromText() {
+        try {
+            return Integer.parseInt(textFieldCapMotor.getText().trim());
+        } catch (NumberFormatException ex) {
+            return -1;
+        }
+    }
+
+    @FXML
+    private void handleInscriere() {
+        logger.info("Incepere handleInscriere");
+        String nume = textFieldNume.getText().trim();
+        String cnp = textFieldCNP.getText().trim();
+        String echipa = textFieldEchipa.getText().trim();
+        int capMotor = getCapMotorFromText();
+        if(capMotor < 0){
+            logger.info("capacitate motor gresita");
+            MessageAlert.showMessage(null, Alert.AlertType.ERROR,"Eroare","introduceti toate datele");
+            return;
+        }
+        if (nume.isEmpty() || cnp.isEmpty() || echipa.isEmpty()) {
+            logger.info("introduceti toate datele");
+            MessageAlert.showMessage(null, Alert.AlertType.ERROR,"Eroare","introduceti toate datele");
+            return;
+        }
+
+        try {
+            proxy.inscrieParticipant(nume, cnp, capMotor, echipa);
+            MessageAlert.showMessage(null, Alert.AlertType.CONFIRMATION, "Succes", "introdus cu succes");
+            openPrincipalForm();
+        }
+        catch (Exception ex) {
+            logger.error("eroare la insert user " + ex.getMessage());
+            MessageAlert.showMessage(null, Alert.AlertType.ERROR,"Eroare","eroare la introducerea participantului " + ex.getMessage());
+        }
+    }
+
+    @FXML
+    protected void handleInapoi() {
+        logger.info("click inapoi");
+        openPrincipalForm();
+    }
+
+    private void openPrincipalForm() {
+        try {
+            Stage primaryStage = (Stage) textFieldNume.getScene().getWindow();
+            FXMLLoader fxmlLoader = new FXMLLoader(StartClient.class.getResource("principal.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Principal comntroller = fxmlLoader.getController();
+            comntroller.setServiceAplicatie(proxy);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        }
+        catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+
+}

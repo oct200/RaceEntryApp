@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="439.0" prefWidth="385.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.UIControllers.AdaugareParticipant">
+   <children>
+      <TextField fx:id="textFieldNume" layoutX="118.0" layoutY="58.0" />
+      <TextField fx:id="textFieldEchipa" layoutX="118.0" layoutY="120.0" />
+      <TextField fx:id="textFieldCNP" layoutX="118.0" layoutY="185.0" />
+      <TextField fx:id="textFieldCapMotor" layoutX="118.0" layoutY="254.0" />
+      <Button layoutX="155.0" layoutY="328.0" mnemonicParsing="false" onAction="#handleInscriere" prefHeight="41.0" prefWidth="76.0" text="Adaugare" />
+      <Button layoutX="165.0" layoutY="392.0" mnemonicParsing="false" onAction="#handleInapoi" prefHeight="26.0" prefWidth="56.0" text="Inapoi" />
+      <Label layoutX="98.0" text="Adauga un participant">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="176.0" layoutY="40.0" text="Nume" />
+      <Label layoutX="176.0" layoutY="94.0" text="Echipa" />
+      <Label layoutX="182.0" layoutY="158.0" text="CNP" />
+      <Label layoutX="132.0" layoutY="229.0" text="Capacitatea motorului" />
+   </children>
+</AnchorPane>

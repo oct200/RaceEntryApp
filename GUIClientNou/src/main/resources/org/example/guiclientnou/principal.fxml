@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane prefHeight="686.0" prefWidth="775.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.UIControllers.Principal">
+   <children>
+      <ComboBox fx:id="comboBoxEchipe" layoutX="56.0" layoutY="44.0" prefWidth="150.0" />
+      <ComboBox fx:id="comboBoxCapacitateMotor" layoutX="56.0" layoutY="320.0" prefWidth="150.0" />
+      <TableView fx:id="tableViewParticipanti" layoutX="14.0" layoutY="77.0" onMouseClicked="#tabelParticipantiClick" prefHeight="200.0" prefWidth="408.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tableViewCurse" layoutX="14.0" layoutY="354.0" prefHeight="200.0" prefWidth="408.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <Button layoutX="67.0" layoutY="573.0" mnemonicParsing="false" onAction="#buttonInscrieParticipant_Click" prefHeight="52.0" prefWidth="150.0" text="adauga un participant" />
+      <Button layoutX="588.0" layoutY="573.0" mnemonicParsing="false" onAction="#buttonLogOut_Click" prefHeight="52.0" prefWidth="150.0" text="Log out" />
+      <Button layoutX="578.0" layoutY="268.0" mnemonicParsing="false" onAction="#buttonAdaugareParticipantLaCursa_Click" prefHeight="52.0" prefWidth="150.0" text="Adauga la cursa" />
+      <Label layoutX="103.0" layoutY="14.0" text="Echipa" />
+      <Label layoutX="72.0" layoutY="294.0" text="Capacitatea motorului" />
+   </children>
+</AnchorPane>
