@@ -5,8 +5,8 @@ public class Inscriere extends Entity <Pair<Long,Long>>{
     Cursa cursa;
     Participant participant;
 
-    public Inscriere(Pair<Long,Long> id,Cursa cursa, Participant participant) {
-        super.id = id;
+    public Inscriere(Participant participant,Cursa cursa) {
+        super.id = new Pair<>(cursa.getId(), participant.getId());
         this.cursa = cursa;
         this.participant = participant;
     }

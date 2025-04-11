@@ -1,6 +1,7 @@
-package org.example.Repository;
+package org.example;
 
-import org.example.Domain.Echipa;
+
+import org.model.Echipa;
 
 public interface EchipaRepositoryInterface extends RepoInterface<Echipa,Long>{
 }

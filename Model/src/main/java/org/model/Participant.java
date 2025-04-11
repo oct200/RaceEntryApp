@@ -3,10 +3,10 @@ package org.model;
 public class Participant extends Entity<Long>{
     String nume;
     int capMotor;
-    Echipa echipa;
+    String echipa;
     String cnp;
 
-    public Participant(Long id, String nume, int capMotor, Echipa echipa, String cnp) {
+    public Participant(Long id, String nume, int capMotor, String echipa, String cnp) {
         super.id = id;
         this.nume = nume;
         this.capMotor = capMotor;
@@ -30,11 +30,11 @@ public class Participant extends Entity<Long>{
         this.capMotor = capMotor;
     }
 
-    public Echipa getEchipa() {
+    public String getEchipa() {
         return echipa;
     }
 
-    public void setEchipa(Echipa echipa) {
+    public void setEchipa(String echipa) {
         this.echipa = echipa;
     }
 
