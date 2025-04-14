@@ -2,6 +2,7 @@ package org.example;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
@@ -59,7 +60,7 @@ public class AdaugareParticipant {
         try {
             proxy.inscrieParticipant(nume, cnp, capMotor, echipa);
             MessageAlert.showMessage(null, Alert.AlertType.CONFIRMATION, "Succes", "introdus cu succes");
-            openPrincipalForm();
+            closeWindow();
         }
         catch (Exception ex) {
             logger.error("eroare la insert user " + ex.getMessage());
@@ -70,22 +71,13 @@ public class AdaugareParticipant {
     @FXML
     protected void handleInapoi() {
         logger.info("click inapoi");
-        openPrincipalForm();
+        Stage stage = (Stage) textFieldNume.getScene().getWindow();
+        stage.close();
     }
 
-    private void openPrincipalForm() {
-        try {
-            Stage primaryStage = (Stage) textFieldNume.getScene().getWindow();
-            FXMLLoader fxmlLoader = new FXMLLoader(StartClient.class.getResource("principal.fxml"));
-            Scene scene = new Scene(fxmlLoader.load());
-            Principal comntroller = fxmlLoader.getController();
-            comntroller.setServiceAplicatie(proxy);
-            primaryStage.setScene(scene);
-            primaryStage.show();
-        }
-        catch (IOException ex) {
-            System.out.println(ex.getMessage());
-        }
+    private void closeWindow(){
+        Stage stage = (Stage) textFieldNume.getScene().getWindow();
+        stage.close();
     }
 
 }

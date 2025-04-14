@@ -1,6 +1,8 @@
 package jsonprotocol;
 
 
+import org.model.Cursa;
+import org.model.Participant;
 import org.model.User;
 
 import java.util.Arrays;
@@ -11,6 +13,8 @@ public class Request {
     private User[] listaUseri;
     private String echipa;
     private int capMotor;
+    private Participant participant;
+    private Cursa cursa;
 
     public Request(){}
     public RequestType getType() {
@@ -51,5 +55,21 @@ public class Request {
 
     public void setCapMotor(int capMotor) {
         this.capMotor = capMotor;
+    }
+
+    public Participant getParticipant() {
+        return participant;
+    }
+
+    public void setParticipant(Participant participant) {
+        this.participant = participant;
+    }
+
+    public Cursa getCursa() {
+        return cursa;
+    }
+
+    public void setCursa(Cursa cursa) {
+        this.cursa = cursa;
     }
 }

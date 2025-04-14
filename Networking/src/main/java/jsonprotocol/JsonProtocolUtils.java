@@ -15,9 +15,51 @@ public class JsonProtocolUtils {
         return req;
     }
 
+    public static Request createLogOutRequest(User user) {
+        Request req=new Request();
+        req.setType(RequestType.LOGOUT);
+        req.setUser(user);
+        return req;
+    }
+
+    public static Request createAdaugaParticipantRequest(Participant participant) {
+        Request req=new Request();
+        req.setType(RequestType.ADAUGA_PARTICIPANT);
+        req.setParticipant(participant);
+        return req;
+    }
+
+    public static Request createAdaugaInscriereRequest(Participant participant,Cursa cursa){
+        Request req=new Request();
+        req.setType(RequestType.ADAUGA_INSCRIERE);
+        req.setParticipant(participant);
+        req.setCursa(cursa);
+        return req;
+    }
+
+    public static Request createAdaugaUserRequest(User user){
+        Request req=new Request();
+        req.setType(RequestType.ADAUGA_USER);
+        req.setUser(user);
+        return req;
+    }
+
+    public static Response createUpdateResponse(){
+        Response res=new Response();
+        res.setType(ResponseType.UPDATE);
+        return res;
+    }
+
+    public static Request createRequestGetCurseByParticipant(Participant participant) {
+        Request req=new Request();
+        req.setType(RequestType.GET_CURSE_BY_PARTICIPANT);
+        req.setParticipant(participant);
+        return req;
+    }
+
     public static Response createUserResponse(User user){
         Response res=new Response();
-        res.setType(ResponseType.USER_EXISTS);
+        res.setType(ResponseType.OK);
         res.setUser(user);
         return res;
     }

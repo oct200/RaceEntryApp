@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.utils.ServerException;
+import org.model.Cursa;
 import org.model.Inscriere;
 import org.model.Participant;
 import org.model.User;
@@ -58,7 +59,7 @@ public class ChatClientJsonWorker implements Runnable, IClientObserver {
                 logger.error(e.getStackTrace());
             }
             try {
-                Thread.sleep(1000);
+                Thread.sleep(50);
             } catch (InterruptedException e) {
                 logger.error(e);
                 logger.error(e.getStackTrace());
@@ -80,9 +81,53 @@ public class ChatClientJsonWorker implements Runnable, IClientObserver {
             logger.debug("Login request ...{}" + request.getUser());
             User user = request.getUser();
             try {
-                if (service.userExists(user.getUsername(), user.getPassword(), this))
-                    return okResponse;
-                throw new AppException("wrong username or password");
+                user = service.userExists(user.getUsername(), user.getPassword(), this);
+                return JsonProtocolUtils.createUserResponse(user);
+            } catch (Exception e) {
+                connected = false;
+                return JsonProtocolUtils.createErrorResponse(e.getMessage());
+            }
+        }
+        if (request.getType() == RequestType.LOGOUT) {
+            logger.debug("Logout request ...{}" + request.getUser());
+            User user = request.getUser();
+            try {
+                service.logout(user);
+                return okResponse;
+            } catch (Exception e) {
+                connected = false;
+                return JsonProtocolUtils.createErrorResponse(e.getMessage());
+            }
+        }
+        if (request.getType() == RequestType.ADAUGA_USER) {
+            logger.debug("Adaugare user ...{}" + request.getUser());
+            User user = request.getUser();
+            try {
+                service.insertUser(user.getUsername(), user.getPassword());
+                return okResponse;
+            } catch (Exception e) {
+                connected = false;
+                return JsonProtocolUtils.createErrorResponse(e.getMessage());
+            }
+        }
+        if (request.getType() == RequestType.ADAUGA_PARTICIPANT) {
+            logger.debug("adauga participant ...{}" + request.getParticipant());
+            Participant p = request.getParticipant();
+            try {
+                service.inscrieParticipant(p.getNume(),p.getCnp(),p.getCapMotor(),p.getEchipa());
+                return okResponse;
+            } catch (Exception e) {
+                connected = false;
+                return JsonProtocolUtils.createErrorResponse(e.getMessage());
+            }
+        }
+        if (request.getType() == RequestType.ADAUGA_INSCRIERE) {
+            logger.debug("adauga inscriere ...{}" + request.getParticipant() + " " + request.getCursa());
+            Participant p = request.getParticipant();
+            Cursa c = request.getCursa();
+            try {
+                service.adaugaInscriere(p,c);
+                return okResponse;
             } catch (Exception e) {
                 connected = false;
                 return JsonProtocolUtils.createErrorResponse(e.getMessage());
@@ -107,6 +152,14 @@ public class ChatClientJsonWorker implements Runnable, IClientObserver {
         if (request.getType() == RequestType.GET_ALL_CURSE) {
             try {
                 return JsonProtocolUtils.createCurseResponse(service.getAllCurse());
+            } catch (Exception e) {
+                connected = false;
+                return JsonProtocolUtils.createErrorResponse(e.getMessage());
+            }
+        }
+        if (request.getType() == RequestType.GET_CURSE_BY_PARTICIPANT) {
+            try {
+                return JsonProtocolUtils.createCurseResponse(service.getCurseForParticipant(request.getParticipant()));
             } catch (Exception e) {
                 connected = false;
                 return JsonProtocolUtils.createErrorResponse(e.getMessage());
@@ -149,12 +202,13 @@ public class ChatClientJsonWorker implements Runnable, IClientObserver {
     }
 
     @Override
-    public void participantAdded(Participant donatie) throws AppException {
-
-    }
-
-    @Override
-    public void inscriereAdded(Inscriere donator) throws AppException {
-
+    public void refresh() {
+        logger.info("sending refresh response");
+        Response r = JsonProtocolUtils.createUpdateResponse();
+        try{
+            sendResponse(r);
+        } catch (Exception e) {
+            logger.info("error sending refresh response");
+        }
     }
 }

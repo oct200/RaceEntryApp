@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 import jsonprotocol.ChatClientJsonWorker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.model.User;
 import org.service.IClientObserver;
 import org.service.IService;
 
@@ -47,7 +48,7 @@ public class AutentificareController {
             logger.info(2);
             logger.info(3);
             Principal comntroller = fxmlLoader.getController();
-            if (proxy.userExists(username, password,comntroller)) {
+            if ((proxy.userExists(username, password,comntroller))  != null) {
                 Stage primaryStage = (Stage) textFieldPassword.getScene().getWindow();
                 comntroller.setServiceAplicatie(proxy);
                 primaryStage.setScene(scene);

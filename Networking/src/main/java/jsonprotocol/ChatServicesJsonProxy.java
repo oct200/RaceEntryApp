@@ -25,6 +25,8 @@ public class ChatServicesJsonProxy implements IService {
     private String host;
     private int port;
 
+    private User currentUser;
+
     private IClientObserver client;
 
     private BufferedReader input;
@@ -43,7 +45,16 @@ public class ChatServicesJsonProxy implements IService {
         qresponses=new LinkedBlockingQueue<Response>();
     }
 
+    public User getCurrentUser() {
+        return currentUser;
+    }
+
+    public void setCurrentUser(User currentUser) {
+        this.currentUser = currentUser;
+    }
+
     private void closeConnection() {
+        logger.info("closing connection");
         finished=true;
         try {
             input.close();
@@ -58,28 +69,45 @@ public class ChatServicesJsonProxy implements IService {
     }
 
     @Override
-    public void insertUser(String username, String pass) {
-
-    }
-
-    @Override
-    public boolean userExists(String username, String pass, IClientObserver client) throws AppException {
-        logger.info("start userExists");
-        initializeConnection();
+    public void insertUser(String username, String pass) throws AppException {
+        logger.info("start insertUser");
+        if(connection == null || connection.isClosed())
+            initializeConnection();
         User user = new User(1L,username, pass);
-        Request req= JsonProtocolUtils.createLoginRequest(user);
+        Request req= JsonProtocolUtils.createAdaugaUserRequest(user);
         sendRequest(req);
         Response response=readResponse();
         if (response.getType()== ResponseType.OK){
-            this.client=client;
-            return true;
+            return;
         }
         if (response.getType()== ResponseType.ERROR){
             String err=response.getErrorMessage();;
             closeConnection();
             throw new AppException(err);
         }
-        return false;
+        return;
+    }
+
+    @Override
+    public User userExists(String username, String pass, IClientObserver client) throws AppException {
+        logger.info("start userExists");
+        if(connection == null || connection.isClosed())
+            initializeConnection();
+        User user = new User(1L,username, pass);
+        Request req= JsonProtocolUtils.createLoginRequest(user);
+        sendRequest(req);
+        Response response=readResponse();
+        if (response.getType()== ResponseType.OK){
+            this.client=client;
+            setCurrentUser(response.getUser());
+            return response.getUser();
+        }
+        if (response.getType()== ResponseType.ERROR){
+            String err=response.getErrorMessage();;
+            closeConnection();
+            throw new AppException(err);
+        }
+        return null;
     }
 
     @Override
@@ -119,8 +147,20 @@ public class ChatServicesJsonProxy implements IService {
     }
 
     @Override
-    public void inscrieParticipant(String nume, String cnp, int cap, String echipa) {
-
+    public void inscrieParticipant(String nume, String cnp, int cap, String echipa) throws AppException{
+        logger.info("start getCapacitati");
+        Request req= JsonProtocolUtils.createAdaugaParticipantRequest(new Participant(1L,nume,cap,echipa,cnp));
+        sendRequest(req);
+        Response response=readResponse();
+        if (response.getType()== ResponseType.OK){
+            logger.info("participant inscris");
+            return;
+        }
+        if (response.getType()== ResponseType.ERROR){
+            String err=response.getErrorMessage();;
+            closeConnection();
+            throw new AppException(err);
+        }
     }
 
     @Override
@@ -143,7 +183,7 @@ public class ChatServicesJsonProxy implements IService {
 
     @Override
     public List<Participant> getAllParticipantiByEchipa(String echipa) throws AppException {
-        logger.info("start getallCurseCapMotor");
+        logger.info("start getAllParticipantiByEchipa");
         Request req= JsonProtocolUtils.createRequestGetParticipantiByEchipa(echipa);
         sendRequest(req);
         Response response=readResponse();
@@ -196,13 +236,56 @@ public class ChatServicesJsonProxy implements IService {
     }
 
     @Override
-    public List<Cursa> getCurseForParticipant(Participant participant) {
-        return List.of();
+    public List<Cursa> getCurseForParticipant(Participant participant)throws AppException {
+        logger.info("start getCurseForParticipant");
+        Request req= JsonProtocolUtils.createRequestGetCurseByParticipant(participant);
+        sendRequest(req);
+        Response response=readResponse();
+        if (response.getType()== ResponseType.OK){
+            logger.info("curse returnati: " + response.getCurse().size());
+            return response.getCurse();
+        }
+        if (response.getType()== ResponseType.ERROR){
+            String err=response.getErrorMessage();;
+            closeConnection();
+            throw new AppException(err);
+        }
+        return new ArrayList<>();
     }
 
     @Override
-    public void adaugaInscriere(Participant participant, Cursa cursa) {
+    public void adaugaInscriere(Participant participant, Cursa cursa) throws AppException {
+        logger.info("start adaugaInscriere");
+        Request req= JsonProtocolUtils.createAdaugaInscriereRequest(participant,cursa);
+        sendRequest(req);
+        Response response=readResponse();
+        if (response.getType()== ResponseType.OK){
+            logger.info("inscriere adaugata");
+            return;
+        }
+        if (response.getType()== ResponseType.ERROR){
+            String err=response.getErrorMessage();;
+            closeConnection();
+            throw new AppException(err);
+        }
+    }
 
+    @Override
+    public void logout(User user) throws AppException {
+        logger.info("start logout");
+        Request req= JsonProtocolUtils.createLogOutRequest(this.currentUser);
+        sendRequest(req);
+        Response response=readResponse();
+        if (response.getType()== ResponseType.OK){
+            logger.info("logged out");
+            closeConnection();
+            return;
+        }
+        if (response.getType()== ResponseType.ERROR){
+            String err=response.getErrorMessage();;
+            closeConnection();
+            throw new AppException(err);
+        }
     }
 
     private void initializeConnection() {
@@ -223,9 +306,7 @@ public class ChatServicesJsonProxy implements IService {
     }
 
     private void handleUpdate(Response response){
-        if (response.getType()== ResponseType.FRIEND_LOGGED_IN) {
-            return ;
-        }
+        client.refresh();
     }
 
 
@@ -235,7 +316,7 @@ public class ChatServicesJsonProxy implements IService {
     }
 
     private boolean isUpdate(Response response){
-        return response.getType()== ResponseType.FRIEND_LOGGED_OUT || response.getType()== ResponseType.FRIEND_LOGGED_IN || response.getType()== ResponseType.NEW_MESSAGE;
+        return response.getType()== ResponseType.UPDATE;
     }
 
     private class ReaderThread implements Runnable {
@@ -255,7 +336,7 @@ public class ChatServicesJsonProxy implements IService {
                             logger.error(e.getStackTrace());
                         }
                     }
-                } catch (IOException e) {
+                } catch (Exception e) {
                     logger.error("Reading error " + e);
                 }
             }
@@ -273,10 +354,9 @@ public class ChatServicesJsonProxy implements IService {
 
     private Response readResponse() throws AppException {
         Response response=null;
+        logger.info("start read response");
         try{
-
             response=qresponses.take();
-
         } catch (InterruptedException e) {
             logger.error(e);
             logger.error(e.getStackTrace());
