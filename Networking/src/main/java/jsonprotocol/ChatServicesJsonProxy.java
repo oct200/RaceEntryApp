@@ -57,11 +57,13 @@ public class ChatServicesJsonProxy implements IService {
         logger.info("closing connection");
         finished=true;
         try {
+            connection.close();
             input.close();
             output.close();
-            connection.close();
             client=null;
-        } catch (IOException e) {
+            logger.info("connection closed");
+        }
+        catch(Exception e){
             logger.error(e);
             logger.error(e.getStackTrace());
         }

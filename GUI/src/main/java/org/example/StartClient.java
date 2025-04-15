@@ -63,9 +63,6 @@ public class StartClient extends Application {
         primaryStage.setScene(new Scene(root, 300, 130));
         primaryStage.show();
 
-
-
-
     }
     public static void main(String[] args) {
         launch(args);  // Calls Application.launch() to start the JavaFX application

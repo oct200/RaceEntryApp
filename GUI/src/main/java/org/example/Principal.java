@@ -177,6 +177,7 @@
         private void buttonLogOut_Click() {
             try {
                 proxy.logout(new User(1L,"sf","sd"));
+                logger.info("ajunge aici");
                 Stage primaryStage = (Stage) comboBoxEchipe.getScene().getWindow();
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("autentificare.fxml"));
                 Scene scene = new Scene(fxmlLoader.load());

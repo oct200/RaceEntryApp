@@ -5930,3 +5930,669 @@ java.lang.NumberFormatException: Cannot parse null string
 12 Apr 2025 01:02:57,942 ERROR jsonprotocol.ChatServicesJsonProxy$ReaderThread 340 run - Reading error java.net.SocketException: Connection reset
 12 Apr 2025 01:02:57,942 ERROR jsonprotocol.ChatServicesJsonProxy$ReaderThread 340 run - Reading error java.net.SocketException: Connection reset
 12 Apr 2025 01:02:57,943 ERROR jsonprotocol.ChatServicesJsonProxy$ReaderThread 340 run - Reading error java.net.SocketException: Connection reset
+15 Apr 2025 18:19:51,158 DEBUG org.example.StartClient 28 start - In start
+15 Apr 2025 18:19:51,162 DEBUG org.example.StartClient 28 start - In start
+15 Apr 2025 18:19:51,185 INFO  org.example.StartClient 32 start - Client properties set {chat.server.port=55556, chat.server.host=localhost} 
+15 Apr 2025 18:19:51,185 INFO  org.example.StartClient 32 start - Client properties set {chat.server.port=55556, chat.server.host=localhost} 
+15 Apr 2025 18:19:51,187 INFO  org.example.StartClient 48 start - Using server IP localhost
+15 Apr 2025 18:19:51,187 INFO  org.example.StartClient 48 start - Using server IP localhost
+15 Apr 2025 18:19:51,189 INFO  org.example.StartClient 49 start - Using server port 55556
+15 Apr 2025 18:19:51,190 INFO  org.example.StartClient 49 start - Using server port 55556
+15 Apr 2025 18:20:05,328 INFO  org.example.AutentificareController 44 clickLogIn - 1
+15 Apr 2025 18:20:05,406 INFO  org.example.AutentificareController 48 clickLogIn - 2
+15 Apr 2025 18:20:05,406 INFO  org.example.AutentificareController 49 clickLogIn - 3
+15 Apr 2025 18:20:05,406 INFO  jsonprotocol.ChatServicesJsonProxy 93 userExists - start userExists
+15 Apr 2025 18:20:05,406 INFO  jsonprotocol.ChatServicesJsonProxy 293 initializeConnection - start initialise
+15 Apr 2025 18:20:05,453 INFO  jsonprotocol.ChatServicesJsonProxy 300 initializeConnection - before start reader
+15 Apr 2025 18:20:05,466 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:20:06,140 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","user":{"username":"octa","password":"pass","id":23}}
+15 Apr 2025 18:20:06,145 INFO  org.example.Principal 102 initializareCombobox - Incepere initializareCombobox
+15 Apr 2025 18:20:06,146 INFO  jsonprotocol.ChatServicesJsonProxy 115 getAllTeams - start getallTeams
+15 Apr 2025 18:20:06,146 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:20:06,202 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","echipe":["Seat","Yamaha","Skoda","VW","1","2","3","4","5","6","fierarii"]}
+15 Apr 2025 18:20:06,203 INFO  jsonprotocol.ChatServicesJsonProxy 120 getAllTeams - echipe returnate: 11
+15 Apr 2025 18:20:06,203 INFO  jsonprotocol.ChatServicesJsonProxy 133 getCapacitati - start getCapacitati
+15 Apr 2025 18:20:06,203 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:20:06,265 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","capacitatiMotor":[125,250]}
+15 Apr 2025 18:20:06,266 INFO  jsonprotocol.ChatServicesJsonProxy 138 getCapacitati - echipe returnate: 2
+15 Apr 2025 18:20:06,269 INFO  org.example.Principal 111 initializareCombobox - final initializareCombobox
+15 Apr 2025 18:20:06,270 INFO  org.example.Principal 120 loadTabelParticipanti - Incepere loadTabelParticipanti
+15 Apr 2025 18:20:06,270 INFO  jsonprotocol.ChatServicesJsonProxy 168 getAllParticipanti - start getAllParticipanti
+15 Apr 2025 18:20:06,271 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:20:06,325 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12}]}
+15 Apr 2025 18:20:06,326 INFO  jsonprotocol.ChatServicesJsonProxy 173 getAllParticipanti - participanti returnati: 12
+15 Apr 2025 18:20:06,327 INFO  org.example.Principal 130 loadTabelParticipanti - final loadTabelParticipanti
+15 Apr 2025 18:20:06,327 INFO  org.example.Principal 143 loadTabelCurse - Incepere loadTabelCurse
+15 Apr 2025 18:20:06,327 INFO  jsonprotocol.ChatServicesJsonProxy 204 getAllCurse - start getallCurse
+15 Apr 2025 18:20:06,327 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:20:06,394 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","curse":[{"numarParticipanti":16,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 18:20:06,395 INFO  jsonprotocol.ChatServicesJsonProxy 209 getAllCurse - participanti returnati: 2
+15 Apr 2025 18:20:06,395 INFO  org.example.Principal 154 loadTabelCurse - final loadTabelCurse
+15 Apr 2025 18:20:11,165 INFO  org.example.AutentificareController 44 clickLogIn - 1
+15 Apr 2025 18:20:11,219 INFO  org.example.AutentificareController 48 clickLogIn - 2
+15 Apr 2025 18:20:11,219 INFO  org.example.AutentificareController 49 clickLogIn - 3
+15 Apr 2025 18:20:11,219 INFO  jsonprotocol.ChatServicesJsonProxy 93 userExists - start userExists
+15 Apr 2025 18:20:11,219 INFO  jsonprotocol.ChatServicesJsonProxy 293 initializeConnection - start initialise
+15 Apr 2025 18:20:11,264 INFO  jsonprotocol.ChatServicesJsonProxy 300 initializeConnection - before start reader
+15 Apr 2025 18:20:11,278 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:20:11,285 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","user":{"username":"octa2","password":"pass","id":44}}
+15 Apr 2025 18:20:11,292 INFO  org.example.Principal 102 initializareCombobox - Incepere initializareCombobox
+15 Apr 2025 18:20:11,292 INFO  jsonprotocol.ChatServicesJsonProxy 115 getAllTeams - start getallTeams
+15 Apr 2025 18:20:11,293 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:20:11,353 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","echipe":["Seat","Yamaha","Skoda","VW","1","2","3","4","5","6","fierarii"]}
+15 Apr 2025 18:20:11,354 INFO  jsonprotocol.ChatServicesJsonProxy 120 getAllTeams - echipe returnate: 11
+15 Apr 2025 18:20:11,355 INFO  jsonprotocol.ChatServicesJsonProxy 133 getCapacitati - start getCapacitati
+15 Apr 2025 18:20:11,355 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:20:11,414 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","capacitatiMotor":[125,250]}
+15 Apr 2025 18:20:11,415 INFO  jsonprotocol.ChatServicesJsonProxy 138 getCapacitati - echipe returnate: 2
+15 Apr 2025 18:20:11,417 INFO  org.example.Principal 111 initializareCombobox - final initializareCombobox
+15 Apr 2025 18:20:11,418 INFO  org.example.Principal 120 loadTabelParticipanti - Incepere loadTabelParticipanti
+15 Apr 2025 18:20:11,418 INFO  jsonprotocol.ChatServicesJsonProxy 168 getAllParticipanti - start getAllParticipanti
+15 Apr 2025 18:20:11,419 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:20:11,478 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12}]}
+15 Apr 2025 18:20:11,480 INFO  jsonprotocol.ChatServicesJsonProxy 173 getAllParticipanti - participanti returnati: 12
+15 Apr 2025 18:20:11,481 INFO  org.example.Principal 130 loadTabelParticipanti - final loadTabelParticipanti
+15 Apr 2025 18:20:11,481 INFO  org.example.Principal 143 loadTabelCurse - Incepere loadTabelCurse
+15 Apr 2025 18:20:11,481 INFO  jsonprotocol.ChatServicesJsonProxy 204 getAllCurse - start getallCurse
+15 Apr 2025 18:20:11,482 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:20:11,540 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","curse":[{"numarParticipanti":16,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 18:20:11,541 INFO  jsonprotocol.ChatServicesJsonProxy 209 getAllCurse - participanti returnati: 2
+15 Apr 2025 18:20:11,541 INFO  org.example.Principal 154 loadTabelCurse - final loadTabelCurse
+15 Apr 2025 18:20:17,172 INFO  org.example.Principal 162 tabelParticipantiClick - starting tabelParticipantiClick
+15 Apr 2025 18:20:17,173 INFO  jsonprotocol.ChatServicesJsonProxy 240 getCurseForParticipant - start getCurseForParticipant
+15 Apr 2025 18:20:17,174 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:20:17,182 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","curse":[]}
+15 Apr 2025 18:20:17,183 INFO  jsonprotocol.ChatServicesJsonProxy 245 getCurseForParticipant - curse returnati: 0
+15 Apr 2025 18:20:25,420 INFO  org.example.Principal 120 loadTabelParticipanti - Incepere loadTabelParticipanti
+15 Apr 2025 18:20:25,421 INFO  jsonprotocol.ChatServicesJsonProxy 186 getAllParticipantiByEchipa - start getAllParticipantiByEchipa
+15 Apr 2025 18:20:25,422 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:20:25,426 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","participanti":[{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4}]}
+15 Apr 2025 18:20:25,428 INFO  jsonprotocol.ChatServicesJsonProxy 191 getAllParticipantiByEchipa - curse returnati: 1
+15 Apr 2025 18:20:25,430 INFO  org.example.Principal 130 loadTabelParticipanti - final loadTabelParticipanti
+15 Apr 2025 18:20:27,035 INFO  org.example.Principal 120 loadTabelParticipanti - Incepere loadTabelParticipanti
+15 Apr 2025 18:20:27,036 INFO  jsonprotocol.ChatServicesJsonProxy 186 getAllParticipantiByEchipa - start getAllParticipantiByEchipa
+15 Apr 2025 18:20:27,037 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:20:27,041 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","participanti":[{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6}]}
+15 Apr 2025 18:20:27,041 INFO  jsonprotocol.ChatServicesJsonProxy 191 getAllParticipantiByEchipa - curse returnati: 1
+15 Apr 2025 18:20:27,042 INFO  org.example.Principal 130 loadTabelParticipanti - final loadTabelParticipanti
+15 Apr 2025 18:20:28,066 INFO  org.example.Principal 143 loadTabelCurse - Incepere loadTabelCurse
+15 Apr 2025 18:20:28,066 INFO  jsonprotocol.ChatServicesJsonProxy 222 getAllCurseByCapMotor - start getallCurseCapMotor
+15 Apr 2025 18:20:28,067 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:20:28,072 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","curse":[{"numarParticipanti":16,"capMotor":125,"id":1}]}
+15 Apr 2025 18:20:28,073 INFO  jsonprotocol.ChatServicesJsonProxy 227 getAllCurseByCapMotor - curse returnati: 1
+15 Apr 2025 18:20:28,074 INFO  org.example.Principal 154 loadTabelCurse - final loadTabelCurse
+15 Apr 2025 18:20:30,033 INFO  org.example.Principal 120 loadTabelParticipanti - Incepere loadTabelParticipanti
+15 Apr 2025 18:20:30,034 INFO  jsonprotocol.ChatServicesJsonProxy 168 getAllParticipanti - start getAllParticipanti
+15 Apr 2025 18:20:30,035 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:20:30,040 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12}]}
+15 Apr 2025 18:20:30,042 INFO  jsonprotocol.ChatServicesJsonProxy 173 getAllParticipanti - participanti returnati: 12
+15 Apr 2025 18:20:30,043 INFO  org.example.Principal 130 loadTabelParticipanti - final loadTabelParticipanti
+15 Apr 2025 18:20:43,353 INFO  org.example.Principal 162 tabelParticipantiClick - starting tabelParticipantiClick
+15 Apr 2025 18:20:43,354 INFO  jsonprotocol.ChatServicesJsonProxy 240 getCurseForParticipant - start getCurseForParticipant
+15 Apr 2025 18:20:43,355 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:20:43,361 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","curse":[]}
+15 Apr 2025 18:20:43,362 INFO  jsonprotocol.ChatServicesJsonProxy 245 getCurseForParticipant - curse returnati: 0
+15 Apr 2025 18:20:43,793 INFO  org.example.Principal 162 tabelParticipantiClick - starting tabelParticipantiClick
+15 Apr 2025 18:20:43,793 INFO  jsonprotocol.ChatServicesJsonProxy 240 getCurseForParticipant - start getCurseForParticipant
+15 Apr 2025 18:20:43,794 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:20:43,802 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","curse":[]}
+15 Apr 2025 18:20:43,802 INFO  jsonprotocol.ChatServicesJsonProxy 245 getCurseForParticipant - curse returnati: 0
+15 Apr 2025 18:20:44,279 INFO  org.example.Principal 162 tabelParticipantiClick - starting tabelParticipantiClick
+15 Apr 2025 18:20:44,279 INFO  jsonprotocol.ChatServicesJsonProxy 240 getCurseForParticipant - start getCurseForParticipant
+15 Apr 2025 18:20:44,280 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:20:44,285 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","curse":[]}
+15 Apr 2025 18:20:44,286 INFO  jsonprotocol.ChatServicesJsonProxy 245 getCurseForParticipant - curse returnati: 0
+15 Apr 2025 18:20:44,624 INFO  org.example.Principal 162 tabelParticipantiClick - starting tabelParticipantiClick
+15 Apr 2025 18:20:44,624 INFO  jsonprotocol.ChatServicesJsonProxy 240 getCurseForParticipant - start getCurseForParticipant
+15 Apr 2025 18:20:44,625 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:20:44,630 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","curse":[]}
+15 Apr 2025 18:20:44,630 INFO  jsonprotocol.ChatServicesJsonProxy 245 getCurseForParticipant - curse returnati: 0
+15 Apr 2025 18:20:45,059 INFO  org.example.Principal 162 tabelParticipantiClick - starting tabelParticipantiClick
+15 Apr 2025 18:20:45,059 INFO  jsonprotocol.ChatServicesJsonProxy 240 getCurseForParticipant - start getCurseForParticipant
+15 Apr 2025 18:20:45,060 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:20:45,065 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","curse":[]}
+15 Apr 2025 18:20:45,065 INFO  jsonprotocol.ChatServicesJsonProxy 245 getCurseForParticipant - curse returnati: 0
+15 Apr 2025 18:20:45,978 INFO  org.example.Principal 162 tabelParticipantiClick - starting tabelParticipantiClick
+15 Apr 2025 18:20:45,979 INFO  jsonprotocol.ChatServicesJsonProxy 240 getCurseForParticipant - start getCurseForParticipant
+15 Apr 2025 18:20:45,979 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:20:45,983 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","curse":[]}
+15 Apr 2025 18:20:45,985 INFO  jsonprotocol.ChatServicesJsonProxy 245 getCurseForParticipant - curse returnati: 0
+15 Apr 2025 18:20:46,365 INFO  org.example.Principal 162 tabelParticipantiClick - starting tabelParticipantiClick
+15 Apr 2025 18:20:46,366 INFO  jsonprotocol.ChatServicesJsonProxy 240 getCurseForParticipant - start getCurseForParticipant
+15 Apr 2025 18:20:46,366 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:20:46,371 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","curse":[]}
+15 Apr 2025 18:20:46,372 INFO  jsonprotocol.ChatServicesJsonProxy 245 getCurseForParticipant - curse returnati: 0
+15 Apr 2025 18:20:59,663 INFO  org.example.AdaugareParticipant 44 handleInscriere - Incepere handleInscriere
+15 Apr 2025 18:20:59,664 INFO  jsonprotocol.ChatServicesJsonProxy 151 inscrieParticipant - start getCapacitati
+15 Apr 2025 18:20:59,665 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:20:59,702 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK"}
+15 Apr 2025 18:20:59,703 INFO  jsonprotocol.ChatServicesJsonProxy 156 inscrieParticipant - participant inscris
+15 Apr 2025 18:20:59,704 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"UPDATE"}
+15 Apr 2025 18:20:59,705 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"UPDATE"}
+15 Apr 2025 18:20:59,708 INFO  org.example.Principal 120 loadTabelParticipanti - Incepere loadTabelParticipanti
+15 Apr 2025 18:20:59,709 INFO  jsonprotocol.ChatServicesJsonProxy 168 getAllParticipanti - start getAllParticipanti
+15 Apr 2025 18:20:59,710 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:20:59,715 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13}]}
+15 Apr 2025 18:20:59,718 INFO  jsonprotocol.ChatServicesJsonProxy 173 getAllParticipanti - participanti returnati: 13
+15 Apr 2025 18:20:59,720 INFO  org.example.Principal 130 loadTabelParticipanti - final loadTabelParticipanti
+15 Apr 2025 18:20:59,720 INFO  org.example.Principal 143 loadTabelCurse - Incepere loadTabelCurse
+15 Apr 2025 18:20:59,721 INFO  jsonprotocol.ChatServicesJsonProxy 204 getAllCurse - start getallCurse
+15 Apr 2025 18:20:59,722 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:20:59,777 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","curse":[{"numarParticipanti":16,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 18:20:59,778 INFO  jsonprotocol.ChatServicesJsonProxy 209 getAllCurse - participanti returnati: 2
+15 Apr 2025 18:20:59,778 INFO  org.example.Principal 154 loadTabelCurse - final loadTabelCurse
+15 Apr 2025 18:20:59,830 INFO  org.example.Principal 120 loadTabelParticipanti - Incepere loadTabelParticipanti
+15 Apr 2025 18:20:59,830 INFO  jsonprotocol.ChatServicesJsonProxy 168 getAllParticipanti - start getAllParticipanti
+15 Apr 2025 18:20:59,831 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:20:59,838 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13}]}
+15 Apr 2025 18:20:59,841 INFO  jsonprotocol.ChatServicesJsonProxy 173 getAllParticipanti - participanti returnati: 13
+15 Apr 2025 18:20:59,844 INFO  org.example.Principal 130 loadTabelParticipanti - final loadTabelParticipanti
+15 Apr 2025 18:20:59,845 INFO  org.example.Principal 143 loadTabelCurse - Incepere loadTabelCurse
+15 Apr 2025 18:20:59,845 INFO  jsonprotocol.ChatServicesJsonProxy 222 getAllCurseByCapMotor - start getallCurseCapMotor
+15 Apr 2025 18:20:59,849 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:20:59,903 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","curse":[{"numarParticipanti":16,"capMotor":125,"id":1}]}
+15 Apr 2025 18:20:59,904 INFO  jsonprotocol.ChatServicesJsonProxy 227 getAllCurseByCapMotor - curse returnati: 1
+15 Apr 2025 18:20:59,905 INFO  org.example.Principal 154 loadTabelCurse - final loadTabelCurse
+15 Apr 2025 18:21:04,358 INFO  org.example.Principal 162 tabelParticipantiClick - starting tabelParticipantiClick
+15 Apr 2025 18:21:04,359 INFO  jsonprotocol.ChatServicesJsonProxy 240 getCurseForParticipant - start getCurseForParticipant
+15 Apr 2025 18:21:04,359 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:21:04,362 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","curse":[{"numarParticipanti":16,"capMotor":125,"id":1}]}
+15 Apr 2025 18:21:04,363 INFO  jsonprotocol.ChatServicesJsonProxy 245 getCurseForParticipant - curse returnati: 1
+15 Apr 2025 18:21:08,703 INFO  org.example.Principal 217 buttonAdaugareParticipantLaCursa_Click - starting buttonAdaugareParticipantLaCursa_Click
+15 Apr 2025 18:21:08,704 INFO  jsonprotocol.ChatServicesJsonProxy 258 adaugaInscriere - start adaugaInscriere
+15 Apr 2025 18:21:08,704 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:21:08,722 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK"}
+15 Apr 2025 18:21:08,722 INFO  jsonprotocol.ChatServicesJsonProxy 263 adaugaInscriere - inscriere adaugata
+15 Apr 2025 18:21:08,723 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"UPDATE"}
+15 Apr 2025 18:21:08,723 INFO  org.example.Principal 224 buttonAdaugareParticipantLaCursa_Click - final buttonAdaugareParticipantLaCursa_Click
+15 Apr 2025 18:21:08,723 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"UPDATE"}
+15 Apr 2025 18:21:08,724 INFO  org.example.Principal 120 loadTabelParticipanti - Incepere loadTabelParticipanti
+15 Apr 2025 18:21:08,724 INFO  org.example.Principal 120 loadTabelParticipanti - Incepere loadTabelParticipanti
+15 Apr 2025 18:21:08,725 INFO  jsonprotocol.ChatServicesJsonProxy 168 getAllParticipanti - start getAllParticipanti
+15 Apr 2025 18:21:08,725 INFO  jsonprotocol.ChatServicesJsonProxy 168 getAllParticipanti - start getAllParticipanti
+15 Apr 2025 18:21:08,725 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:21:08,725 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:21:08,730 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13}]}
+15 Apr 2025 18:21:08,731 INFO  jsonprotocol.ChatServicesJsonProxy 173 getAllParticipanti - participanti returnati: 13
+15 Apr 2025 18:21:08,731 INFO  org.example.Principal 130 loadTabelParticipanti - final loadTabelParticipanti
+15 Apr 2025 18:21:08,731 INFO  org.example.Principal 143 loadTabelCurse - Incepere loadTabelCurse
+15 Apr 2025 18:21:08,732 INFO  jsonprotocol.ChatServicesJsonProxy 222 getAllCurseByCapMotor - start getallCurseCapMotor
+15 Apr 2025 18:21:08,732 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:21:08,776 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13}]}
+15 Apr 2025 18:21:08,778 INFO  jsonprotocol.ChatServicesJsonProxy 173 getAllParticipanti - participanti returnati: 13
+15 Apr 2025 18:21:08,779 INFO  org.example.Principal 130 loadTabelParticipanti - final loadTabelParticipanti
+15 Apr 2025 18:21:08,780 INFO  org.example.Principal 143 loadTabelCurse - Incepere loadTabelCurse
+15 Apr 2025 18:21:08,780 INFO  jsonprotocol.ChatServicesJsonProxy 204 getAllCurse - start getallCurse
+15 Apr 2025 18:21:08,781 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:21:08,792 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","curse":[{"numarParticipanti":17,"capMotor":125,"id":1}]}
+15 Apr 2025 18:21:08,793 INFO  jsonprotocol.ChatServicesJsonProxy 227 getAllCurseByCapMotor - curse returnati: 1
+15 Apr 2025 18:21:08,794 INFO  org.example.Principal 154 loadTabelCurse - final loadTabelCurse
+15 Apr 2025 18:21:08,838 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK","curse":[{"numarParticipanti":17,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 18:21:08,839 INFO  jsonprotocol.ChatServicesJsonProxy 209 getAllCurse - participanti returnati: 2
+15 Apr 2025 18:21:08,840 INFO  org.example.Principal 154 loadTabelCurse - final loadTabelCurse
+15 Apr 2025 18:21:12,332 INFO  jsonprotocol.ChatServicesJsonProxy 275 logout - start logout
+15 Apr 2025 18:21:12,333 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:21:12,336 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK"}
+15 Apr 2025 18:21:12,337 INFO  jsonprotocol.ChatServicesJsonProxy 280 logout - logged out
+15 Apr 2025 18:21:12,338 INFO  jsonprotocol.ChatServicesJsonProxy 57 closeConnection - closing connection
+15 Apr 2025 18:21:34,061 INFO  jsonprotocol.ChatServicesJsonProxy 275 logout - start logout
+15 Apr 2025 18:21:34,062 INFO  jsonprotocol.ChatServicesJsonProxy 357 readResponse - start read response
+15 Apr 2025 18:21:34,066 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 327 run - response received {"type":"OK"}
+15 Apr 2025 18:21:34,067 INFO  jsonprotocol.ChatServicesJsonProxy 280 logout - logged out
+15 Apr 2025 18:21:34,067 INFO  jsonprotocol.ChatServicesJsonProxy 57 closeConnection - closing connection
+15 Apr 2025 18:23:23,804 DEBUG org.example.StartClient 28 start - In start
+15 Apr 2025 18:23:23,809 INFO  org.example.StartClient 32 start - Client properties set {chat.server.port=55556, chat.server.host=localhost} 
+15 Apr 2025 18:23:23,810 INFO  org.example.StartClient 48 start - Using server IP localhost
+15 Apr 2025 18:23:23,811 INFO  org.example.StartClient 49 start - Using server port 55556
+15 Apr 2025 18:23:32,173 INFO  org.example.AutentificareController 44 clickLogIn - 1
+15 Apr 2025 18:23:32,236 INFO  org.example.AutentificareController 48 clickLogIn - 2
+15 Apr 2025 18:23:32,237 INFO  org.example.AutentificareController 49 clickLogIn - 3
+15 Apr 2025 18:23:32,237 INFO  jsonprotocol.ChatServicesJsonProxy 97 userExists - start userExists
+15 Apr 2025 18:23:32,237 INFO  jsonprotocol.ChatServicesJsonProxy 297 initializeConnection - start initialise
+15 Apr 2025 18:23:32,273 INFO  jsonprotocol.ChatServicesJsonProxy 304 initializeConnection - before start reader
+15 Apr 2025 18:23:32,286 INFO  jsonprotocol.ChatServicesJsonProxy 361 readResponse - start read response
+15 Apr 2025 18:23:32,893 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 331 run - response received {"type":"OK","user":{"username":"octa","password":"pass","id":23}}
+15 Apr 2025 18:23:32,899 INFO  org.example.Principal 102 initializareCombobox - Incepere initializareCombobox
+15 Apr 2025 18:23:32,899 INFO  jsonprotocol.ChatServicesJsonProxy 119 getAllTeams - start getallTeams
+15 Apr 2025 18:23:32,900 INFO  jsonprotocol.ChatServicesJsonProxy 361 readResponse - start read response
+15 Apr 2025 18:23:32,962 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 331 run - response received {"type":"OK","echipe":["Seat","Yamaha","Skoda","VW","1","2","3","4","5","6","fierarii","10"]}
+15 Apr 2025 18:23:32,963 INFO  jsonprotocol.ChatServicesJsonProxy 124 getAllTeams - echipe returnate: 12
+15 Apr 2025 18:23:32,963 INFO  jsonprotocol.ChatServicesJsonProxy 137 getCapacitati - start getCapacitati
+15 Apr 2025 18:23:32,964 INFO  jsonprotocol.ChatServicesJsonProxy 361 readResponse - start read response
+15 Apr 2025 18:23:33,025 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 331 run - response received {"type":"OK","capacitatiMotor":[125,250]}
+15 Apr 2025 18:23:33,026 INFO  jsonprotocol.ChatServicesJsonProxy 142 getCapacitati - echipe returnate: 2
+15 Apr 2025 18:23:33,030 INFO  org.example.Principal 111 initializareCombobox - final initializareCombobox
+15 Apr 2025 18:23:33,031 INFO  org.example.Principal 120 loadTabelParticipanti - Incepere loadTabelParticipanti
+15 Apr 2025 18:23:33,031 INFO  jsonprotocol.ChatServicesJsonProxy 172 getAllParticipanti - start getAllParticipanti
+15 Apr 2025 18:23:33,032 INFO  jsonprotocol.ChatServicesJsonProxy 361 readResponse - start read response
+15 Apr 2025 18:23:33,091 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 331 run - response received {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13}]}
+15 Apr 2025 18:23:33,094 INFO  jsonprotocol.ChatServicesJsonProxy 177 getAllParticipanti - participanti returnati: 13
+15 Apr 2025 18:23:33,095 INFO  org.example.Principal 130 loadTabelParticipanti - final loadTabelParticipanti
+15 Apr 2025 18:23:33,095 INFO  org.example.Principal 143 loadTabelCurse - Incepere loadTabelCurse
+15 Apr 2025 18:23:33,095 INFO  jsonprotocol.ChatServicesJsonProxy 208 getAllCurse - start getallCurse
+15 Apr 2025 18:23:33,096 INFO  jsonprotocol.ChatServicesJsonProxy 361 readResponse - start read response
+15 Apr 2025 18:23:33,151 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 331 run - response received {"type":"OK","curse":[{"numarParticipanti":17,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 18:23:33,153 INFO  jsonprotocol.ChatServicesJsonProxy 213 getAllCurse - participanti returnati: 2
+15 Apr 2025 18:23:33,154 INFO  org.example.Principal 154 loadTabelCurse - final loadTabelCurse
+15 Apr 2025 18:23:36,162 INFO  jsonprotocol.ChatServicesJsonProxy 279 logout - start logout
+15 Apr 2025 18:23:36,164 INFO  jsonprotocol.ChatServicesJsonProxy 361 readResponse - start read response
+15 Apr 2025 18:23:36,169 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 331 run - response received {"type":"OK"}
+15 Apr 2025 18:23:36,170 INFO  jsonprotocol.ChatServicesJsonProxy 284 logout - logged out
+15 Apr 2025 18:23:36,170 INFO  jsonprotocol.ChatServicesJsonProxy 57 closeConnection - closing connection
+15 Apr 2025 18:50:47,518 DEBUG org.example.StartClient 28 start - In start
+15 Apr 2025 18:50:47,540 INFO  org.example.StartClient 32 start - Client properties set {chat.server.port=55556, chat.server.host=localhost} 
+15 Apr 2025 18:50:47,540 INFO  org.example.StartClient 48 start - Using server IP localhost
+15 Apr 2025 18:50:47,541 INFO  org.example.StartClient 49 start - Using server port 55556
+15 Apr 2025 19:05:34,861 DEBUG org.example.StartClient 28 start - In start
+15 Apr 2025 19:05:34,865 INFO  org.example.StartClient 32 start - Client properties set {chat.server.port=55556, chat.server.host=localhost} 
+15 Apr 2025 19:05:34,866 INFO  org.example.StartClient 48 start - Using server IP localhost
+15 Apr 2025 19:05:34,866 INFO  org.example.StartClient 49 start - Using server port 55556
+15 Apr 2025 19:05:47,092 INFO  org.example.AutentificareController 44 clickLogIn - 1
+15 Apr 2025 19:05:47,173 INFO  org.example.AutentificareController 48 clickLogIn - 2
+15 Apr 2025 19:05:47,173 INFO  org.example.AutentificareController 49 clickLogIn - 3
+15 Apr 2025 19:05:47,174 INFO  jsonprotocol.ChatServicesJsonProxy 98 userExists - start userExists
+15 Apr 2025 19:05:47,174 INFO  jsonprotocol.ChatServicesJsonProxy 298 initializeConnection - start initialise
+15 Apr 2025 19:05:47,219 INFO  jsonprotocol.ChatServicesJsonProxy 305 initializeConnection - before start reader
+15 Apr 2025 19:05:47,237 INFO  jsonprotocol.ChatServicesJsonProxy 362 readResponse - start read response
+15 Apr 2025 19:05:47,863 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 332 run - response received {"type":"OK","user":{"username":"octa","password":"pass","id":23}}
+15 Apr 2025 19:05:47,867 INFO  org.example.Principal 102 initializareCombobox - Incepere initializareCombobox
+15 Apr 2025 19:05:47,868 INFO  jsonprotocol.ChatServicesJsonProxy 120 getAllTeams - start getallTeams
+15 Apr 2025 19:05:47,868 INFO  jsonprotocol.ChatServicesJsonProxy 362 readResponse - start read response
+15 Apr 2025 19:05:47,922 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 332 run - response received {"type":"OK","echipe":["Seat","Yamaha","Skoda","VW","1","2","3","4","5","6","fierarii","10"]}
+15 Apr 2025 19:05:47,923 INFO  jsonprotocol.ChatServicesJsonProxy 125 getAllTeams - echipe returnate: 12
+15 Apr 2025 19:05:47,923 INFO  jsonprotocol.ChatServicesJsonProxy 138 getCapacitati - start getCapacitati
+15 Apr 2025 19:05:47,923 INFO  jsonprotocol.ChatServicesJsonProxy 362 readResponse - start read response
+15 Apr 2025 19:05:47,983 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 332 run - response received {"type":"OK","capacitatiMotor":[125,250]}
+15 Apr 2025 19:05:47,984 INFO  jsonprotocol.ChatServicesJsonProxy 143 getCapacitati - echipe returnate: 2
+15 Apr 2025 19:05:47,987 INFO  org.example.Principal 111 initializareCombobox - final initializareCombobox
+15 Apr 2025 19:05:47,989 INFO  org.example.Principal 120 loadTabelParticipanti - Incepere loadTabelParticipanti
+15 Apr 2025 19:05:47,989 INFO  jsonprotocol.ChatServicesJsonProxy 173 getAllParticipanti - start getAllParticipanti
+15 Apr 2025 19:05:47,989 INFO  jsonprotocol.ChatServicesJsonProxy 362 readResponse - start read response
+15 Apr 2025 19:05:48,045 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 332 run - response received {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13}]}
+15 Apr 2025 19:05:48,046 INFO  jsonprotocol.ChatServicesJsonProxy 178 getAllParticipanti - participanti returnati: 13
+15 Apr 2025 19:05:48,047 INFO  org.example.Principal 130 loadTabelParticipanti - final loadTabelParticipanti
+15 Apr 2025 19:05:48,047 INFO  org.example.Principal 143 loadTabelCurse - Incepere loadTabelCurse
+15 Apr 2025 19:05:48,047 INFO  jsonprotocol.ChatServicesJsonProxy 209 getAllCurse - start getallCurse
+15 Apr 2025 19:05:48,047 INFO  jsonprotocol.ChatServicesJsonProxy 362 readResponse - start read response
+15 Apr 2025 19:05:48,107 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 332 run - response received {"type":"OK","curse":[{"numarParticipanti":17,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 19:05:48,109 INFO  jsonprotocol.ChatServicesJsonProxy 214 getAllCurse - participanti returnati: 2
+15 Apr 2025 19:05:48,109 INFO  org.example.Principal 154 loadTabelCurse - final loadTabelCurse
+15 Apr 2025 19:05:57,430 INFO  jsonprotocol.ChatServicesJsonProxy 280 logout - start logout
+15 Apr 2025 19:05:57,431 INFO  jsonprotocol.ChatServicesJsonProxy 362 readResponse - start read response
+15 Apr 2025 19:05:57,433 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 332 run - response received {"type":"OK"}
+15 Apr 2025 19:05:57,433 INFO  jsonprotocol.ChatServicesJsonProxy 285 logout - logged out
+15 Apr 2025 19:05:57,433 INFO  jsonprotocol.ChatServicesJsonProxy 57 closeConnection - closing connection
+15 Apr 2025 19:06:36,969 DEBUG org.example.StartClient 28 start - In start
+15 Apr 2025 19:06:36,976 INFO  org.example.StartClient 32 start - Client properties set {chat.server.port=55556, chat.server.host=localhost} 
+15 Apr 2025 19:06:36,976 INFO  org.example.StartClient 48 start - Using server IP localhost
+15 Apr 2025 19:06:36,977 INFO  org.example.StartClient 49 start - Using server port 55556
+15 Apr 2025 19:06:47,975 INFO  org.example.AutentificareController 44 clickLogIn - 1
+15 Apr 2025 19:06:48,017 INFO  org.example.AutentificareController 48 clickLogIn - 2
+15 Apr 2025 19:06:48,017 INFO  org.example.AutentificareController 49 clickLogIn - 3
+15 Apr 2025 19:06:48,017 INFO  jsonprotocol.ChatServicesJsonProxy 98 userExists - start userExists
+15 Apr 2025 19:06:48,017 INFO  jsonprotocol.ChatServicesJsonProxy 298 initializeConnection - start initialise
+15 Apr 2025 19:06:48,051 INFO  jsonprotocol.ChatServicesJsonProxy 305 initializeConnection - before start reader
+15 Apr 2025 19:06:48,064 INFO  jsonprotocol.ChatServicesJsonProxy 362 readResponse - start read response
+15 Apr 2025 19:06:48,390 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 332 run - response received {"type":"OK","user":{"username":"octa","password":"pass","id":23}}
+15 Apr 2025 19:06:48,394 INFO  org.example.Principal 102 initializareCombobox - Incepere initializareCombobox
+15 Apr 2025 19:06:48,394 INFO  jsonprotocol.ChatServicesJsonProxy 120 getAllTeams - start getallTeams
+15 Apr 2025 19:06:48,395 INFO  jsonprotocol.ChatServicesJsonProxy 362 readResponse - start read response
+15 Apr 2025 19:06:48,446 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 332 run - response received {"type":"OK","echipe":["Seat","Yamaha","Skoda","VW","1","2","3","4","5","6","fierarii","10"]}
+15 Apr 2025 19:06:48,447 INFO  jsonprotocol.ChatServicesJsonProxy 125 getAllTeams - echipe returnate: 12
+15 Apr 2025 19:06:48,447 INFO  jsonprotocol.ChatServicesJsonProxy 138 getCapacitati - start getCapacitati
+15 Apr 2025 19:06:48,447 INFO  jsonprotocol.ChatServicesJsonProxy 362 readResponse - start read response
+15 Apr 2025 19:06:48,511 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 332 run - response received {"type":"OK","capacitatiMotor":[125,250]}
+15 Apr 2025 19:06:48,512 INFO  jsonprotocol.ChatServicesJsonProxy 143 getCapacitati - echipe returnate: 2
+15 Apr 2025 19:06:48,513 INFO  org.example.Principal 111 initializareCombobox - final initializareCombobox
+15 Apr 2025 19:06:48,514 INFO  org.example.Principal 120 loadTabelParticipanti - Incepere loadTabelParticipanti
+15 Apr 2025 19:06:48,515 INFO  jsonprotocol.ChatServicesJsonProxy 173 getAllParticipanti - start getAllParticipanti
+15 Apr 2025 19:06:48,515 INFO  jsonprotocol.ChatServicesJsonProxy 362 readResponse - start read response
+15 Apr 2025 19:06:48,569 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 332 run - response received {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13}]}
+15 Apr 2025 19:06:48,570 INFO  jsonprotocol.ChatServicesJsonProxy 178 getAllParticipanti - participanti returnati: 13
+15 Apr 2025 19:06:48,571 INFO  org.example.Principal 130 loadTabelParticipanti - final loadTabelParticipanti
+15 Apr 2025 19:06:48,571 INFO  org.example.Principal 143 loadTabelCurse - Incepere loadTabelCurse
+15 Apr 2025 19:06:48,571 INFO  jsonprotocol.ChatServicesJsonProxy 209 getAllCurse - start getallCurse
+15 Apr 2025 19:06:48,571 INFO  jsonprotocol.ChatServicesJsonProxy 362 readResponse - start read response
+15 Apr 2025 19:06:48,632 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 332 run - response received {"type":"OK","curse":[{"numarParticipanti":17,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 19:06:48,633 INFO  jsonprotocol.ChatServicesJsonProxy 214 getAllCurse - participanti returnati: 2
+15 Apr 2025 19:06:48,633 INFO  org.example.Principal 154 loadTabelCurse - final loadTabelCurse
+15 Apr 2025 19:06:51,625 INFO  jsonprotocol.ChatServicesJsonProxy 280 logout - start logout
+15 Apr 2025 19:06:51,625 INFO  jsonprotocol.ChatServicesJsonProxy 362 readResponse - start read response
+15 Apr 2025 19:06:51,628 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 332 run - response received {"type":"OK"}
+15 Apr 2025 19:06:51,628 INFO  jsonprotocol.ChatServicesJsonProxy 285 logout - logged out
+15 Apr 2025 19:06:51,628 INFO  jsonprotocol.ChatServicesJsonProxy 57 closeConnection - closing connection
+15 Apr 2025 19:08:30,792 DEBUG org.example.StartClient 28 start - In start
+15 Apr 2025 19:08:30,797 INFO  org.example.StartClient 32 start - Client properties set {chat.server.port=55556, chat.server.host=localhost} 
+15 Apr 2025 19:08:30,798 INFO  org.example.StartClient 48 start - Using server IP localhost
+15 Apr 2025 19:08:30,799 INFO  org.example.StartClient 49 start - Using server port 55556
+15 Apr 2025 19:08:53,481 INFO  org.example.AutentificareController 44 clickLogIn - 1
+15 Apr 2025 19:08:53,536 INFO  org.example.AutentificareController 48 clickLogIn - 2
+15 Apr 2025 19:08:53,536 INFO  org.example.AutentificareController 49 clickLogIn - 3
+15 Apr 2025 19:08:53,536 INFO  jsonprotocol.ChatServicesJsonProxy 96 userExists - start userExists
+15 Apr 2025 19:08:53,536 INFO  jsonprotocol.ChatServicesJsonProxy 296 initializeConnection - start initialise
+15 Apr 2025 19:08:53,585 INFO  jsonprotocol.ChatServicesJsonProxy 303 initializeConnection - before start reader
+15 Apr 2025 19:08:53,597 INFO  jsonprotocol.ChatServicesJsonProxy 360 readResponse - start read response
+15 Apr 2025 19:08:54,878 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 330 run - response received {"type":"OK","user":{"username":"octa","password":"pass","id":23}}
+15 Apr 2025 19:08:54,882 INFO  org.example.Principal 102 initializareCombobox - Incepere initializareCombobox
+15 Apr 2025 19:08:54,882 INFO  jsonprotocol.ChatServicesJsonProxy 118 getAllTeams - start getallTeams
+15 Apr 2025 19:08:54,882 INFO  jsonprotocol.ChatServicesJsonProxy 360 readResponse - start read response
+15 Apr 2025 19:08:54,944 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 330 run - response received {"type":"OK","echipe":["Seat","Yamaha","Skoda","VW","1","2","3","4","5","6","fierarii","10"]}
+15 Apr 2025 19:08:54,944 INFO  jsonprotocol.ChatServicesJsonProxy 123 getAllTeams - echipe returnate: 12
+15 Apr 2025 19:08:54,944 INFO  jsonprotocol.ChatServicesJsonProxy 136 getCapacitati - start getCapacitati
+15 Apr 2025 19:08:54,946 INFO  jsonprotocol.ChatServicesJsonProxy 360 readResponse - start read response
+15 Apr 2025 19:08:55,007 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 330 run - response received {"type":"OK","capacitatiMotor":[125,250]}
+15 Apr 2025 19:08:55,007 INFO  jsonprotocol.ChatServicesJsonProxy 141 getCapacitati - echipe returnate: 2
+15 Apr 2025 19:08:55,011 INFO  org.example.Principal 111 initializareCombobox - final initializareCombobox
+15 Apr 2025 19:08:55,012 INFO  org.example.Principal 120 loadTabelParticipanti - Incepere loadTabelParticipanti
+15 Apr 2025 19:08:55,012 INFO  jsonprotocol.ChatServicesJsonProxy 171 getAllParticipanti - start getAllParticipanti
+15 Apr 2025 19:08:55,013 INFO  jsonprotocol.ChatServicesJsonProxy 360 readResponse - start read response
+15 Apr 2025 19:08:55,066 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 330 run - response received {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13}]}
+15 Apr 2025 19:08:55,067 INFO  jsonprotocol.ChatServicesJsonProxy 176 getAllParticipanti - participanti returnati: 13
+15 Apr 2025 19:08:55,067 INFO  org.example.Principal 130 loadTabelParticipanti - final loadTabelParticipanti
+15 Apr 2025 19:08:55,067 INFO  org.example.Principal 143 loadTabelCurse - Incepere loadTabelCurse
+15 Apr 2025 19:08:55,067 INFO  jsonprotocol.ChatServicesJsonProxy 207 getAllCurse - start getallCurse
+15 Apr 2025 19:08:55,068 INFO  jsonprotocol.ChatServicesJsonProxy 360 readResponse - start read response
+15 Apr 2025 19:08:55,130 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 330 run - response received {"type":"OK","curse":[{"numarParticipanti":17,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 19:08:55,141 INFO  jsonprotocol.ChatServicesJsonProxy 212 getAllCurse - participanti returnati: 2
+15 Apr 2025 19:08:55,141 INFO  org.example.Principal 154 loadTabelCurse - final loadTabelCurse
+15 Apr 2025 19:08:58,814 INFO  jsonprotocol.ChatServicesJsonProxy 278 logout - start logout
+15 Apr 2025 19:08:58,815 INFO  jsonprotocol.ChatServicesJsonProxy 360 readResponse - start read response
+15 Apr 2025 19:08:58,817 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 330 run - response received {"type":"OK"}
+15 Apr 2025 19:08:58,818 INFO  jsonprotocol.ChatServicesJsonProxy 283 logout - logged out
+15 Apr 2025 19:08:58,818 INFO  jsonprotocol.ChatServicesJsonProxy 57 closeConnection - closing connection
+15 Apr 2025 19:08:58,818 INFO  jsonprotocol.ChatServicesJsonProxy 60 closeConnection - ajunge aici
+15 Apr 2025 19:09:21,303 ERROR jsonprotocol.ChatServicesJsonProxy$ReaderThread 343 run - Reading error java.net.SocketException: Connection reset
+15 Apr 2025 19:09:21,305 INFO  jsonprotocol.ChatServicesJsonProxy 65 closeConnection - connection closed
+15 Apr 2025 19:09:21,308 INFO  org.example.Principal 180 buttonLogOut_Click - ajunge aici
+15 Apr 2025 19:09:28,594 DEBUG org.example.StartClient 28 start - In start
+15 Apr 2025 19:09:28,599 INFO  org.example.StartClient 32 start - Client properties set {chat.server.port=55556, chat.server.host=localhost} 
+15 Apr 2025 19:09:28,599 INFO  org.example.StartClient 48 start - Using server IP localhost
+15 Apr 2025 19:09:28,600 INFO  org.example.StartClient 49 start - Using server port 55556
+15 Apr 2025 19:11:14,207 INFO  org.example.AutentificareController 44 clickLogIn - 1
+15 Apr 2025 19:11:14,256 INFO  org.example.AutentificareController 48 clickLogIn - 2
+15 Apr 2025 19:11:14,256 INFO  org.example.AutentificareController 49 clickLogIn - 3
+15 Apr 2025 19:11:14,256 INFO  jsonprotocol.ChatServicesJsonProxy 96 userExists - start userExists
+15 Apr 2025 19:11:14,256 INFO  jsonprotocol.ChatServicesJsonProxy 296 initializeConnection - start initialise
+15 Apr 2025 19:11:14,291 INFO  jsonprotocol.ChatServicesJsonProxy 303 initializeConnection - before start reader
+15 Apr 2025 19:11:14,306 INFO  jsonprotocol.ChatServicesJsonProxy 360 readResponse - start read response
+15 Apr 2025 19:11:15,031 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 330 run - response received {"type":"OK","user":{"username":"octa","password":"pass","id":23}}
+15 Apr 2025 19:11:15,034 INFO  org.example.Principal 102 initializareCombobox - Incepere initializareCombobox
+15 Apr 2025 19:11:15,035 INFO  jsonprotocol.ChatServicesJsonProxy 118 getAllTeams - start getallTeams
+15 Apr 2025 19:11:15,035 INFO  jsonprotocol.ChatServicesJsonProxy 360 readResponse - start read response
+15 Apr 2025 19:11:15,093 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 330 run - response received {"type":"OK","echipe":["Seat","Yamaha","Skoda","VW","1","2","3","4","5","6","fierarii","10"]}
+15 Apr 2025 19:11:15,093 INFO  jsonprotocol.ChatServicesJsonProxy 123 getAllTeams - echipe returnate: 12
+15 Apr 2025 19:11:15,094 INFO  jsonprotocol.ChatServicesJsonProxy 136 getCapacitati - start getCapacitati
+15 Apr 2025 19:11:15,094 INFO  jsonprotocol.ChatServicesJsonProxy 360 readResponse - start read response
+15 Apr 2025 19:11:15,156 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 330 run - response received {"type":"OK","capacitatiMotor":[125,250]}
+15 Apr 2025 19:11:15,156 INFO  jsonprotocol.ChatServicesJsonProxy 141 getCapacitati - echipe returnate: 2
+15 Apr 2025 19:11:15,159 INFO  org.example.Principal 111 initializareCombobox - final initializareCombobox
+15 Apr 2025 19:11:15,161 INFO  org.example.Principal 120 loadTabelParticipanti - Incepere loadTabelParticipanti
+15 Apr 2025 19:11:15,161 INFO  jsonprotocol.ChatServicesJsonProxy 171 getAllParticipanti - start getAllParticipanti
+15 Apr 2025 19:11:15,162 INFO  jsonprotocol.ChatServicesJsonProxy 360 readResponse - start read response
+15 Apr 2025 19:11:15,216 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 330 run - response received {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13}]}
+15 Apr 2025 19:11:15,217 INFO  jsonprotocol.ChatServicesJsonProxy 176 getAllParticipanti - participanti returnati: 13
+15 Apr 2025 19:11:15,218 INFO  org.example.Principal 130 loadTabelParticipanti - final loadTabelParticipanti
+15 Apr 2025 19:11:15,218 INFO  org.example.Principal 143 loadTabelCurse - Incepere loadTabelCurse
+15 Apr 2025 19:11:15,218 INFO  jsonprotocol.ChatServicesJsonProxy 207 getAllCurse - start getallCurse
+15 Apr 2025 19:11:15,219 INFO  jsonprotocol.ChatServicesJsonProxy 360 readResponse - start read response
+15 Apr 2025 19:11:15,278 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 330 run - response received {"type":"OK","curse":[{"numarParticipanti":17,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 19:11:15,279 INFO  jsonprotocol.ChatServicesJsonProxy 212 getAllCurse - participanti returnati: 2
+15 Apr 2025 19:11:15,279 INFO  org.example.Principal 154 loadTabelCurse - final loadTabelCurse
+15 Apr 2025 19:11:18,759 INFO  jsonprotocol.ChatServicesJsonProxy 278 logout - start logout
+15 Apr 2025 19:11:18,760 INFO  jsonprotocol.ChatServicesJsonProxy 360 readResponse - start read response
+15 Apr 2025 19:11:18,761 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 330 run - response received {"type":"OK"}
+15 Apr 2025 19:11:18,761 INFO  jsonprotocol.ChatServicesJsonProxy 283 logout - logged out
+15 Apr 2025 19:11:18,762 INFO  jsonprotocol.ChatServicesJsonProxy 57 closeConnection - closing connection
+15 Apr 2025 19:11:23,642 ERROR jsonprotocol.ChatServicesJsonProxy$ReaderThread 343 run - Reading error java.net.SocketException: Connection reset
+15 Apr 2025 19:11:23,644 INFO  jsonprotocol.ChatServicesJsonProxy 62 closeConnection - ajunge aici
+15 Apr 2025 19:11:23,645 INFO  jsonprotocol.ChatServicesJsonProxy 65 closeConnection - connection closed
+15 Apr 2025 19:11:23,645 INFO  org.example.Principal 180 buttonLogOut_Click - ajunge aici
+15 Apr 2025 19:11:39,650 DEBUG org.example.StartClient 28 start - In start
+15 Apr 2025 19:11:39,655 INFO  org.example.StartClient 32 start - Client properties set {chat.server.port=55556, chat.server.host=localhost} 
+15 Apr 2025 19:11:39,656 INFO  org.example.StartClient 48 start - Using server IP localhost
+15 Apr 2025 19:11:39,657 INFO  org.example.StartClient 49 start - Using server port 55556
+15 Apr 2025 19:11:45,844 INFO  org.example.AutentificareController 44 clickLogIn - 1
+15 Apr 2025 19:11:45,885 INFO  org.example.AutentificareController 48 clickLogIn - 2
+15 Apr 2025 19:11:45,886 INFO  org.example.AutentificareController 49 clickLogIn - 3
+15 Apr 2025 19:11:45,886 INFO  jsonprotocol.ChatServicesJsonProxy 96 userExists - start userExists
+15 Apr 2025 19:11:45,886 INFO  jsonprotocol.ChatServicesJsonProxy 296 initializeConnection - start initialise
+15 Apr 2025 19:11:45,916 INFO  jsonprotocol.ChatServicesJsonProxy 303 initializeConnection - before start reader
+15 Apr 2025 19:11:45,936 INFO  jsonprotocol.ChatServicesJsonProxy 360 readResponse - start read response
+15 Apr 2025 19:11:46,241 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 330 run - response received {"type":"OK","user":{"username":"octa","password":"pass","id":23}}
+15 Apr 2025 19:11:46,250 INFO  org.example.Principal 102 initializareCombobox - Incepere initializareCombobox
+15 Apr 2025 19:11:46,250 INFO  jsonprotocol.ChatServicesJsonProxy 118 getAllTeams - start getallTeams
+15 Apr 2025 19:11:46,251 INFO  jsonprotocol.ChatServicesJsonProxy 360 readResponse - start read response
+15 Apr 2025 19:11:46,301 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 330 run - response received {"type":"OK","echipe":["Seat","Yamaha","Skoda","VW","1","2","3","4","5","6","fierarii","10"]}
+15 Apr 2025 19:11:46,302 INFO  jsonprotocol.ChatServicesJsonProxy 123 getAllTeams - echipe returnate: 12
+15 Apr 2025 19:11:46,302 INFO  jsonprotocol.ChatServicesJsonProxy 136 getCapacitati - start getCapacitati
+15 Apr 2025 19:11:46,303 INFO  jsonprotocol.ChatServicesJsonProxy 360 readResponse - start read response
+15 Apr 2025 19:11:46,363 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 330 run - response received {"type":"OK","capacitatiMotor":[125,250]}
+15 Apr 2025 19:11:46,364 INFO  jsonprotocol.ChatServicesJsonProxy 141 getCapacitati - echipe returnate: 2
+15 Apr 2025 19:11:46,365 INFO  org.example.Principal 111 initializareCombobox - final initializareCombobox
+15 Apr 2025 19:11:46,366 INFO  org.example.Principal 120 loadTabelParticipanti - Incepere loadTabelParticipanti
+15 Apr 2025 19:11:46,366 INFO  jsonprotocol.ChatServicesJsonProxy 171 getAllParticipanti - start getAllParticipanti
+15 Apr 2025 19:11:46,366 INFO  jsonprotocol.ChatServicesJsonProxy 360 readResponse - start read response
+15 Apr 2025 19:11:46,424 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 330 run - response received {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13}]}
+15 Apr 2025 19:11:46,425 INFO  jsonprotocol.ChatServicesJsonProxy 176 getAllParticipanti - participanti returnati: 13
+15 Apr 2025 19:11:46,426 INFO  org.example.Principal 130 loadTabelParticipanti - final loadTabelParticipanti
+15 Apr 2025 19:11:46,426 INFO  org.example.Principal 143 loadTabelCurse - Incepere loadTabelCurse
+15 Apr 2025 19:11:46,426 INFO  jsonprotocol.ChatServicesJsonProxy 207 getAllCurse - start getallCurse
+15 Apr 2025 19:11:46,426 INFO  jsonprotocol.ChatServicesJsonProxy 360 readResponse - start read response
+15 Apr 2025 19:11:46,487 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 330 run - response received {"type":"OK","curse":[{"numarParticipanti":17,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 19:11:46,488 INFO  jsonprotocol.ChatServicesJsonProxy 212 getAllCurse - participanti returnati: 2
+15 Apr 2025 19:11:46,488 INFO  org.example.Principal 154 loadTabelCurse - final loadTabelCurse
+15 Apr 2025 19:11:49,321 INFO  jsonprotocol.ChatServicesJsonProxy 278 logout - start logout
+15 Apr 2025 19:11:49,321 INFO  jsonprotocol.ChatServicesJsonProxy 360 readResponse - start read response
+15 Apr 2025 19:11:49,322 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 330 run - response received {"type":"OK"}
+15 Apr 2025 19:11:49,322 INFO  jsonprotocol.ChatServicesJsonProxy 283 logout - logged out
+15 Apr 2025 19:11:49,322 INFO  jsonprotocol.ChatServicesJsonProxy 57 closeConnection - closing connection
+15 Apr 2025 19:11:53,115 ERROR jsonprotocol.ChatServicesJsonProxy$ReaderThread 343 run - Reading error java.net.SocketException: Connection reset
+15 Apr 2025 19:11:53,116 INFO  jsonprotocol.ChatServicesJsonProxy 61 closeConnection - ajunge aici
+15 Apr 2025 19:11:53,117 INFO  jsonprotocol.ChatServicesJsonProxy 65 closeConnection - connection closed
+15 Apr 2025 19:11:53,117 INFO  org.example.Principal 180 buttonLogOut_Click - ajunge aici
+15 Apr 2025 19:13:42,273 DEBUG org.example.StartClient 28 start - In start
+15 Apr 2025 19:13:42,276 INFO  org.example.StartClient 32 start - Client properties set {chat.server.port=55556, chat.server.host=localhost} 
+15 Apr 2025 19:13:42,277 INFO  org.example.StartClient 48 start - Using server IP localhost
+15 Apr 2025 19:13:42,277 INFO  org.example.StartClient 49 start - Using server port 55556
+15 Apr 2025 19:14:13,760 INFO  org.example.AutentificareController 44 clickLogIn - 1
+15 Apr 2025 19:14:13,818 INFO  org.example.AutentificareController 48 clickLogIn - 2
+15 Apr 2025 19:14:13,818 INFO  org.example.AutentificareController 49 clickLogIn - 3
+15 Apr 2025 19:14:13,818 INFO  jsonprotocol.ChatServicesJsonProxy 95 userExists - start userExists
+15 Apr 2025 19:14:13,818 INFO  jsonprotocol.ChatServicesJsonProxy 295 initializeConnection - start initialise
+15 Apr 2025 19:14:13,858 INFO  jsonprotocol.ChatServicesJsonProxy 302 initializeConnection - before start reader
+15 Apr 2025 19:14:13,872 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:14:14,724 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"OK","user":{"username":"octa","password":"pass","id":23}}
+15 Apr 2025 19:14:14,728 INFO  org.example.Principal 102 initializareCombobox - Incepere initializareCombobox
+15 Apr 2025 19:14:14,729 INFO  jsonprotocol.ChatServicesJsonProxy 117 getAllTeams - start getallTeams
+15 Apr 2025 19:14:14,729 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:14:14,781 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"OK","echipe":["Seat","Yamaha","Skoda","VW","1","2","3","4","5","6","fierarii","10"]}
+15 Apr 2025 19:14:14,781 INFO  jsonprotocol.ChatServicesJsonProxy 122 getAllTeams - echipe returnate: 12
+15 Apr 2025 19:14:14,782 INFO  jsonprotocol.ChatServicesJsonProxy 135 getCapacitati - start getCapacitati
+15 Apr 2025 19:14:14,782 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:14:14,844 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"OK","capacitatiMotor":[125,250]}
+15 Apr 2025 19:14:14,844 INFO  jsonprotocol.ChatServicesJsonProxy 140 getCapacitati - echipe returnate: 2
+15 Apr 2025 19:14:14,847 INFO  org.example.Principal 111 initializareCombobox - final initializareCombobox
+15 Apr 2025 19:14:14,848 INFO  org.example.Principal 120 loadTabelParticipanti - Incepere loadTabelParticipanti
+15 Apr 2025 19:14:14,848 INFO  jsonprotocol.ChatServicesJsonProxy 170 getAllParticipanti - start getAllParticipanti
+15 Apr 2025 19:14:14,848 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:14:14,905 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13}]}
+15 Apr 2025 19:14:14,907 INFO  jsonprotocol.ChatServicesJsonProxy 175 getAllParticipanti - participanti returnati: 13
+15 Apr 2025 19:14:14,907 INFO  org.example.Principal 130 loadTabelParticipanti - final loadTabelParticipanti
+15 Apr 2025 19:14:14,908 INFO  org.example.Principal 143 loadTabelCurse - Incepere loadTabelCurse
+15 Apr 2025 19:14:14,908 INFO  jsonprotocol.ChatServicesJsonProxy 206 getAllCurse - start getallCurse
+15 Apr 2025 19:14:14,908 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:14:14,967 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"OK","curse":[{"numarParticipanti":17,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 19:14:14,968 INFO  jsonprotocol.ChatServicesJsonProxy 211 getAllCurse - participanti returnati: 2
+15 Apr 2025 19:14:14,968 INFO  org.example.Principal 154 loadTabelCurse - final loadTabelCurse
+15 Apr 2025 19:14:17,778 INFO  jsonprotocol.ChatServicesJsonProxy 277 logout - start logout
+15 Apr 2025 19:14:17,779 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:14:17,782 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"OK"}
+15 Apr 2025 19:14:17,782 INFO  jsonprotocol.ChatServicesJsonProxy 282 logout - logged out
+15 Apr 2025 19:14:17,783 INFO  jsonprotocol.ChatServicesJsonProxy 57 closeConnection - closing connection
+15 Apr 2025 19:14:17,786 INFO  jsonprotocol.ChatServicesJsonProxy 64 closeConnection - connection closed
+15 Apr 2025 19:14:17,787 ERROR jsonprotocol.ChatServicesJsonProxy$ReaderThread 342 run - Reading error java.net.SocketException: Socket closed
+15 Apr 2025 19:14:17,787 INFO  org.example.Principal 180 buttonLogOut_Click - ajunge aici
+15 Apr 2025 19:14:24,259 INFO  org.example.AutentificareController 44 clickLogIn - 1
+15 Apr 2025 19:14:24,266 INFO  org.example.AutentificareController 48 clickLogIn - 2
+15 Apr 2025 19:14:24,266 INFO  org.example.AutentificareController 49 clickLogIn - 3
+15 Apr 2025 19:14:24,266 INFO  jsonprotocol.ChatServicesJsonProxy 95 userExists - start userExists
+15 Apr 2025 19:14:24,267 INFO  jsonprotocol.ChatServicesJsonProxy 295 initializeConnection - start initialise
+15 Apr 2025 19:14:24,267 INFO  jsonprotocol.ChatServicesJsonProxy 302 initializeConnection - before start reader
+15 Apr 2025 19:14:24,269 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:14:24,273 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"OK","user":{"username":"octa","password":"pass","id":23}}
+15 Apr 2025 19:14:24,274 INFO  org.example.Principal 102 initializareCombobox - Incepere initializareCombobox
+15 Apr 2025 19:14:24,274 INFO  jsonprotocol.ChatServicesJsonProxy 117 getAllTeams - start getallTeams
+15 Apr 2025 19:14:24,274 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:14:24,335 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"OK","echipe":["Seat","Yamaha","Skoda","VW","1","2","3","4","5","6","fierarii","10"]}
+15 Apr 2025 19:14:24,336 INFO  jsonprotocol.ChatServicesJsonProxy 122 getAllTeams - echipe returnate: 12
+15 Apr 2025 19:14:24,336 INFO  jsonprotocol.ChatServicesJsonProxy 135 getCapacitati - start getCapacitati
+15 Apr 2025 19:14:24,336 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:14:24,396 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"OK","capacitatiMotor":[125,250]}
+15 Apr 2025 19:14:24,396 INFO  jsonprotocol.ChatServicesJsonProxy 140 getCapacitati - echipe returnate: 2
+15 Apr 2025 19:14:24,397 INFO  org.example.Principal 111 initializareCombobox - final initializareCombobox
+15 Apr 2025 19:14:24,397 INFO  org.example.Principal 120 loadTabelParticipanti - Incepere loadTabelParticipanti
+15 Apr 2025 19:14:24,397 INFO  jsonprotocol.ChatServicesJsonProxy 170 getAllParticipanti - start getAllParticipanti
+15 Apr 2025 19:14:24,397 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:14:24,458 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13}]}
+15 Apr 2025 19:14:24,459 INFO  jsonprotocol.ChatServicesJsonProxy 175 getAllParticipanti - participanti returnati: 13
+15 Apr 2025 19:14:24,459 INFO  org.example.Principal 130 loadTabelParticipanti - final loadTabelParticipanti
+15 Apr 2025 19:14:24,459 INFO  org.example.Principal 143 loadTabelCurse - Incepere loadTabelCurse
+15 Apr 2025 19:14:24,459 INFO  jsonprotocol.ChatServicesJsonProxy 206 getAllCurse - start getallCurse
+15 Apr 2025 19:14:24,460 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:14:24,521 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"OK","curse":[{"numarParticipanti":17,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 19:14:24,522 INFO  jsonprotocol.ChatServicesJsonProxy 211 getAllCurse - participanti returnati: 2
+15 Apr 2025 19:14:24,522 INFO  org.example.Principal 154 loadTabelCurse - final loadTabelCurse
+15 Apr 2025 19:14:37,336 DEBUG org.example.StartClient 28 start - In start
+15 Apr 2025 19:14:37,339 INFO  org.example.StartClient 32 start - Client properties set {chat.server.port=55556, chat.server.host=localhost} 
+15 Apr 2025 19:14:37,340 INFO  org.example.StartClient 48 start - Using server IP localhost
+15 Apr 2025 19:14:37,340 INFO  org.example.StartClient 49 start - Using server port 55556
+15 Apr 2025 19:14:42,681 INFO  org.example.AutentificareController 44 clickLogIn - 1
+15 Apr 2025 19:14:42,723 INFO  org.example.AutentificareController 48 clickLogIn - 2
+15 Apr 2025 19:14:42,723 INFO  org.example.AutentificareController 49 clickLogIn - 3
+15 Apr 2025 19:14:42,723 INFO  jsonprotocol.ChatServicesJsonProxy 95 userExists - start userExists
+15 Apr 2025 19:14:42,724 INFO  jsonprotocol.ChatServicesJsonProxy 295 initializeConnection - start initialise
+15 Apr 2025 19:14:42,766 INFO  jsonprotocol.ChatServicesJsonProxy 302 initializeConnection - before start reader
+15 Apr 2025 19:14:42,784 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:14:42,787 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"ERROR","errorMessage":"utilizatorul nu a fost gasit"}
+15 Apr 2025 19:14:42,790 INFO  jsonprotocol.ChatServicesJsonProxy 57 closeConnection - closing connection
+15 Apr 2025 19:14:42,792 ERROR jsonprotocol.ChatServicesJsonProxy$ReaderThread 342 run - Reading error java.net.SocketException: Socket closed
+15 Apr 2025 19:14:42,792 INFO  jsonprotocol.ChatServicesJsonProxy 64 closeConnection - connection closed
+15 Apr 2025 19:14:52,334 INFO  org.example.AutentificareController 44 clickLogIn - 1
+15 Apr 2025 19:14:52,343 INFO  org.example.AutentificareController 48 clickLogIn - 2
+15 Apr 2025 19:14:52,343 INFO  org.example.AutentificareController 49 clickLogIn - 3
+15 Apr 2025 19:14:52,343 INFO  jsonprotocol.ChatServicesJsonProxy 95 userExists - start userExists
+15 Apr 2025 19:14:52,343 INFO  jsonprotocol.ChatServicesJsonProxy 295 initializeConnection - start initialise
+15 Apr 2025 19:14:52,344 INFO  jsonprotocol.ChatServicesJsonProxy 302 initializeConnection - before start reader
+15 Apr 2025 19:14:52,345 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:14:52,354 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"OK","user":{"username":"octa2","password":"pass","id":44}}
+15 Apr 2025 19:14:52,357 INFO  org.example.Principal 102 initializareCombobox - Incepere initializareCombobox
+15 Apr 2025 19:14:52,357 INFO  jsonprotocol.ChatServicesJsonProxy 117 getAllTeams - start getallTeams
+15 Apr 2025 19:14:52,357 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:14:52,415 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"OK","echipe":["Seat","Yamaha","Skoda","VW","1","2","3","4","5","6","fierarii","10"]}
+15 Apr 2025 19:14:52,416 INFO  jsonprotocol.ChatServicesJsonProxy 122 getAllTeams - echipe returnate: 12
+15 Apr 2025 19:14:52,416 INFO  jsonprotocol.ChatServicesJsonProxy 135 getCapacitati - start getCapacitati
+15 Apr 2025 19:14:52,416 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:14:52,475 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"OK","capacitatiMotor":[125,250]}
+15 Apr 2025 19:14:52,475 INFO  jsonprotocol.ChatServicesJsonProxy 140 getCapacitati - echipe returnate: 2
+15 Apr 2025 19:14:52,477 INFO  org.example.Principal 111 initializareCombobox - final initializareCombobox
+15 Apr 2025 19:14:52,478 INFO  org.example.Principal 120 loadTabelParticipanti - Incepere loadTabelParticipanti
+15 Apr 2025 19:14:52,478 INFO  jsonprotocol.ChatServicesJsonProxy 170 getAllParticipanti - start getAllParticipanti
+15 Apr 2025 19:14:52,478 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:14:52,542 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13}]}
+15 Apr 2025 19:14:52,542 INFO  jsonprotocol.ChatServicesJsonProxy 175 getAllParticipanti - participanti returnati: 13
+15 Apr 2025 19:14:52,543 INFO  org.example.Principal 130 loadTabelParticipanti - final loadTabelParticipanti
+15 Apr 2025 19:14:52,543 INFO  org.example.Principal 143 loadTabelCurse - Incepere loadTabelCurse
+15 Apr 2025 19:14:52,543 INFO  jsonprotocol.ChatServicesJsonProxy 206 getAllCurse - start getallCurse
+15 Apr 2025 19:14:52,543 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:14:52,600 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"OK","curse":[{"numarParticipanti":17,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 19:14:52,601 INFO  jsonprotocol.ChatServicesJsonProxy 211 getAllCurse - participanti returnati: 2
+15 Apr 2025 19:14:52,602 INFO  org.example.Principal 154 loadTabelCurse - final loadTabelCurse
+15 Apr 2025 19:15:03,645 INFO  org.example.Principal 162 tabelParticipantiClick - starting tabelParticipantiClick
+15 Apr 2025 19:15:03,645 INFO  jsonprotocol.ChatServicesJsonProxy 242 getCurseForParticipant - start getCurseForParticipant
+15 Apr 2025 19:15:03,647 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:15:03,652 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"OK","curse":[]}
+15 Apr 2025 19:15:03,652 INFO  jsonprotocol.ChatServicesJsonProxy 247 getCurseForParticipant - curse returnati: 0
+15 Apr 2025 19:15:11,682 INFO  org.example.AdaugareParticipant 44 handleInscriere - Incepere handleInscriere
+15 Apr 2025 19:15:11,682 INFO  jsonprotocol.ChatServicesJsonProxy 153 inscrieParticipant - start getCapacitati
+15 Apr 2025 19:15:11,683 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:15:11,708 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"OK"}
+15 Apr 2025 19:15:11,709 INFO  jsonprotocol.ChatServicesJsonProxy 158 inscrieParticipant - participant inscris
+15 Apr 2025 19:15:11,710 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"UPDATE"}
+15 Apr 2025 19:15:11,710 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"UPDATE"}
+15 Apr 2025 19:15:11,712 INFO  org.example.Principal 120 loadTabelParticipanti - Incepere loadTabelParticipanti
+15 Apr 2025 19:15:11,712 INFO  jsonprotocol.ChatServicesJsonProxy 170 getAllParticipanti - start getAllParticipanti
+15 Apr 2025 19:15:11,713 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:15:11,717 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13},{"nume":"isadj","capMotor":125,"echipa":"dji","cnp":"93210","id":14}]}
+15 Apr 2025 19:15:11,719 INFO  jsonprotocol.ChatServicesJsonProxy 175 getAllParticipanti - participanti returnati: 14
+15 Apr 2025 19:15:11,720 INFO  org.example.Principal 130 loadTabelParticipanti - final loadTabelParticipanti
+15 Apr 2025 19:15:11,720 INFO  org.example.Principal 143 loadTabelCurse - Incepere loadTabelCurse
+15 Apr 2025 19:15:11,720 INFO  jsonprotocol.ChatServicesJsonProxy 206 getAllCurse - start getallCurse
+15 Apr 2025 19:15:11,721 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:15:11,761 INFO  org.example.Principal 120 loadTabelParticipanti - Incepere loadTabelParticipanti
+15 Apr 2025 19:15:11,762 INFO  jsonprotocol.ChatServicesJsonProxy 170 getAllParticipanti - start getAllParticipanti
+15 Apr 2025 19:15:11,762 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:15:11,774 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"OK","curse":[{"numarParticipanti":17,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 19:15:11,775 INFO  jsonprotocol.ChatServicesJsonProxy 211 getAllCurse - participanti returnati: 2
+15 Apr 2025 19:15:11,775 INFO  org.example.Principal 154 loadTabelCurse - final loadTabelCurse
+15 Apr 2025 19:15:11,786 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13},{"nume":"isadj","capMotor":125,"echipa":"dji","cnp":"93210","id":14}]}
+15 Apr 2025 19:15:11,788 INFO  jsonprotocol.ChatServicesJsonProxy 175 getAllParticipanti - participanti returnati: 14
+15 Apr 2025 19:15:11,790 INFO  org.example.Principal 130 loadTabelParticipanti - final loadTabelParticipanti
+15 Apr 2025 19:15:11,790 INFO  org.example.Principal 143 loadTabelCurse - Incepere loadTabelCurse
+15 Apr 2025 19:15:11,791 INFO  jsonprotocol.ChatServicesJsonProxy 206 getAllCurse - start getallCurse
+15 Apr 2025 19:15:11,791 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:15:11,850 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"OK","curse":[{"numarParticipanti":17,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 19:15:11,850 INFO  jsonprotocol.ChatServicesJsonProxy 211 getAllCurse - participanti returnati: 2
+15 Apr 2025 19:15:11,851 INFO  org.example.Principal 154 loadTabelCurse - final loadTabelCurse
+15 Apr 2025 19:15:17,590 INFO  org.example.Principal 162 tabelParticipantiClick - starting tabelParticipantiClick
+15 Apr 2025 19:15:17,591 INFO  jsonprotocol.ChatServicesJsonProxy 242 getCurseForParticipant - start getCurseForParticipant
+15 Apr 2025 19:15:17,591 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:15:17,594 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"OK","curse":[{"numarParticipanti":17,"capMotor":125,"id":1}]}
+15 Apr 2025 19:15:17,594 INFO  jsonprotocol.ChatServicesJsonProxy 247 getCurseForParticipant - curse returnati: 1
+15 Apr 2025 19:15:19,547 INFO  org.example.Principal 218 buttonAdaugareParticipantLaCursa_Click - starting buttonAdaugareParticipantLaCursa_Click
+15 Apr 2025 19:15:19,547 INFO  jsonprotocol.ChatServicesJsonProxy 260 adaugaInscriere - start adaugaInscriere
+15 Apr 2025 19:15:19,547 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:15:19,566 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"OK"}
+15 Apr 2025 19:15:19,567 INFO  jsonprotocol.ChatServicesJsonProxy 265 adaugaInscriere - inscriere adaugata
+15 Apr 2025 19:15:19,567 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"UPDATE"}
+15 Apr 2025 19:15:19,568 INFO  org.example.Principal 225 buttonAdaugareParticipantLaCursa_Click - final buttonAdaugareParticipantLaCursa_Click
+15 Apr 2025 19:15:19,570 INFO  org.example.Principal 120 loadTabelParticipanti - Incepere loadTabelParticipanti
+15 Apr 2025 19:15:19,570 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"UPDATE"}
+15 Apr 2025 19:15:19,571 INFO  jsonprotocol.ChatServicesJsonProxy 170 getAllParticipanti - start getAllParticipanti
+15 Apr 2025 19:15:19,571 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:15:19,571 INFO  org.example.Principal 120 loadTabelParticipanti - Incepere loadTabelParticipanti
+15 Apr 2025 19:15:19,572 INFO  jsonprotocol.ChatServicesJsonProxy 170 getAllParticipanti - start getAllParticipanti
+15 Apr 2025 19:15:19,572 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:15:19,575 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13},{"nume":"isadj","capMotor":125,"echipa":"dji","cnp":"93210","id":14}]}
+15 Apr 2025 19:15:19,576 INFO  jsonprotocol.ChatServicesJsonProxy 175 getAllParticipanti - participanti returnati: 14
+15 Apr 2025 19:15:19,576 INFO  org.example.Principal 130 loadTabelParticipanti - final loadTabelParticipanti
+15 Apr 2025 19:15:19,577 INFO  org.example.Principal 143 loadTabelCurse - Incepere loadTabelCurse
+15 Apr 2025 19:15:19,577 INFO  jsonprotocol.ChatServicesJsonProxy 206 getAllCurse - start getallCurse
+15 Apr 2025 19:15:19,577 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:15:19,631 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"OK","curse":[{"numarParticipanti":18,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 19:15:19,631 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13},{"nume":"isadj","capMotor":125,"echipa":"dji","cnp":"93210","id":14}]}
+15 Apr 2025 19:15:19,631 INFO  jsonprotocol.ChatServicesJsonProxy 211 getAllCurse - participanti returnati: 2
+15 Apr 2025 19:15:19,632 INFO  jsonprotocol.ChatServicesJsonProxy 175 getAllParticipanti - participanti returnati: 14
+15 Apr 2025 19:15:19,632 INFO  org.example.Principal 154 loadTabelCurse - final loadTabelCurse
+15 Apr 2025 19:15:19,633 INFO  org.example.Principal 130 loadTabelParticipanti - final loadTabelParticipanti
+15 Apr 2025 19:15:19,633 INFO  org.example.Principal 143 loadTabelCurse - Incepere loadTabelCurse
+15 Apr 2025 19:15:19,633 INFO  jsonprotocol.ChatServicesJsonProxy 206 getAllCurse - start getallCurse
+15 Apr 2025 19:15:19,634 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:15:19,692 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"OK","curse":[{"numarParticipanti":18,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 19:15:19,693 INFO  jsonprotocol.ChatServicesJsonProxy 211 getAllCurse - participanti returnati: 2
+15 Apr 2025 19:15:19,693 INFO  org.example.Principal 154 loadTabelCurse - final loadTabelCurse
+15 Apr 2025 19:15:21,171 INFO  jsonprotocol.ChatServicesJsonProxy 277 logout - start logout
+15 Apr 2025 19:15:21,171 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:15:21,172 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"OK"}
+15 Apr 2025 19:15:21,173 INFO  jsonprotocol.ChatServicesJsonProxy 282 logout - logged out
+15 Apr 2025 19:15:21,173 INFO  jsonprotocol.ChatServicesJsonProxy 57 closeConnection - closing connection
+15 Apr 2025 19:15:21,174 ERROR jsonprotocol.ChatServicesJsonProxy$ReaderThread 342 run - Reading error java.net.SocketException: Socket closed
+15 Apr 2025 19:15:21,174 INFO  jsonprotocol.ChatServicesJsonProxy 64 closeConnection - connection closed
+15 Apr 2025 19:15:21,174 INFO  org.example.Principal 180 buttonLogOut_Click - ajunge aici
+15 Apr 2025 19:15:21,984 INFO  jsonprotocol.ChatServicesJsonProxy 277 logout - start logout
+15 Apr 2025 19:15:21,984 INFO  jsonprotocol.ChatServicesJsonProxy 359 readResponse - start read response
+15 Apr 2025 19:15:21,986 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 329 run - response received {"type":"OK"}
+15 Apr 2025 19:15:21,986 INFO  jsonprotocol.ChatServicesJsonProxy 282 logout - logged out
+15 Apr 2025 19:15:21,986 INFO  jsonprotocol.ChatServicesJsonProxy 57 closeConnection - closing connection
+15 Apr 2025 19:15:21,987 ERROR jsonprotocol.ChatServicesJsonProxy$ReaderThread 342 run - Reading error java.net.SocketException: Socket closed
+15 Apr 2025 19:15:21,987 INFO  jsonprotocol.ChatServicesJsonProxy 64 closeConnection - connection closed
+15 Apr 2025 19:15:21,987 INFO  org.example.Principal 180 buttonLogOut_Click - ajunge aici

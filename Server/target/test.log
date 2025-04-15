@@ -3093,3 +3093,817 @@
 12 Apr 2025 01:02:49,069 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7c9f5f2c)
 12 Apr 2025 01:02:49,069 INFO  org.example.CursaDBRepository 89 getAll - Returning 2 curse
 12 Apr 2025 01:02:49,069 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[{"numarParticipanti":16,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 18:19:47,895 INFO  org.server.StartServer 24 main - Server properties set. {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite} 
+15 Apr 2025 18:19:47,992 INFO  org.example.CursaDBRepository 18 <init> - CursaDBRepository initialized
+15 Apr 2025 18:19:47,996 INFO  org.example.ParticipantDBRepository 21 <init> - Initializing AngajatDBRepository with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 18:19:47,999 INFO  org.example.InscriereDBRepository 29 <init> - InscriereDBRepository initialized
+15 Apr 2025 18:19:48,004 INFO  org.example.UserDBRepository 17 <init> - UserDBRepository initialized with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 18:19:48,069 DEBUG org.server.StartServer 39 main - Starting server on port: 55556
+15 Apr 2025 18:19:48,071 DEBUG org.example.utils.AbsConcurrentServer 12 <init> - Concurrent AbstractServer
+15 Apr 2025 18:19:48,071 INFO  jsonprotocol.ChatJsonConcurrentServer 16 <init> - Chat-ChatJsonConcurrentServer
+15 Apr 2025 18:19:48,101 INFO  org.example.utils.AbstractServer 22 start - Waiting for clients ...
+15 Apr 2025 18:20:05,454 INFO  org.example.utils.AbstractServer 24 start - Client connected ...
+15 Apr 2025 18:20:05,515 INFO  org.example.utils.AbstractServer 22 start - Waiting for clients ...
+15 Apr 2025 18:20:05,536 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request LOGIN
+15 Apr 2025 18:20:05,538 DEBUG jsonprotocol.ChatClientJsonWorker 81 handleRequest - Login request ...{}User{username='octa', password='pass'}
+15 Apr 2025 18:20:05,538 INFO  org.example.UserDBRepository 148 getUserByUsernameAndPassword - Retrieving user with username octa and password
+15 Apr 2025 18:20:05,542 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:20:05,542 TRACE org.example.JdbcUtils 21 getNewConnection - Enter
+15 Apr 2025 18:20:05,542 INFO  org.example.JdbcUtils 23 getNewConnection - Connecting to jdbc:sqlite:Moto.sqlite
+15 Apr 2025 18:20:06,126 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@677bdcf1)
+15 Apr 2025 18:20:06,132 INFO  org.example.UserDBRepository 158 getUserByUsernameAndPassword - User found: octa
+15 Apr 2025 18:20:06,139 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","user":{"username":"octa","password":"pass","id":23}}
+15 Apr 2025 18:20:06,198 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_TEAMS
+15 Apr 2025 18:20:06,199 INFO  org.example.ParticipantDBRepository 113 getEchipe - Fetching all team names
+15 Apr 2025 18:20:06,199 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:20:06,200 TRACE org.example.JdbcUtils 21 getNewConnection - Enter
+15 Apr 2025 18:20:06,200 INFO  org.example.JdbcUtils 23 getNewConnection - Connecting to jdbc:sqlite:Moto.sqlite
+15 Apr 2025 18:20:06,201 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5370b3ad)
+15 Apr 2025 18:20:06,202 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","echipe":["Seat","Yamaha","Skoda","VW","1","2","3","4","5","6","fierarii"]}
+15 Apr 2025 18:20:06,259 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_CAPACITATI
+15 Apr 2025 18:20:06,260 INFO  org.example.CursaDBRepository 95 getCapacitati - Fetching all motor capacities
+15 Apr 2025 18:20:06,260 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:20:06,260 TRACE org.example.JdbcUtils 21 getNewConnection - Enter
+15 Apr 2025 18:20:06,261 INFO  org.example.JdbcUtils 23 getNewConnection - Connecting to jdbc:sqlite:Moto.sqlite
+15 Apr 2025 18:20:06,263 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7c9f5f2c)
+15 Apr 2025 18:20:06,264 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","capacitatiMotor":[125,250]}
+15 Apr 2025 18:20:06,321 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_PARTICIPANTI
+15 Apr 2025 18:20:06,322 INFO  org.example.ParticipantDBRepository 90 getAll - Fetching all Participants
+15 Apr 2025 18:20:06,322 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:20:06,322 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5370b3ad)
+15 Apr 2025 18:20:06,324 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12}]}
+15 Apr 2025 18:20:06,387 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_CURSE
+15 Apr 2025 18:20:06,388 INFO  org.example.CursaDBRepository 76 getAll - Fetching all Curse
+15 Apr 2025 18:20:06,389 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:20:06,390 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7c9f5f2c)
+15 Apr 2025 18:20:06,392 INFO  org.example.CursaDBRepository 89 getAll - Returning 2 curse
+15 Apr 2025 18:20:06,393 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[{"numarParticipanti":16,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 18:20:11,264 INFO  org.example.utils.AbstractServer 24 start - Client connected ...
+15 Apr 2025 18:20:11,265 INFO  org.example.utils.AbstractServer 22 start - Waiting for clients ...
+15 Apr 2025 18:20:11,280 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request LOGIN
+15 Apr 2025 18:20:11,281 DEBUG jsonprotocol.ChatClientJsonWorker 81 handleRequest - Login request ...{}User{username='octa2', password='pass'}
+15 Apr 2025 18:20:11,281 INFO  org.example.UserDBRepository 148 getUserByUsernameAndPassword - Retrieving user with username octa2 and password
+15 Apr 2025 18:20:11,282 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:20:11,282 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@677bdcf1)
+15 Apr 2025 18:20:11,283 INFO  org.example.UserDBRepository 158 getUserByUsernameAndPassword - User found: octa2
+15 Apr 2025 18:20:11,284 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","user":{"username":"octa2","password":"pass","id":44}}
+15 Apr 2025 18:20:11,349 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_TEAMS
+15 Apr 2025 18:20:11,350 INFO  org.example.ParticipantDBRepository 113 getEchipe - Fetching all team names
+15 Apr 2025 18:20:11,351 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:20:11,351 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5370b3ad)
+15 Apr 2025 18:20:11,353 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","echipe":["Seat","Yamaha","Skoda","VW","1","2","3","4","5","6","fierarii"]}
+15 Apr 2025 18:20:11,411 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_CAPACITATI
+15 Apr 2025 18:20:11,411 INFO  org.example.CursaDBRepository 95 getCapacitati - Fetching all motor capacities
+15 Apr 2025 18:20:11,412 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:20:11,412 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7c9f5f2c)
+15 Apr 2025 18:20:11,413 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","capacitatiMotor":[125,250]}
+15 Apr 2025 18:20:11,474 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_PARTICIPANTI
+15 Apr 2025 18:20:11,475 INFO  org.example.ParticipantDBRepository 90 getAll - Fetching all Participants
+15 Apr 2025 18:20:11,476 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:20:11,476 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5370b3ad)
+15 Apr 2025 18:20:11,478 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12}]}
+15 Apr 2025 18:20:11,536 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_CURSE
+15 Apr 2025 18:20:11,537 INFO  org.example.CursaDBRepository 76 getAll - Fetching all Curse
+15 Apr 2025 18:20:11,537 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:20:11,537 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7c9f5f2c)
+15 Apr 2025 18:20:11,538 INFO  org.example.CursaDBRepository 89 getAll - Returning 2 curse
+15 Apr 2025 18:20:11,539 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[{"numarParticipanti":16,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 18:20:17,175 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_CURSE_BY_PARTICIPANT
+15 Apr 2025 18:20:17,176 INFO  org.example.InscriereDBRepository 99 getCursePosibilePentruParticipant - getCursePosibilePentruParticipant 12
+15 Apr 2025 18:20:17,177 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:20:17,177 TRACE org.example.JdbcUtils 21 getNewConnection - Enter
+15 Apr 2025 18:20:17,177 INFO  org.example.JdbcUtils 23 getNewConnection - Connecting to jdbc:sqlite:Moto.sqlite
+15 Apr 2025 18:20:17,179 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@24571147)
+15 Apr 2025 18:20:17,180 INFO  org.example.InscriereDBRepository 119 getCursePosibilePentruParticipant - Curse fetched successfully
+15 Apr 2025 18:20:17,181 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[]}
+15 Apr 2025 18:20:25,423 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_PARTICIPANTI_BY_ECHIPE
+15 Apr 2025 18:20:25,423 INFO  org.example.ParticipantDBRepository 65 getAllByTeam - Getting all Participants by team Skoda
+15 Apr 2025 18:20:25,424 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:20:25,424 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5370b3ad)
+15 Apr 2025 18:20:25,425 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","participanti":[{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4}]}
+15 Apr 2025 18:20:27,037 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_PARTICIPANTI_BY_ECHIPE
+15 Apr 2025 18:20:27,038 INFO  org.example.ParticipantDBRepository 65 getAllByTeam - Getting all Participants by team 1
+15 Apr 2025 18:20:27,038 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:20:27,039 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5370b3ad)
+15 Apr 2025 18:20:27,040 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","participanti":[{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6}]}
+15 Apr 2025 18:20:28,068 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_CURSE_BY_CAP
+15 Apr 2025 18:20:28,069 INFO  org.example.CursaDBRepository 128 getCurseByCap - Fetching all Curse with motor capacity 125
+15 Apr 2025 18:20:28,069 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:20:28,069 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7c9f5f2c)
+15 Apr 2025 18:20:28,071 INFO  org.example.CursaDBRepository 142 getCurseByCap - Returning 1 curse
+15 Apr 2025 18:20:28,071 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[{"numarParticipanti":16,"capMotor":125,"id":1}]}
+15 Apr 2025 18:20:30,036 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_PARTICIPANTI
+15 Apr 2025 18:20:30,036 INFO  org.example.ParticipantDBRepository 90 getAll - Fetching all Participants
+15 Apr 2025 18:20:30,037 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:20:30,037 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5370b3ad)
+15 Apr 2025 18:20:30,039 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12}]}
+15 Apr 2025 18:20:43,357 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_CURSE_BY_PARTICIPANT
+15 Apr 2025 18:20:43,358 INFO  org.example.InscriereDBRepository 99 getCursePosibilePentruParticipant - getCursePosibilePentruParticipant 1
+15 Apr 2025 18:20:43,358 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:20:43,358 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@24571147)
+15 Apr 2025 18:20:43,360 INFO  org.example.InscriereDBRepository 119 getCursePosibilePentruParticipant - Curse fetched successfully
+15 Apr 2025 18:20:43,360 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[]}
+15 Apr 2025 18:20:43,795 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_CURSE_BY_PARTICIPANT
+15 Apr 2025 18:20:43,795 INFO  org.example.InscriereDBRepository 99 getCursePosibilePentruParticipant - getCursePosibilePentruParticipant 2
+15 Apr 2025 18:20:43,798 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:20:43,799 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@24571147)
+15 Apr 2025 18:20:43,800 INFO  org.example.InscriereDBRepository 119 getCursePosibilePentruParticipant - Curse fetched successfully
+15 Apr 2025 18:20:43,801 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[]}
+15 Apr 2025 18:20:44,280 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_CURSE_BY_PARTICIPANT
+15 Apr 2025 18:20:44,281 INFO  org.example.InscriereDBRepository 99 getCursePosibilePentruParticipant - getCursePosibilePentruParticipant 3
+15 Apr 2025 18:20:44,282 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:20:44,282 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@24571147)
+15 Apr 2025 18:20:44,284 INFO  org.example.InscriereDBRepository 119 getCursePosibilePentruParticipant - Curse fetched successfully
+15 Apr 2025 18:20:44,284 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[]}
+15 Apr 2025 18:20:44,625 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_CURSE_BY_PARTICIPANT
+15 Apr 2025 18:20:44,626 INFO  org.example.InscriereDBRepository 99 getCursePosibilePentruParticipant - getCursePosibilePentruParticipant 4
+15 Apr 2025 18:20:44,626 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:20:44,627 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@24571147)
+15 Apr 2025 18:20:44,628 INFO  org.example.InscriereDBRepository 119 getCursePosibilePentruParticipant - Curse fetched successfully
+15 Apr 2025 18:20:44,629 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[]}
+15 Apr 2025 18:20:45,060 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_CURSE_BY_PARTICIPANT
+15 Apr 2025 18:20:45,061 INFO  org.example.InscriereDBRepository 99 getCursePosibilePentruParticipant - getCursePosibilePentruParticipant 6
+15 Apr 2025 18:20:45,061 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:20:45,062 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@24571147)
+15 Apr 2025 18:20:45,063 INFO  org.example.InscriereDBRepository 119 getCursePosibilePentruParticipant - Curse fetched successfully
+15 Apr 2025 18:20:45,064 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[]}
+15 Apr 2025 18:20:45,980 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_CURSE_BY_PARTICIPANT
+15 Apr 2025 18:20:45,980 INFO  org.example.InscriereDBRepository 99 getCursePosibilePentruParticipant - getCursePosibilePentruParticipant 10
+15 Apr 2025 18:20:45,981 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:20:45,981 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@24571147)
+15 Apr 2025 18:20:45,982 INFO  org.example.InscriereDBRepository 119 getCursePosibilePentruParticipant - Curse fetched successfully
+15 Apr 2025 18:20:45,983 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[]}
+15 Apr 2025 18:20:46,367 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_CURSE_BY_PARTICIPANT
+15 Apr 2025 18:20:46,368 INFO  org.example.InscriereDBRepository 99 getCursePosibilePentruParticipant - getCursePosibilePentruParticipant 12
+15 Apr 2025 18:20:46,368 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:20:46,368 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@24571147)
+15 Apr 2025 18:20:46,369 INFO  org.example.InscriereDBRepository 119 getCursePosibilePentruParticipant - Curse fetched successfully
+15 Apr 2025 18:20:46,370 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[]}
+15 Apr 2025 18:20:59,666 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request ADAUGA_PARTICIPANT
+15 Apr 2025 18:20:59,681 DEBUG jsonprotocol.ChatClientJsonWorker 114 handleRequest - adauga participant ...{}Participant{nume='10', capMotor=125, echipa=10, cnp='2193090213'}
+15 Apr 2025 18:20:59,682 TRACE org.example.ParticipantDBRepository 27 insert - Enter Inserting new Participant
+15 Apr 2025 18:20:59,683 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:20:59,683 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5370b3ad)
+15 Apr 2025 18:20:59,696 TRACE org.example.ParticipantDBRepository 38 insert - Exit: Inserted new Participant with id13
+15 Apr 2025 18:20:59,697 INFO  org.server.ServiceJSON 115 notify_observers - start notify_observers
+15 Apr 2025 18:20:59,701 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK"}
+15 Apr 2025 18:20:59,702 INFO  jsonprotocol.ChatClientJsonWorker 206 refresh - sending refresh response
+15 Apr 2025 18:20:59,702 INFO  jsonprotocol.ChatClientJsonWorker 206 refresh - sending refresh response
+15 Apr 2025 18:20:59,703 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"UPDATE"}
+15 Apr 2025 18:20:59,703 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"UPDATE"}
+15 Apr 2025 18:20:59,710 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_PARTICIPANTI
+15 Apr 2025 18:20:59,710 INFO  org.example.ParticipantDBRepository 90 getAll - Fetching all Participants
+15 Apr 2025 18:20:59,711 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:20:59,711 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5370b3ad)
+15 Apr 2025 18:20:59,714 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13}]}
+15 Apr 2025 18:20:59,773 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_CURSE
+15 Apr 2025 18:20:59,774 INFO  org.example.CursaDBRepository 76 getAll - Fetching all Curse
+15 Apr 2025 18:20:59,774 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:20:59,774 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7c9f5f2c)
+15 Apr 2025 18:20:59,775 INFO  org.example.CursaDBRepository 89 getAll - Returning 2 curse
+15 Apr 2025 18:20:59,776 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[{"numarParticipanti":16,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 18:20:59,832 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_PARTICIPANTI
+15 Apr 2025 18:20:59,833 INFO  org.example.ParticipantDBRepository 90 getAll - Fetching all Participants
+15 Apr 2025 18:20:59,835 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:20:59,835 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5370b3ad)
+15 Apr 2025 18:20:59,837 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13}]}
+15 Apr 2025 18:20:59,900 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_CURSE_BY_CAP
+15 Apr 2025 18:20:59,901 INFO  org.example.CursaDBRepository 128 getCurseByCap - Fetching all Curse with motor capacity 125
+15 Apr 2025 18:20:59,901 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:20:59,901 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7c9f5f2c)
+15 Apr 2025 18:20:59,902 INFO  org.example.CursaDBRepository 142 getCurseByCap - Returning 1 curse
+15 Apr 2025 18:20:59,903 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[{"numarParticipanti":16,"capMotor":125,"id":1}]}
+15 Apr 2025 18:21:04,360 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_CURSE_BY_PARTICIPANT
+15 Apr 2025 18:21:04,360 INFO  org.example.InscriereDBRepository 99 getCursePosibilePentruParticipant - getCursePosibilePentruParticipant 13
+15 Apr 2025 18:21:04,360 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:21:04,361 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@24571147)
+15 Apr 2025 18:21:04,362 INFO  org.example.InscriereDBRepository 119 getCursePosibilePentruParticipant - Curse fetched successfully
+15 Apr 2025 18:21:04,362 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[{"numarParticipanti":16,"capMotor":125,"id":1}]}
+15 Apr 2025 18:21:08,705 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request ADAUGA_INSCRIERE
+15 Apr 2025 18:21:08,709 DEBUG jsonprotocol.ChatClientJsonWorker 125 handleRequest - adauga inscriere ...{}Participant{nume='10', capMotor=125, echipa=10, cnp='2193090213'} Cursa{numarParticipanti=16, capMotor=125}
+15 Apr 2025 18:21:08,709 INFO  org.server.ServiceJSON 98 adaugaInscriere - start adaugaInscriere in ServiceJSON
+15 Apr 2025 18:21:08,710 INFO  org.example.InscriereDBRepository 34 insert - Inserting new Inscriere
+15 Apr 2025 18:21:08,710 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:21:08,710 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@24571147)
+15 Apr 2025 18:21:08,715 INFO  org.example.InscriereDBRepository 42 insert - Inserted new Inscriere successfully
+15 Apr 2025 18:21:08,716 INFO  org.example.CursaDBRepository 114 increaseNr - Increasing numarParticipanti for Cursa with id 1
+15 Apr 2025 18:21:08,717 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:21:08,717 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7c9f5f2c)
+15 Apr 2025 18:21:08,721 INFO  org.server.ServiceJSON 115 notify_observers - start notify_observers
+15 Apr 2025 18:21:08,722 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK"}
+15 Apr 2025 18:21:08,722 INFO  jsonprotocol.ChatClientJsonWorker 206 refresh - sending refresh response
+15 Apr 2025 18:21:08,722 INFO  jsonprotocol.ChatClientJsonWorker 206 refresh - sending refresh response
+15 Apr 2025 18:21:08,722 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"UPDATE"}
+15 Apr 2025 18:21:08,722 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"UPDATE"}
+15 Apr 2025 18:21:08,725 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_PARTICIPANTI
+15 Apr 2025 18:21:08,726 INFO  org.example.ParticipantDBRepository 90 getAll - Fetching all Participants
+15 Apr 2025 18:21:08,726 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:21:08,726 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5370b3ad)
+15 Apr 2025 18:21:08,729 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13}]}
+15 Apr 2025 18:21:08,772 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_PARTICIPANTI
+15 Apr 2025 18:21:08,773 INFO  org.example.ParticipantDBRepository 90 getAll - Fetching all Participants
+15 Apr 2025 18:21:08,773 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:21:08,773 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5370b3ad)
+15 Apr 2025 18:21:08,775 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13}]}
+15 Apr 2025 18:21:08,788 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_CURSE_BY_CAP
+15 Apr 2025 18:21:08,788 INFO  org.example.CursaDBRepository 128 getCurseByCap - Fetching all Curse with motor capacity 125
+15 Apr 2025 18:21:08,789 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:21:08,789 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7c9f5f2c)
+15 Apr 2025 18:21:08,790 INFO  org.example.CursaDBRepository 142 getCurseByCap - Returning 1 curse
+15 Apr 2025 18:21:08,791 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[{"numarParticipanti":17,"capMotor":125,"id":1}]}
+15 Apr 2025 18:21:08,834 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_CURSE
+15 Apr 2025 18:21:08,835 INFO  org.example.CursaDBRepository 76 getAll - Fetching all Curse
+15 Apr 2025 18:21:08,835 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:21:08,836 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7c9f5f2c)
+15 Apr 2025 18:21:08,837 INFO  org.example.CursaDBRepository 89 getAll - Returning 2 curse
+15 Apr 2025 18:21:08,837 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[{"numarParticipanti":17,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 18:21:12,334 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request LOGOUT
+15 Apr 2025 18:21:12,335 DEBUG jsonprotocol.ChatClientJsonWorker 92 handleRequest - Logout request ...{}User{username='octa', password='pass'}
+15 Apr 2025 18:21:12,335 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK"}
+15 Apr 2025 18:21:34,064 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request LOGOUT
+15 Apr 2025 18:21:34,065 DEBUG jsonprotocol.ChatClientJsonWorker 92 handleRequest - Logout request ...{}User{username='octa2', password='pass'}
+15 Apr 2025 18:21:34,065 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK"}
+15 Apr 2025 18:23:18,861 INFO  org.server.StartServer 24 main - Server properties set. {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite} 
+15 Apr 2025 18:23:18,872 INFO  org.example.CursaDBRepository 18 <init> - CursaDBRepository initialized
+15 Apr 2025 18:23:18,874 INFO  org.example.ParticipantDBRepository 21 <init> - Initializing AngajatDBRepository with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 18:23:18,875 INFO  org.example.InscriereDBRepository 29 <init> - InscriereDBRepository initialized
+15 Apr 2025 18:23:18,876 INFO  org.example.UserDBRepository 17 <init> - UserDBRepository initialized with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 18:23:18,879 DEBUG org.server.StartServer 39 main - Starting server on port: 55556
+15 Apr 2025 18:23:18,880 DEBUG org.example.utils.AbsConcurrentServer 12 <init> - Concurrent AbstractServer
+15 Apr 2025 18:23:18,881 INFO  jsonprotocol.ChatJsonConcurrentServer 16 <init> - Chat-ChatJsonConcurrentServer
+15 Apr 2025 18:23:18,890 INFO  org.example.utils.AbstractServer 22 start - Waiting for clients ...
+15 Apr 2025 18:23:32,274 INFO  org.example.utils.AbstractServer 24 start - Client connected ...
+15 Apr 2025 18:23:32,320 INFO  org.example.utils.AbstractServer 22 start - Waiting for clients ...
+15 Apr 2025 18:23:32,335 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request LOGIN
+15 Apr 2025 18:23:32,337 DEBUG jsonprotocol.ChatClientJsonWorker 81 handleRequest - Login request ...{}User{username='octa', password='pass'}
+15 Apr 2025 18:23:32,337 INFO  org.example.UserDBRepository 148 getUserByUsernameAndPassword - Retrieving user with username octa and password
+15 Apr 2025 18:23:32,339 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:23:32,339 TRACE org.example.JdbcUtils 21 getNewConnection - Enter
+15 Apr 2025 18:23:32,339 INFO  org.example.JdbcUtils 23 getNewConnection - Connecting to jdbc:sqlite:Moto.sqlite
+15 Apr 2025 18:23:32,882 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@531b4f91)
+15 Apr 2025 18:23:32,886 INFO  org.example.UserDBRepository 158 getUserByUsernameAndPassword - User found: octa
+15 Apr 2025 18:23:32,892 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","user":{"username":"octa","password":"pass","id":23}}
+15 Apr 2025 18:23:32,957 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_TEAMS
+15 Apr 2025 18:23:32,958 INFO  org.example.ParticipantDBRepository 113 getEchipe - Fetching all team names
+15 Apr 2025 18:23:32,958 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:23:32,959 TRACE org.example.JdbcUtils 21 getNewConnection - Enter
+15 Apr 2025 18:23:32,959 INFO  org.example.JdbcUtils 23 getNewConnection - Connecting to jdbc:sqlite:Moto.sqlite
+15 Apr 2025 18:23:32,960 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@dff11e)
+15 Apr 2025 18:23:32,961 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","echipe":["Seat","Yamaha","Skoda","VW","1","2","3","4","5","6","fierarii","10"]}
+15 Apr 2025 18:23:33,021 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_CAPACITATI
+15 Apr 2025 18:23:33,022 INFO  org.example.CursaDBRepository 95 getCapacitati - Fetching all motor capacities
+15 Apr 2025 18:23:33,022 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:23:33,022 TRACE org.example.JdbcUtils 21 getNewConnection - Enter
+15 Apr 2025 18:23:33,022 INFO  org.example.JdbcUtils 23 getNewConnection - Connecting to jdbc:sqlite:Moto.sqlite
+15 Apr 2025 18:23:33,023 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7f993599)
+15 Apr 2025 18:23:33,024 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","capacitatiMotor":[125,250]}
+15 Apr 2025 18:23:33,084 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_PARTICIPANTI
+15 Apr 2025 18:23:33,085 INFO  org.example.ParticipantDBRepository 90 getAll - Fetching all Participants
+15 Apr 2025 18:23:33,086 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:23:33,086 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@dff11e)
+15 Apr 2025 18:23:33,089 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13}]}
+15 Apr 2025 18:23:33,144 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_CURSE
+15 Apr 2025 18:23:33,145 INFO  org.example.CursaDBRepository 76 getAll - Fetching all Curse
+15 Apr 2025 18:23:33,146 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 18:23:33,146 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7f993599)
+15 Apr 2025 18:23:33,148 INFO  org.example.CursaDBRepository 89 getAll - Returning 2 curse
+15 Apr 2025 18:23:33,149 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[{"numarParticipanti":17,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 18:23:36,165 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request LOGOUT
+15 Apr 2025 18:23:36,167 DEBUG jsonprotocol.ChatClientJsonWorker 92 handleRequest - Logout request ...{}User{username='octa', password='pass'}
+15 Apr 2025 18:23:36,168 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK"}
+15 Apr 2025 18:50:05,274 INFO  org.server.StartServer 24 main - Server properties set. {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite} 
+15 Apr 2025 18:50:05,284 INFO  org.example.CursaDBRepository 18 <init> - CursaDBRepository initialized
+15 Apr 2025 18:50:05,285 INFO  org.example.ParticipantDBRepository 21 <init> - Initializing AngajatDBRepository with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 18:50:05,286 INFO  org.example.InscriereDBRepository 29 <init> - InscriereDBRepository initialized
+15 Apr 2025 18:50:05,286 INFO  org.example.UserDBRepository 17 <init> - UserDBRepository initialized with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 18:50:05,300 DEBUG org.server.StartServer 39 main - Starting server on port: 55556
+15 Apr 2025 18:50:05,302 DEBUG org.example.utils.AbsConcurrentServer 12 <init> - Concurrent AbstractServer
+15 Apr 2025 18:50:05,302 INFO  jsonprotocol.ChatJsonConcurrentServer 16 <init> - Chat-ChatJsonConcurrentServer
+15 Apr 2025 18:50:30,196 INFO  org.server.StartServer 24 main - Server properties set. {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite} 
+15 Apr 2025 18:50:30,205 INFO  org.example.CursaDBRepository 18 <init> - CursaDBRepository initialized
+15 Apr 2025 18:50:30,206 INFO  org.example.ParticipantDBRepository 21 <init> - Initializing AngajatDBRepository with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 18:50:30,208 INFO  org.example.InscriereDBRepository 29 <init> - InscriereDBRepository initialized
+15 Apr 2025 18:50:30,211 INFO  org.example.UserDBRepository 17 <init> - UserDBRepository initialized with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 18:50:30,217 DEBUG org.server.StartServer 39 main - Starting server on port: 55556
+15 Apr 2025 18:50:30,219 DEBUG org.example.utils.AbsConcurrentServer 12 <init> - Concurrent AbstractServer
+15 Apr 2025 18:50:30,219 INFO  jsonprotocol.ChatJsonConcurrentServer 16 <init> - Chat-ChatJsonConcurrentServer
+15 Apr 2025 18:50:39,584 INFO  org.server.StartServer 24 main - Server properties set. {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite} 
+15 Apr 2025 18:50:39,597 INFO  org.example.CursaDBRepository 18 <init> - CursaDBRepository initialized
+15 Apr 2025 18:50:39,602 INFO  org.example.ParticipantDBRepository 21 <init> - Initializing AngajatDBRepository with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 18:50:39,604 INFO  org.example.InscriereDBRepository 29 <init> - InscriereDBRepository initialized
+15 Apr 2025 18:50:39,607 INFO  org.example.UserDBRepository 17 <init> - UserDBRepository initialized with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 18:50:39,613 DEBUG org.server.StartServer 39 main - Starting server on port: 55556
+15 Apr 2025 18:50:39,615 DEBUG org.example.utils.AbsConcurrentServer 12 <init> - Concurrent AbstractServer
+15 Apr 2025 18:50:39,615 INFO  jsonprotocol.ChatJsonConcurrentServer 16 <init> - Chat-ChatJsonConcurrentServer
+15 Apr 2025 18:52:13,218 INFO  org.server.StartServer 24 main - Server properties set. {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite} 
+15 Apr 2025 18:52:13,224 INFO  org.example.CursaDBRepository 18 <init> - CursaDBRepository initialized
+15 Apr 2025 18:52:13,226 INFO  org.example.ParticipantDBRepository 21 <init> - Initializing AngajatDBRepository with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 18:52:13,228 INFO  org.example.InscriereDBRepository 29 <init> - InscriereDBRepository initialized
+15 Apr 2025 18:52:13,229 INFO  org.example.UserDBRepository 17 <init> - UserDBRepository initialized with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 18:52:13,231 DEBUG org.server.StartServer 39 main - Starting server on port: 55556
+15 Apr 2025 18:52:13,231 DEBUG org.example.utils.AbsConcurrentServer 12 <init> - Concurrent AbstractServer
+15 Apr 2025 18:52:13,232 INFO  jsonprotocol.ChatJsonConcurrentServer 16 <init> - Chat-ChatJsonConcurrentServer
+15 Apr 2025 18:54:10,063 INFO  org.server.StartServer 24 main - Server properties set. {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite} 
+15 Apr 2025 18:54:10,071 INFO  org.example.CursaDBRepository 18 <init> - CursaDBRepository initialized
+15 Apr 2025 18:54:10,072 INFO  org.example.ParticipantDBRepository 21 <init> - Initializing AngajatDBRepository with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 18:54:10,072 INFO  org.example.InscriereDBRepository 29 <init> - InscriereDBRepository initialized
+15 Apr 2025 18:54:10,074 INFO  org.example.UserDBRepository 17 <init> - UserDBRepository initialized with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 18:54:10,076 DEBUG org.server.StartServer 39 main - Starting server on port: 55556
+15 Apr 2025 18:54:10,076 DEBUG org.example.utils.AbsConcurrentServer 12 <init> - Concurrent AbstractServer
+15 Apr 2025 18:54:10,076 INFO  jsonprotocol.ChatJsonConcurrentServer 16 <init> - Chat-ChatJsonConcurrentServer
+15 Apr 2025 18:56:55,881 INFO  org.server.StartServer 24 main - Server properties set. {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite} 
+15 Apr 2025 18:56:55,902 INFO  org.example.CursaDBRepository 18 <init> - CursaDBRepository initialized
+15 Apr 2025 18:56:55,907 INFO  org.example.ParticipantDBRepository 21 <init> - Initializing AngajatDBRepository with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 18:56:55,909 INFO  org.example.InscriereDBRepository 29 <init> - InscriereDBRepository initialized
+15 Apr 2025 18:56:55,911 INFO  org.example.UserDBRepository 17 <init> - UserDBRepository initialized with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 18:56:55,942 DEBUG org.server.StartServer 39 main - Starting server on port: 55556
+15 Apr 2025 18:56:55,943 DEBUG org.example.utils.AbsConcurrentServer 12 <init> - Concurrent AbstractServer
+15 Apr 2025 18:56:55,943 INFO  jsonprotocol.ChatJsonConcurrentServer 16 <init> - Chat-ChatJsonConcurrentServer
+15 Apr 2025 18:56:55,944 INFO  org.example.utils.AbstractServer 20 start - starting server ...
+15 Apr 2025 18:57:20,844 INFO  org.server.StartServer 24 main - Server properties set. {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite} 
+15 Apr 2025 18:57:20,849 INFO  org.example.CursaDBRepository 18 <init> - CursaDBRepository initialized
+15 Apr 2025 18:57:20,850 INFO  org.example.ParticipantDBRepository 21 <init> - Initializing AngajatDBRepository with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 18:57:20,851 INFO  org.example.InscriereDBRepository 29 <init> - InscriereDBRepository initialized
+15 Apr 2025 18:57:20,852 INFO  org.example.UserDBRepository 17 <init> - UserDBRepository initialized with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 18:57:20,854 DEBUG org.server.StartServer 39 main - Starting server on port: 55556
+15 Apr 2025 18:57:20,854 DEBUG org.example.utils.AbsConcurrentServer 12 <init> - Concurrent AbstractServer
+15 Apr 2025 18:57:20,854 INFO  jsonprotocol.ChatJsonConcurrentServer 16 <init> - Chat-ChatJsonConcurrentServer
+15 Apr 2025 18:58:47,599 INFO  org.server.StartServer 24 main - Server properties set. {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite} 
+15 Apr 2025 18:58:47,606 INFO  org.example.CursaDBRepository 18 <init> - CursaDBRepository initialized
+15 Apr 2025 18:58:47,607 INFO  org.example.ParticipantDBRepository 21 <init> - Initializing AngajatDBRepository with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 18:58:47,608 INFO  org.example.InscriereDBRepository 29 <init> - InscriereDBRepository initialized
+15 Apr 2025 18:58:47,609 INFO  org.example.UserDBRepository 17 <init> - UserDBRepository initialized with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 18:58:47,610 DEBUG org.server.StartServer 39 main - Starting server on port: 55556
+15 Apr 2025 18:58:47,611 DEBUG org.example.utils.AbsConcurrentServer 12 <init> - Concurrent AbstractServer
+15 Apr 2025 18:58:47,611 INFO  jsonprotocol.ChatJsonConcurrentServer 16 <init> - Chat-ChatJsonConcurrentServer
+15 Apr 2025 19:01:18,285 INFO  org.server.StartServer 24 main - Server properties set. {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite} 
+15 Apr 2025 19:01:18,300 INFO  org.example.CursaDBRepository 18 <init> - CursaDBRepository initialized
+15 Apr 2025 19:01:18,302 INFO  org.example.ParticipantDBRepository 21 <init> - Initializing AngajatDBRepository with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 19:01:18,303 INFO  org.example.InscriereDBRepository 29 <init> - InscriereDBRepository initialized
+15 Apr 2025 19:01:18,305 INFO  org.example.UserDBRepository 17 <init> - UserDBRepository initialized with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 19:01:18,308 DEBUG org.server.StartServer 39 main - Starting server on port: 55556
+15 Apr 2025 19:01:18,310 DEBUG org.example.utils.AbsConcurrentServer 12 <init> - Concurrent AbstractServer
+15 Apr 2025 19:01:18,310 INFO  jsonprotocol.ChatJsonConcurrentServer 16 <init> - Chat-ChatJsonConcurrentServer
+15 Apr 2025 19:03:03,419 INFO  org.server.StartServer 24 main - Server properties set. {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite} 
+15 Apr 2025 19:03:03,431 INFO  org.example.CursaDBRepository 18 <init> - CursaDBRepository initialized
+15 Apr 2025 19:03:03,432 INFO  org.example.ParticipantDBRepository 21 <init> - Initializing AngajatDBRepository with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 19:03:03,435 INFO  org.example.InscriereDBRepository 29 <init> - InscriereDBRepository initialized
+15 Apr 2025 19:03:03,436 INFO  org.example.UserDBRepository 17 <init> - UserDBRepository initialized with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 19:03:03,438 DEBUG org.server.StartServer 39 main - Starting server on port: 55556
+15 Apr 2025 19:03:03,439 DEBUG org.example.utils.AbsConcurrentServer 12 <init> - Concurrent AbstractServer
+15 Apr 2025 19:03:03,439 INFO  jsonprotocol.ChatJsonConcurrentServer 16 <init> - Chat-ChatJsonConcurrentServer
+15 Apr 2025 19:03:03,451 ERROR org.example.utils.AbstractServer 29 start - Address already in use: bind
+15 Apr 2025 19:05:14,536 INFO  org.server.StartServer 24 main - Server properties set. {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite} 
+15 Apr 2025 19:05:14,545 INFO  org.example.CursaDBRepository 18 <init> - CursaDBRepository initialized
+15 Apr 2025 19:05:14,546 INFO  org.example.ParticipantDBRepository 21 <init> - Initializing AngajatDBRepository with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 19:05:14,547 INFO  org.example.InscriereDBRepository 29 <init> - InscriereDBRepository initialized
+15 Apr 2025 19:05:14,548 INFO  org.example.UserDBRepository 17 <init> - UserDBRepository initialized with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 19:05:14,549 DEBUG org.server.StartServer 39 main - Starting server on port: 55556
+15 Apr 2025 19:05:14,550 DEBUG org.example.utils.AbsConcurrentServer 12 <init> - Concurrent AbstractServer
+15 Apr 2025 19:05:14,550 INFO  jsonprotocol.ChatJsonConcurrentServer 16 <init> - Chat-ChatJsonConcurrentServer
+15 Apr 2025 19:05:14,558 INFO  org.example.utils.AbstractServer 21 start - starting server ...
+15 Apr 2025 19:05:14,558 INFO  org.example.utils.AbstractServer 23 start - Waiting for clients ...
+15 Apr 2025 19:05:47,219 INFO  org.example.utils.AbstractServer 25 start - Client connected ...
+15 Apr 2025 19:05:47,266 INFO  org.example.utils.AbstractServer 23 start - Waiting for clients ...
+15 Apr 2025 19:05:47,279 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request LOGIN
+15 Apr 2025 19:05:47,281 DEBUG jsonprotocol.ChatClientJsonWorker 81 handleRequest - Login request ...{}User{username='octa', password='pass'}
+15 Apr 2025 19:05:47,281 INFO  org.example.UserDBRepository 148 getUserByUsernameAndPassword - Retrieving user with username octa and password
+15 Apr 2025 19:05:47,283 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:05:47,284 TRACE org.example.JdbcUtils 21 getNewConnection - Enter
+15 Apr 2025 19:05:47,284 INFO  org.example.JdbcUtils 23 getNewConnection - Connecting to jdbc:sqlite:Moto.sqlite
+15 Apr 2025 19:05:47,856 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@958a00d)
+15 Apr 2025 19:05:47,859 INFO  org.example.UserDBRepository 158 getUserByUsernameAndPassword - User found: octa
+15 Apr 2025 19:05:47,862 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","user":{"username":"octa","password":"pass","id":23}}
+15 Apr 2025 19:05:47,918 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_TEAMS
+15 Apr 2025 19:05:47,918 INFO  org.example.ParticipantDBRepository 113 getEchipe - Fetching all team names
+15 Apr 2025 19:05:47,918 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:05:47,919 TRACE org.example.JdbcUtils 21 getNewConnection - Enter
+15 Apr 2025 19:05:47,919 INFO  org.example.JdbcUtils 23 getNewConnection - Connecting to jdbc:sqlite:Moto.sqlite
+15 Apr 2025 19:05:47,920 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2f61c4c3)
+15 Apr 2025 19:05:47,921 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","echipe":["Seat","Yamaha","Skoda","VW","1","2","3","4","5","6","fierarii","10"]}
+15 Apr 2025 19:05:47,979 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_CAPACITATI
+15 Apr 2025 19:05:47,980 INFO  org.example.CursaDBRepository 95 getCapacitati - Fetching all motor capacities
+15 Apr 2025 19:05:47,980 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:05:47,980 TRACE org.example.JdbcUtils 21 getNewConnection - Enter
+15 Apr 2025 19:05:47,980 INFO  org.example.JdbcUtils 23 getNewConnection - Connecting to jdbc:sqlite:Moto.sqlite
+15 Apr 2025 19:05:47,981 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2f373fc)
+15 Apr 2025 19:05:47,983 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","capacitatiMotor":[125,250]}
+15 Apr 2025 19:05:48,041 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_PARTICIPANTI
+15 Apr 2025 19:05:48,042 INFO  org.example.ParticipantDBRepository 90 getAll - Fetching all Participants
+15 Apr 2025 19:05:48,042 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:05:48,042 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2f61c4c3)
+15 Apr 2025 19:05:48,044 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13}]}
+15 Apr 2025 19:05:48,104 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_CURSE
+15 Apr 2025 19:05:48,105 INFO  org.example.CursaDBRepository 76 getAll - Fetching all Curse
+15 Apr 2025 19:05:48,105 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:05:48,105 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2f373fc)
+15 Apr 2025 19:05:48,106 INFO  org.example.CursaDBRepository 89 getAll - Returning 2 curse
+15 Apr 2025 19:05:48,107 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[{"numarParticipanti":17,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 19:05:57,431 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request LOGOUT
+15 Apr 2025 19:05:57,431 DEBUG jsonprotocol.ChatClientJsonWorker 92 handleRequest - Logout request ...{}User{username='octa', password='pass'}
+15 Apr 2025 19:05:57,433 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK"}
+15 Apr 2025 19:06:45,067 INFO  org.server.StartServer 24 main - Server properties set. {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite} 
+15 Apr 2025 19:06:45,074 INFO  org.example.CursaDBRepository 18 <init> - CursaDBRepository initialized
+15 Apr 2025 19:06:45,075 INFO  org.example.ParticipantDBRepository 21 <init> - Initializing AngajatDBRepository with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 19:06:45,077 INFO  org.example.InscriereDBRepository 29 <init> - InscriereDBRepository initialized
+15 Apr 2025 19:06:45,078 INFO  org.example.UserDBRepository 17 <init> - UserDBRepository initialized with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 19:06:45,080 DEBUG org.server.StartServer 39 main - Starting server on port: 55556
+15 Apr 2025 19:06:45,081 DEBUG org.example.utils.AbsConcurrentServer 12 <init> - Concurrent AbstractServer
+15 Apr 2025 19:06:45,081 INFO  jsonprotocol.ChatJsonConcurrentServer 16 <init> - Chat-ChatJsonConcurrentServer
+15 Apr 2025 19:06:45,087 INFO  org.example.utils.AbstractServer 21 start - starting server ...
+15 Apr 2025 19:06:45,087 INFO  org.example.utils.AbstractServer 23 start - Waiting for clients ...
+15 Apr 2025 19:06:48,050 INFO  org.example.utils.AbstractServer 25 start - Client connected ...
+15 Apr 2025 19:06:48,079 INFO  org.example.utils.AbstractServer 23 start - Waiting for clients ...
+15 Apr 2025 19:06:48,089 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request LOGIN
+15 Apr 2025 19:06:48,090 DEBUG jsonprotocol.ChatClientJsonWorker 81 handleRequest - Login request ...{}User{username='octa', password='pass'}
+15 Apr 2025 19:06:48,090 INFO  org.example.UserDBRepository 148 getUserByUsernameAndPassword - Retrieving user with username octa and password
+15 Apr 2025 19:06:48,092 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:06:48,092 TRACE org.example.JdbcUtils 21 getNewConnection - Enter
+15 Apr 2025 19:06:48,092 INFO  org.example.JdbcUtils 23 getNewConnection - Connecting to jdbc:sqlite:Moto.sqlite
+15 Apr 2025 19:06:48,383 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@958a00d)
+15 Apr 2025 19:06:48,386 INFO  org.example.UserDBRepository 158 getUserByUsernameAndPassword - User found: octa
+15 Apr 2025 19:06:48,389 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","user":{"username":"octa","password":"pass","id":23}}
+15 Apr 2025 19:06:48,443 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_TEAMS
+15 Apr 2025 19:06:48,443 INFO  org.example.ParticipantDBRepository 113 getEchipe - Fetching all team names
+15 Apr 2025 19:06:48,444 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:06:48,444 TRACE org.example.JdbcUtils 21 getNewConnection - Enter
+15 Apr 2025 19:06:48,444 INFO  org.example.JdbcUtils 23 getNewConnection - Connecting to jdbc:sqlite:Moto.sqlite
+15 Apr 2025 19:06:48,445 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2f61c4c3)
+15 Apr 2025 19:06:48,446 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","echipe":["Seat","Yamaha","Skoda","VW","1","2","3","4","5","6","fierarii","10"]}
+15 Apr 2025 19:06:48,506 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_CAPACITATI
+15 Apr 2025 19:06:48,507 INFO  org.example.CursaDBRepository 95 getCapacitati - Fetching all motor capacities
+15 Apr 2025 19:06:48,508 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:06:48,508 TRACE org.example.JdbcUtils 21 getNewConnection - Enter
+15 Apr 2025 19:06:48,508 INFO  org.example.JdbcUtils 23 getNewConnection - Connecting to jdbc:sqlite:Moto.sqlite
+15 Apr 2025 19:06:48,510 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2f373fc)
+15 Apr 2025 19:06:48,511 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","capacitatiMotor":[125,250]}
+15 Apr 2025 19:06:48,566 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_PARTICIPANTI
+15 Apr 2025 19:06:48,566 INFO  org.example.ParticipantDBRepository 90 getAll - Fetching all Participants
+15 Apr 2025 19:06:48,566 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:06:48,568 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2f61c4c3)
+15 Apr 2025 19:06:48,568 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13}]}
+15 Apr 2025 19:06:48,628 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_CURSE
+15 Apr 2025 19:06:48,630 INFO  org.example.CursaDBRepository 76 getAll - Fetching all Curse
+15 Apr 2025 19:06:48,630 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:06:48,630 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2f373fc)
+15 Apr 2025 19:06:48,631 INFO  org.example.CursaDBRepository 89 getAll - Returning 2 curse
+15 Apr 2025 19:06:48,631 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[{"numarParticipanti":17,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 19:06:51,626 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request LOGOUT
+15 Apr 2025 19:06:51,626 DEBUG jsonprotocol.ChatClientJsonWorker 92 handleRequest - Logout request ...{}User{username='octa', password='pass'}
+15 Apr 2025 19:06:51,627 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK"}
+15 Apr 2025 19:08:15,251 INFO  org.server.StartServer 24 main - Server properties set. {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite} 
+15 Apr 2025 19:08:15,271 INFO  org.example.CursaDBRepository 18 <init> - CursaDBRepository initialized
+15 Apr 2025 19:08:15,274 INFO  org.example.ParticipantDBRepository 21 <init> - Initializing AngajatDBRepository with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 19:08:15,277 INFO  org.example.InscriereDBRepository 29 <init> - InscriereDBRepository initialized
+15 Apr 2025 19:08:15,279 INFO  org.example.UserDBRepository 17 <init> - UserDBRepository initialized with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 19:08:15,284 DEBUG org.server.StartServer 39 main - Starting server on port: 55556
+15 Apr 2025 19:08:15,286 DEBUG org.example.utils.AbsConcurrentServer 12 <init> - Concurrent AbstractServer
+15 Apr 2025 19:08:15,286 INFO  jsonprotocol.ChatJsonConcurrentServer 16 <init> - Chat-ChatJsonConcurrentServer
+15 Apr 2025 19:08:15,307 INFO  org.example.utils.AbstractServer 21 start - starting server ...
+15 Apr 2025 19:08:15,310 INFO  org.example.utils.AbstractServer 23 start - Waiting for clients ...
+15 Apr 2025 19:08:53,642 INFO  org.example.utils.AbstractServer 25 start - Client connected ...
+15 Apr 2025 19:08:53,755 INFO  org.example.utils.AbstractServer 23 start - Waiting for clients ...
+15 Apr 2025 19:08:53,787 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request LOGIN
+15 Apr 2025 19:08:53,796 DEBUG jsonprotocol.ChatClientJsonWorker 81 handleRequest - Login request ...{}User{username='octa', password='pass'}
+15 Apr 2025 19:08:53,797 INFO  org.example.UserDBRepository 148 getUserByUsernameAndPassword - Retrieving user with username octa and password
+15 Apr 2025 19:08:53,799 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:08:53,800 TRACE org.example.JdbcUtils 21 getNewConnection - Enter
+15 Apr 2025 19:08:53,800 INFO  org.example.JdbcUtils 23 getNewConnection - Connecting to jdbc:sqlite:Moto.sqlite
+15 Apr 2025 19:08:54,870 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@958a00d)
+15 Apr 2025 19:08:54,872 INFO  org.example.UserDBRepository 158 getUserByUsernameAndPassword - User found: octa
+15 Apr 2025 19:08:54,877 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","user":{"username":"octa","password":"pass","id":23}}
+15 Apr 2025 19:08:54,938 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_TEAMS
+15 Apr 2025 19:08:54,939 INFO  org.example.ParticipantDBRepository 113 getEchipe - Fetching all team names
+15 Apr 2025 19:08:54,940 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:08:54,940 TRACE org.example.JdbcUtils 21 getNewConnection - Enter
+15 Apr 2025 19:08:54,941 INFO  org.example.JdbcUtils 23 getNewConnection - Connecting to jdbc:sqlite:Moto.sqlite
+15 Apr 2025 19:08:54,943 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2f61c4c3)
+15 Apr 2025 19:08:54,943 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","echipe":["Seat","Yamaha","Skoda","VW","1","2","3","4","5","6","fierarii","10"]}
+15 Apr 2025 19:08:55,000 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_CAPACITATI
+15 Apr 2025 19:08:55,001 INFO  org.example.CursaDBRepository 95 getCapacitati - Fetching all motor capacities
+15 Apr 2025 19:08:55,001 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:08:55,001 TRACE org.example.JdbcUtils 21 getNewConnection - Enter
+15 Apr 2025 19:08:55,002 INFO  org.example.JdbcUtils 23 getNewConnection - Connecting to jdbc:sqlite:Moto.sqlite
+15 Apr 2025 19:08:55,003 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2f373fc)
+15 Apr 2025 19:08:55,006 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","capacitatiMotor":[125,250]}
+15 Apr 2025 19:08:55,062 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_PARTICIPANTI
+15 Apr 2025 19:08:55,063 INFO  org.example.ParticipantDBRepository 90 getAll - Fetching all Participants
+15 Apr 2025 19:08:55,063 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:08:55,064 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2f61c4c3)
+15 Apr 2025 19:08:55,065 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13}]}
+15 Apr 2025 19:08:55,126 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_CURSE
+15 Apr 2025 19:08:55,127 INFO  org.example.CursaDBRepository 76 getAll - Fetching all Curse
+15 Apr 2025 19:08:55,127 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:08:55,127 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2f373fc)
+15 Apr 2025 19:08:55,129 INFO  org.example.CursaDBRepository 89 getAll - Returning 2 curse
+15 Apr 2025 19:08:55,130 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[{"numarParticipanti":17,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 19:08:58,816 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request LOGOUT
+15 Apr 2025 19:08:58,816 DEBUG jsonprotocol.ChatClientJsonWorker 92 handleRequest - Logout request ...{}User{username='octa', password='pass'}
+15 Apr 2025 19:08:58,817 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK"}
+15 Apr 2025 19:09:27,087 INFO  org.server.StartServer 24 main - Server properties set. {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite} 
+15 Apr 2025 19:09:27,105 INFO  org.example.CursaDBRepository 18 <init> - CursaDBRepository initialized
+15 Apr 2025 19:09:27,107 INFO  org.example.ParticipantDBRepository 21 <init> - Initializing AngajatDBRepository with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 19:09:27,111 INFO  org.example.InscriereDBRepository 29 <init> - InscriereDBRepository initialized
+15 Apr 2025 19:09:27,113 INFO  org.example.UserDBRepository 17 <init> - UserDBRepository initialized with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 19:09:27,118 DEBUG org.server.StartServer 39 main - Starting server on port: 55556
+15 Apr 2025 19:09:27,120 DEBUG org.example.utils.AbsConcurrentServer 12 <init> - Concurrent AbstractServer
+15 Apr 2025 19:09:27,121 INFO  jsonprotocol.ChatJsonConcurrentServer 16 <init> - Chat-ChatJsonConcurrentServer
+15 Apr 2025 19:09:27,132 INFO  org.example.utils.AbstractServer 21 start - starting server ...
+15 Apr 2025 19:09:27,133 INFO  org.example.utils.AbstractServer 23 start - Waiting for clients ...
+15 Apr 2025 19:11:14,294 INFO  org.example.utils.AbstractServer 25 start - Client connected ...
+15 Apr 2025 19:11:14,330 INFO  org.example.utils.AbstractServer 23 start - Waiting for clients ...
+15 Apr 2025 19:11:14,343 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request LOGIN
+15 Apr 2025 19:11:14,344 DEBUG jsonprotocol.ChatClientJsonWorker 81 handleRequest - Login request ...{}User{username='octa', password='pass'}
+15 Apr 2025 19:11:14,344 INFO  org.example.UserDBRepository 148 getUserByUsernameAndPassword - Retrieving user with username octa and password
+15 Apr 2025 19:11:14,346 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:11:14,346 TRACE org.example.JdbcUtils 21 getNewConnection - Enter
+15 Apr 2025 19:11:14,347 INFO  org.example.JdbcUtils 23 getNewConnection - Connecting to jdbc:sqlite:Moto.sqlite
+15 Apr 2025 19:11:15,025 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1334d94e)
+15 Apr 2025 19:11:15,028 INFO  org.example.UserDBRepository 158 getUserByUsernameAndPassword - User found: octa
+15 Apr 2025 19:11:15,030 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","user":{"username":"octa","password":"pass","id":23}}
+15 Apr 2025 19:11:15,090 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_TEAMS
+15 Apr 2025 19:11:15,090 INFO  org.example.ParticipantDBRepository 113 getEchipe - Fetching all team names
+15 Apr 2025 19:11:15,090 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:11:15,090 TRACE org.example.JdbcUtils 21 getNewConnection - Enter
+15 Apr 2025 19:11:15,090 INFO  org.example.JdbcUtils 23 getNewConnection - Connecting to jdbc:sqlite:Moto.sqlite
+15 Apr 2025 19:11:15,091 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@50d0e1b)
+15 Apr 2025 19:11:15,092 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","echipe":["Seat","Yamaha","Skoda","VW","1","2","3","4","5","6","fierarii","10"]}
+15 Apr 2025 19:11:15,151 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_CAPACITATI
+15 Apr 2025 19:11:15,152 INFO  org.example.CursaDBRepository 95 getCapacitati - Fetching all motor capacities
+15 Apr 2025 19:11:15,153 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:11:15,153 TRACE org.example.JdbcUtils 21 getNewConnection - Enter
+15 Apr 2025 19:11:15,153 INFO  org.example.JdbcUtils 23 getNewConnection - Connecting to jdbc:sqlite:Moto.sqlite
+15 Apr 2025 19:11:15,154 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4732c4d0)
+15 Apr 2025 19:11:15,155 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","capacitatiMotor":[125,250]}
+15 Apr 2025 19:11:15,214 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_PARTICIPANTI
+15 Apr 2025 19:11:15,215 INFO  org.example.ParticipantDBRepository 90 getAll - Fetching all Participants
+15 Apr 2025 19:11:15,215 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:11:15,215 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@50d0e1b)
+15 Apr 2025 19:11:15,216 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13}]}
+15 Apr 2025 19:11:15,276 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_CURSE
+15 Apr 2025 19:11:15,276 INFO  org.example.CursaDBRepository 76 getAll - Fetching all Curse
+15 Apr 2025 19:11:15,277 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:11:15,277 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4732c4d0)
+15 Apr 2025 19:11:15,277 INFO  org.example.CursaDBRepository 89 getAll - Returning 2 curse
+15 Apr 2025 19:11:15,278 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[{"numarParticipanti":17,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 19:11:18,760 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request LOGOUT
+15 Apr 2025 19:11:18,760 DEBUG jsonprotocol.ChatClientJsonWorker 92 handleRequest - Logout request ...{}User{username='octa', password='pass'}
+15 Apr 2025 19:11:18,761 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK"}
+15 Apr 2025 19:11:40,176 INFO  org.server.StartServer 24 main - Server properties set. {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite} 
+15 Apr 2025 19:11:40,182 INFO  org.example.CursaDBRepository 18 <init> - CursaDBRepository initialized
+15 Apr 2025 19:11:40,183 INFO  org.example.ParticipantDBRepository 21 <init> - Initializing AngajatDBRepository with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 19:11:40,184 INFO  org.example.InscriereDBRepository 29 <init> - InscriereDBRepository initialized
+15 Apr 2025 19:11:40,186 INFO  org.example.UserDBRepository 17 <init> - UserDBRepository initialized with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 19:11:40,188 DEBUG org.server.StartServer 39 main - Starting server on port: 55556
+15 Apr 2025 19:11:40,189 DEBUG org.example.utils.AbsConcurrentServer 12 <init> - Concurrent AbstractServer
+15 Apr 2025 19:11:40,189 INFO  jsonprotocol.ChatJsonConcurrentServer 16 <init> - Chat-ChatJsonConcurrentServer
+15 Apr 2025 19:11:40,197 INFO  org.example.utils.AbstractServer 21 start - starting server ...
+15 Apr 2025 19:11:40,197 INFO  org.example.utils.AbstractServer 23 start - Waiting for clients ...
+15 Apr 2025 19:11:45,916 INFO  org.example.utils.AbstractServer 25 start - Client connected ...
+15 Apr 2025 19:11:45,950 INFO  org.example.utils.AbstractServer 23 start - Waiting for clients ...
+15 Apr 2025 19:11:45,961 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request LOGIN
+15 Apr 2025 19:11:45,963 DEBUG jsonprotocol.ChatClientJsonWorker 81 handleRequest - Login request ...{}User{username='octa', password='pass'}
+15 Apr 2025 19:11:45,963 INFO  org.example.UserDBRepository 148 getUserByUsernameAndPassword - Retrieving user with username octa and password
+15 Apr 2025 19:11:45,966 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:11:45,967 TRACE org.example.JdbcUtils 21 getNewConnection - Enter
+15 Apr 2025 19:11:45,967 INFO  org.example.JdbcUtils 23 getNewConnection - Connecting to jdbc:sqlite:Moto.sqlite
+15 Apr 2025 19:11:46,228 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@958a00d)
+15 Apr 2025 19:11:46,232 INFO  org.example.UserDBRepository 158 getUserByUsernameAndPassword - User found: octa
+15 Apr 2025 19:11:46,239 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","user":{"username":"octa","password":"pass","id":23}}
+15 Apr 2025 19:11:46,299 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_TEAMS
+15 Apr 2025 19:11:46,299 INFO  org.example.ParticipantDBRepository 113 getEchipe - Fetching all team names
+15 Apr 2025 19:11:46,299 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:11:46,299 TRACE org.example.JdbcUtils 21 getNewConnection - Enter
+15 Apr 2025 19:11:46,299 INFO  org.example.JdbcUtils 23 getNewConnection - Connecting to jdbc:sqlite:Moto.sqlite
+15 Apr 2025 19:11:46,300 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2f61c4c3)
+15 Apr 2025 19:11:46,301 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","echipe":["Seat","Yamaha","Skoda","VW","1","2","3","4","5","6","fierarii","10"]}
+15 Apr 2025 19:11:46,360 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_CAPACITATI
+15 Apr 2025 19:11:46,360 INFO  org.example.CursaDBRepository 95 getCapacitati - Fetching all motor capacities
+15 Apr 2025 19:11:46,360 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:11:46,360 TRACE org.example.JdbcUtils 21 getNewConnection - Enter
+15 Apr 2025 19:11:46,361 INFO  org.example.JdbcUtils 23 getNewConnection - Connecting to jdbc:sqlite:Moto.sqlite
+15 Apr 2025 19:11:46,362 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2f373fc)
+15 Apr 2025 19:11:46,363 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","capacitatiMotor":[125,250]}
+15 Apr 2025 19:11:46,421 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_PARTICIPANTI
+15 Apr 2025 19:11:46,421 INFO  org.example.ParticipantDBRepository 90 getAll - Fetching all Participants
+15 Apr 2025 19:11:46,422 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:11:46,422 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2f61c4c3)
+15 Apr 2025 19:11:46,423 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13}]}
+15 Apr 2025 19:11:46,484 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_CURSE
+15 Apr 2025 19:11:46,485 INFO  org.example.CursaDBRepository 76 getAll - Fetching all Curse
+15 Apr 2025 19:11:46,485 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:11:46,485 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2f373fc)
+15 Apr 2025 19:11:46,486 INFO  org.example.CursaDBRepository 89 getAll - Returning 2 curse
+15 Apr 2025 19:11:46,487 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[{"numarParticipanti":17,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 19:11:49,321 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request LOGOUT
+15 Apr 2025 19:11:49,322 DEBUG jsonprotocol.ChatClientJsonWorker 92 handleRequest - Logout request ...{}User{username='octa', password='pass'}
+15 Apr 2025 19:11:49,322 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK"}
+15 Apr 2025 19:13:34,198 INFO  org.server.StartServer 24 main - Server properties set. {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite} 
+15 Apr 2025 19:13:34,208 INFO  org.example.CursaDBRepository 18 <init> - CursaDBRepository initialized
+15 Apr 2025 19:13:34,209 INFO  org.example.ParticipantDBRepository 21 <init> - Initializing AngajatDBRepository with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 19:13:34,210 INFO  org.example.InscriereDBRepository 29 <init> - InscriereDBRepository initialized
+15 Apr 2025 19:13:34,211 INFO  org.example.UserDBRepository 17 <init> - UserDBRepository initialized with properties: {chat.server.port=55556, url=jdbc:sqlite:Moto.sqlite}
+15 Apr 2025 19:13:34,213 DEBUG org.server.StartServer 39 main - Starting server on port: 55556
+15 Apr 2025 19:13:34,214 DEBUG org.example.utils.AbsConcurrentServer 12 <init> - Concurrent AbstractServer
+15 Apr 2025 19:13:34,214 INFO  jsonprotocol.ChatJsonConcurrentServer 16 <init> - Chat-ChatJsonConcurrentServer
+15 Apr 2025 19:13:34,223 INFO  org.example.utils.AbstractServer 21 start - starting server ...
+15 Apr 2025 19:13:34,223 INFO  org.example.utils.AbstractServer 23 start - Waiting for clients ...
+15 Apr 2025 19:14:13,892 INFO  org.example.utils.AbstractServer 25 start - Client connected ...
+15 Apr 2025 19:14:13,987 INFO  org.example.utils.AbstractServer 23 start - Waiting for clients ...
+15 Apr 2025 19:14:14,005 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request LOGIN
+15 Apr 2025 19:14:14,008 DEBUG jsonprotocol.ChatClientJsonWorker 81 handleRequest - Login request ...{}User{username='octa', password='pass'}
+15 Apr 2025 19:14:14,008 INFO  org.example.UserDBRepository 148 getUserByUsernameAndPassword - Retrieving user with username octa and password
+15 Apr 2025 19:14:14,011 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:14:14,011 TRACE org.example.JdbcUtils 21 getNewConnection - Enter
+15 Apr 2025 19:14:14,011 INFO  org.example.JdbcUtils 23 getNewConnection - Connecting to jdbc:sqlite:Moto.sqlite
+15 Apr 2025 19:14:14,715 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@677bdcf1)
+15 Apr 2025 19:14:14,717 INFO  org.example.UserDBRepository 158 getUserByUsernameAndPassword - User found: octa
+15 Apr 2025 19:14:14,722 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","user":{"username":"octa","password":"pass","id":23}}
+15 Apr 2025 19:14:14,777 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_TEAMS
+15 Apr 2025 19:14:14,778 INFO  org.example.ParticipantDBRepository 113 getEchipe - Fetching all team names
+15 Apr 2025 19:14:14,778 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:14:14,778 TRACE org.example.JdbcUtils 21 getNewConnection - Enter
+15 Apr 2025 19:14:14,778 INFO  org.example.JdbcUtils 23 getNewConnection - Connecting to jdbc:sqlite:Moto.sqlite
+15 Apr 2025 19:14:14,779 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5370b3ad)
+15 Apr 2025 19:14:14,780 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","echipe":["Seat","Yamaha","Skoda","VW","1","2","3","4","5","6","fierarii","10"]}
+15 Apr 2025 19:14:14,840 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_CAPACITATI
+15 Apr 2025 19:14:14,840 INFO  org.example.CursaDBRepository 95 getCapacitati - Fetching all motor capacities
+15 Apr 2025 19:14:14,840 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:14:14,841 TRACE org.example.JdbcUtils 21 getNewConnection - Enter
+15 Apr 2025 19:14:14,841 INFO  org.example.JdbcUtils 23 getNewConnection - Connecting to jdbc:sqlite:Moto.sqlite
+15 Apr 2025 19:14:14,842 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7c9f5f2c)
+15 Apr 2025 19:14:14,843 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","capacitatiMotor":[125,250]}
+15 Apr 2025 19:14:14,901 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_PARTICIPANTI
+15 Apr 2025 19:14:14,901 INFO  org.example.ParticipantDBRepository 90 getAll - Fetching all Participants
+15 Apr 2025 19:14:14,902 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:14:14,902 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5370b3ad)
+15 Apr 2025 19:14:14,904 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13}]}
+15 Apr 2025 19:14:14,962 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_CURSE
+15 Apr 2025 19:14:14,962 INFO  org.example.CursaDBRepository 76 getAll - Fetching all Curse
+15 Apr 2025 19:14:14,963 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:14:14,963 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7c9f5f2c)
+15 Apr 2025 19:14:14,965 INFO  org.example.CursaDBRepository 89 getAll - Returning 2 curse
+15 Apr 2025 19:14:14,966 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[{"numarParticipanti":17,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 19:14:17,780 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request LOGOUT
+15 Apr 2025 19:14:17,781 DEBUG jsonprotocol.ChatClientJsonWorker 92 handleRequest - Logout request ...{}User{username='octa', password='pass'}
+15 Apr 2025 19:14:17,781 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK"}
+15 Apr 2025 19:14:24,267 INFO  org.example.utils.AbstractServer 25 start - Client connected ...
+15 Apr 2025 19:14:24,268 INFO  org.example.utils.AbstractServer 23 start - Waiting for clients ...
+15 Apr 2025 19:14:24,270 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request LOGIN
+15 Apr 2025 19:14:24,271 DEBUG jsonprotocol.ChatClientJsonWorker 81 handleRequest - Login request ...{}User{username='octa', password='pass'}
+15 Apr 2025 19:14:24,271 INFO  org.example.UserDBRepository 148 getUserByUsernameAndPassword - Retrieving user with username octa and password
+15 Apr 2025 19:14:24,271 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:14:24,271 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@677bdcf1)
+15 Apr 2025 19:14:24,272 INFO  org.example.UserDBRepository 158 getUserByUsernameAndPassword - User found: octa
+15 Apr 2025 19:14:24,273 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","user":{"username":"octa","password":"pass","id":23}}
+15 Apr 2025 19:14:24,333 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_TEAMS
+15 Apr 2025 19:14:24,334 INFO  org.example.ParticipantDBRepository 113 getEchipe - Fetching all team names
+15 Apr 2025 19:14:24,334 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:14:24,334 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5370b3ad)
+15 Apr 2025 19:14:24,335 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","echipe":["Seat","Yamaha","Skoda","VW","1","2","3","4","5","6","fierarii","10"]}
+15 Apr 2025 19:14:24,394 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_CAPACITATI
+15 Apr 2025 19:14:24,395 INFO  org.example.CursaDBRepository 95 getCapacitati - Fetching all motor capacities
+15 Apr 2025 19:14:24,395 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:14:24,395 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7c9f5f2c)
+15 Apr 2025 19:14:24,395 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","capacitatiMotor":[125,250]}
+15 Apr 2025 19:14:24,456 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_PARTICIPANTI
+15 Apr 2025 19:14:24,457 INFO  org.example.ParticipantDBRepository 90 getAll - Fetching all Participants
+15 Apr 2025 19:14:24,457 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:14:24,457 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5370b3ad)
+15 Apr 2025 19:14:24,458 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13}]}
+15 Apr 2025 19:14:24,519 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_CURSE
+15 Apr 2025 19:14:24,519 INFO  org.example.CursaDBRepository 76 getAll - Fetching all Curse
+15 Apr 2025 19:14:24,519 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:14:24,520 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7c9f5f2c)
+15 Apr 2025 19:14:24,520 INFO  org.example.CursaDBRepository 89 getAll - Returning 2 curse
+15 Apr 2025 19:14:24,521 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[{"numarParticipanti":17,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 19:14:42,766 INFO  org.example.utils.AbstractServer 25 start - Client connected ...
+15 Apr 2025 19:14:42,767 INFO  org.example.utils.AbstractServer 23 start - Waiting for clients ...
+15 Apr 2025 19:14:42,784 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request LOGIN
+15 Apr 2025 19:14:42,785 DEBUG jsonprotocol.ChatClientJsonWorker 81 handleRequest - Login request ...{}User{username='octa2', password='[ass'}
+15 Apr 2025 19:14:42,785 INFO  org.example.UserDBRepository 148 getUserByUsernameAndPassword - Retrieving user with username octa2 and password
+15 Apr 2025 19:14:42,785 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:14:42,785 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@677bdcf1)
+15 Apr 2025 19:14:42,786 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"ERROR","errorMessage":"utilizatorul nu a fost gasit"}
+15 Apr 2025 19:14:52,344 INFO  org.example.utils.AbstractServer 25 start - Client connected ...
+15 Apr 2025 19:14:52,345 INFO  org.example.utils.AbstractServer 23 start - Waiting for clients ...
+15 Apr 2025 19:14:52,352 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request LOGIN
+15 Apr 2025 19:14:52,353 DEBUG jsonprotocol.ChatClientJsonWorker 81 handleRequest - Login request ...{}User{username='octa2', password='pass'}
+15 Apr 2025 19:14:52,353 INFO  org.example.UserDBRepository 148 getUserByUsernameAndPassword - Retrieving user with username octa2 and password
+15 Apr 2025 19:14:52,353 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:14:52,353 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@677bdcf1)
+15 Apr 2025 19:14:52,353 INFO  org.example.UserDBRepository 158 getUserByUsernameAndPassword - User found: octa2
+15 Apr 2025 19:14:52,354 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","user":{"username":"octa2","password":"pass","id":44}}
+15 Apr 2025 19:14:52,412 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_TEAMS
+15 Apr 2025 19:14:52,412 INFO  org.example.ParticipantDBRepository 113 getEchipe - Fetching all team names
+15 Apr 2025 19:14:52,413 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:14:52,413 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5370b3ad)
+15 Apr 2025 19:14:52,414 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","echipe":["Seat","Yamaha","Skoda","VW","1","2","3","4","5","6","fierarii","10"]}
+15 Apr 2025 19:14:52,472 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_CAPACITATI
+15 Apr 2025 19:14:52,473 INFO  org.example.CursaDBRepository 95 getCapacitati - Fetching all motor capacities
+15 Apr 2025 19:14:52,473 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:14:52,474 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7c9f5f2c)
+15 Apr 2025 19:14:52,474 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","capacitatiMotor":[125,250]}
+15 Apr 2025 19:14:52,537 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_PARTICIPANTI
+15 Apr 2025 19:14:52,538 INFO  org.example.ParticipantDBRepository 90 getAll - Fetching all Participants
+15 Apr 2025 19:14:52,539 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:14:52,539 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5370b3ad)
+15 Apr 2025 19:14:52,541 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13}]}
+15 Apr 2025 19:14:52,596 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_CURSE
+15 Apr 2025 19:14:52,598 INFO  org.example.CursaDBRepository 76 getAll - Fetching all Curse
+15 Apr 2025 19:14:52,598 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:14:52,598 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7c9f5f2c)
+15 Apr 2025 19:14:52,599 INFO  org.example.CursaDBRepository 89 getAll - Returning 2 curse
+15 Apr 2025 19:14:52,600 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[{"numarParticipanti":17,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 19:15:03,648 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_CURSE_BY_PARTICIPANT
+15 Apr 2025 19:15:03,648 INFO  org.example.InscriereDBRepository 99 getCursePosibilePentruParticipant - getCursePosibilePentruParticipant 13
+15 Apr 2025 19:15:03,648 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:15:03,648 TRACE org.example.JdbcUtils 21 getNewConnection - Enter
+15 Apr 2025 19:15:03,649 INFO  org.example.JdbcUtils 23 getNewConnection - Connecting to jdbc:sqlite:Moto.sqlite
+15 Apr 2025 19:15:03,650 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@daa5796)
+15 Apr 2025 19:15:03,651 INFO  org.example.InscriereDBRepository 119 getCursePosibilePentruParticipant - Curse fetched successfully
+15 Apr 2025 19:15:03,651 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[]}
+15 Apr 2025 19:15:11,683 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request ADAUGA_PARTICIPANT
+15 Apr 2025 19:15:11,692 DEBUG jsonprotocol.ChatClientJsonWorker 114 handleRequest - adauga participant ...{}Participant{nume='isadj', capMotor=125, echipa=dji, cnp='93210'}
+15 Apr 2025 19:15:11,692 TRACE org.example.ParticipantDBRepository 27 insert - Enter Inserting new Participant
+15 Apr 2025 19:15:11,692 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:15:11,693 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5370b3ad)
+15 Apr 2025 19:15:11,702 TRACE org.example.ParticipantDBRepository 38 insert - Exit: Inserted new Participant with id14
+15 Apr 2025 19:15:11,703 INFO  org.server.ServiceJSON 115 notify_observers - start notify_observers
+15 Apr 2025 19:15:11,707 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK"}
+15 Apr 2025 19:15:11,707 INFO  jsonprotocol.ChatClientJsonWorker 206 refresh - sending refresh response
+15 Apr 2025 19:15:11,707 INFO  jsonprotocol.ChatClientJsonWorker 206 refresh - sending refresh response
+15 Apr 2025 19:15:11,709 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"UPDATE"}
+15 Apr 2025 19:15:11,709 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"UPDATE"}
+15 Apr 2025 19:15:11,714 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_PARTICIPANTI
+15 Apr 2025 19:15:11,714 INFO  org.example.ParticipantDBRepository 90 getAll - Fetching all Participants
+15 Apr 2025 19:15:11,715 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:15:11,715 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5370b3ad)
+15 Apr 2025 19:15:11,716 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13},{"nume":"isadj","capMotor":125,"echipa":"dji","cnp":"93210","id":14}]}
+15 Apr 2025 19:15:11,769 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_CURSE
+15 Apr 2025 19:15:11,769 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_PARTICIPANTI
+15 Apr 2025 19:15:11,770 INFO  org.example.CursaDBRepository 76 getAll - Fetching all Curse
+15 Apr 2025 19:15:11,770 INFO  org.example.ParticipantDBRepository 90 getAll - Fetching all Participants
+15 Apr 2025 19:15:11,771 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:15:11,771 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:15:11,771 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5370b3ad)
+15 Apr 2025 19:15:11,771 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7c9f5f2c)
+15 Apr 2025 19:15:11,772 INFO  org.example.CursaDBRepository 89 getAll - Returning 2 curse
+15 Apr 2025 19:15:11,773 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[{"numarParticipanti":17,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 19:15:11,785 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13},{"nume":"isadj","capMotor":125,"echipa":"dji","cnp":"93210","id":14}]}
+15 Apr 2025 19:15:11,847 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_CURSE
+15 Apr 2025 19:15:11,848 INFO  org.example.CursaDBRepository 76 getAll - Fetching all Curse
+15 Apr 2025 19:15:11,848 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:15:11,849 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7c9f5f2c)
+15 Apr 2025 19:15:11,849 INFO  org.example.CursaDBRepository 89 getAll - Returning 2 curse
+15 Apr 2025 19:15:11,850 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[{"numarParticipanti":17,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 19:15:17,592 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_CURSE_BY_PARTICIPANT
+15 Apr 2025 19:15:17,592 INFO  org.example.InscriereDBRepository 99 getCursePosibilePentruParticipant - getCursePosibilePentruParticipant 14
+15 Apr 2025 19:15:17,592 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:15:17,592 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@daa5796)
+15 Apr 2025 19:15:17,593 INFO  org.example.InscriereDBRepository 119 getCursePosibilePentruParticipant - Curse fetched successfully
+15 Apr 2025 19:15:17,593 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[{"numarParticipanti":17,"capMotor":125,"id":1}]}
+15 Apr 2025 19:15:19,548 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request ADAUGA_INSCRIERE
+15 Apr 2025 19:15:19,552 DEBUG jsonprotocol.ChatClientJsonWorker 125 handleRequest - adauga inscriere ...{}Participant{nume='isadj', capMotor=125, echipa=dji, cnp='93210'} Cursa{numarParticipanti=17, capMotor=125}
+15 Apr 2025 19:15:19,552 INFO  org.server.ServiceJSON 98 adaugaInscriere - start adaugaInscriere in ServiceJSON
+15 Apr 2025 19:15:19,553 INFO  org.example.InscriereDBRepository 34 insert - Inserting new Inscriere
+15 Apr 2025 19:15:19,554 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:15:19,554 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@daa5796)
+15 Apr 2025 19:15:19,560 INFO  org.example.InscriereDBRepository 42 insert - Inserted new Inscriere successfully
+15 Apr 2025 19:15:19,560 INFO  org.example.CursaDBRepository 114 increaseNr - Increasing numarParticipanti for Cursa with id 1
+15 Apr 2025 19:15:19,560 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:15:19,560 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7c9f5f2c)
+15 Apr 2025 19:15:19,565 INFO  org.server.ServiceJSON 115 notify_observers - start notify_observers
+15 Apr 2025 19:15:19,565 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK"}
+15 Apr 2025 19:15:19,566 INFO  jsonprotocol.ChatClientJsonWorker 206 refresh - sending refresh response
+15 Apr 2025 19:15:19,566 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"UPDATE"}
+15 Apr 2025 19:15:19,566 INFO  jsonprotocol.ChatClientJsonWorker 206 refresh - sending refresh response
+15 Apr 2025 19:15:19,569 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"UPDATE"}
+15 Apr 2025 19:15:19,572 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_PARTICIPANTI
+15 Apr 2025 19:15:19,573 INFO  org.example.ParticipantDBRepository 90 getAll - Fetching all Participants
+15 Apr 2025 19:15:19,573 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:15:19,573 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5370b3ad)
+15 Apr 2025 19:15:19,574 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13},{"nume":"isadj","capMotor":125,"echipa":"dji","cnp":"93210","id":14}]}
+15 Apr 2025 19:15:19,629 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_CURSE
+15 Apr 2025 19:15:19,629 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_PARTICIPANTI
+15 Apr 2025 19:15:19,629 INFO  org.example.CursaDBRepository 76 getAll - Fetching all Curse
+15 Apr 2025 19:15:19,629 INFO  org.example.ParticipantDBRepository 90 getAll - Fetching all Participants
+15 Apr 2025 19:15:19,629 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:15:19,629 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7c9f5f2c)
+15 Apr 2025 19:15:19,629 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:15:19,630 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5370b3ad)
+15 Apr 2025 19:15:19,630 INFO  org.example.CursaDBRepository 89 getAll - Returning 2 curse
+15 Apr 2025 19:15:19,630 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[{"numarParticipanti":18,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 19:15:19,630 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13},{"nume":"isadj","capMotor":125,"echipa":"dji","cnp":"93210","id":14}]}
+15 Apr 2025 19:15:19,691 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request GET_ALL_CURSE
+15 Apr 2025 19:15:19,691 INFO  org.example.CursaDBRepository 76 getAll - Fetching all Curse
+15 Apr 2025 19:15:19,691 TRACE org.example.JdbcUtils 35 getConnection - Enter
+15 Apr 2025 19:15:19,691 TRACE org.example.JdbcUtils 43 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7c9f5f2c)
+15 Apr 2025 19:15:19,691 INFO  org.example.CursaDBRepository 89 getAll - Returning 2 curse
+15 Apr 2025 19:15:19,692 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK","curse":[{"numarParticipanti":18,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+15 Apr 2025 19:15:21,172 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request LOGOUT
+15 Apr 2025 19:15:21,172 DEBUG jsonprotocol.ChatClientJsonWorker 92 handleRequest - Logout request ...{}User{username='octa', password='pass'}
+15 Apr 2025 19:15:21,172 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK"}
+15 Apr 2025 19:15:21,984 INFO  jsonprotocol.ChatClientJsonWorker 79 handleRequest - Start handle request LOGOUT
+15 Apr 2025 19:15:21,986 DEBUG jsonprotocol.ChatClientJsonWorker 92 handleRequest - Logout request ...{}User{username='octa2', password='pass'}
+15 Apr 2025 19:15:21,986 DEBUG jsonprotocol.ChatClientJsonWorker 197 sendResponse - sending response {"type":"OK"}

@@ -18,13 +18,15 @@ public abstract class AbstractServer {
     public void start() throws ServerException {
         try{
             server=new ServerSocket(port);
+            logger.info("starting server ...");
             while(true){
                 logger.info("Waiting for clients ...");
                 Socket client=server.accept();
                 logger.info("Client connected ...");
                 processRequest(client);
             }
-        } catch (IOException e) {
+        } catch (Exception e) {
+            logger.error(e.getMessage());
             throw new ServerException("Starting server errror ",e);
         }finally {
             System.out.println("sdddddddd");
