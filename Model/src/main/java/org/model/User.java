@@ -2,12 +2,12 @@ package org.model;
 
 public class User extends Entity<Long>{
     String username;
-    String password;
+    String parola;
 
-    public User(Long id, String username, String password) {
+    public User(Long id, String username, String parola) {
         super.setId(id);
         this.username = username;
-        this.password = password;
+        this.parola = parola;
     }
 
     public String getUsername() {
@@ -18,19 +18,19 @@ public class User extends Entity<Long>{
         this.username = username;
     }
 
-    public String getPassword() {
-        return password;
+    public String getParola() {
+        return parola;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setparola(String parola) {
+        this.parola = parola;
     }
 
     @Override
     public String toString() {
         return "User{" +
                 "username='" + username + '\'' +
-                ", password='" + password + '\'' +
+                ", parola='" + parola + '\'' +
                 '}';
     }
 }

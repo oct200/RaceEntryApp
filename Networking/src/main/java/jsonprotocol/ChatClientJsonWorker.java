@@ -1,6 +1,7 @@
 package jsonprotocol;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.utils.ServerException;
@@ -34,7 +35,8 @@ public class ChatClientJsonWorker implements Runnable, IClientObserver {
     public ChatClientJsonWorker(IService server, Socket connection) {
         this.service = server;
         this.connection = connection;
-        gsonFormatter=new Gson();
+        gsonFormatter = new GsonBuilder().setFieldNamingStrategy(f -> f.getName().toLowerCase()).create();
+        //gsonFormatter=new Gson();
         try{
             output=new PrintWriter(connection.getOutputStream());
             input=new BufferedReader(new InputStreamReader(connection.getInputStream()));
@@ -50,6 +52,7 @@ public class ChatClientJsonWorker implements Runnable, IClientObserver {
             try {
                 String requestLine=input.readLine();
                 Request request=gsonFormatter.fromJson(requestLine, Request.class);
+                logger.info("request primit: " + request.toString());
                 Response response= handleRequest(request);
                 if (response!=null){
                     sendResponse(response);
@@ -81,7 +84,7 @@ public class ChatClientJsonWorker implements Runnable, IClientObserver {
             logger.debug("Login request ...{}" + request.getUser());
             User user = request.getUser();
             try {
-                user = service.userExists(user.getUsername(), user.getPassword(), this);
+                user = service.userExists(user.getUsername(), user.getParola(), this);
                 return JsonProtocolUtils.createUserResponse(user);
             } catch (Exception e) {
                 connected = false;
@@ -103,7 +106,7 @@ public class ChatClientJsonWorker implements Runnable, IClientObserver {
             logger.debug("Adaugare user ...{}" + request.getUser());
             User user = request.getUser();
             try {
-                service.insertUser(user.getUsername(), user.getPassword());
+                service.insertUser(user.getUsername(), user.getParola());
                 return okResponse;
             } catch (Exception e) {
                 connected = false;

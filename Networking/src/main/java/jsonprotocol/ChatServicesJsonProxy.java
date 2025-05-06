@@ -1,6 +1,7 @@
 package jsonprotocol;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.utils.ServerException;
@@ -102,13 +103,16 @@ public class ChatServicesJsonProxy implements IService {
         if (response.getType()== ResponseType.OK){
             this.client=client;
             setCurrentUser(response.getUser());
+            logger.info("response ok00");
             return response.getUser();
         }
         if (response.getType()== ResponseType.ERROR){
-            String err=response.getErrorMessage();;
+            logger.info("response error");
+            String err=response.getErrorMessage();
             closeConnection();
             throw new AppException(err);
         }
+        logger.info("response"  + response.getType());
         return null;
     }
 
@@ -293,7 +297,8 @@ public class ChatServicesJsonProxy implements IService {
     private void initializeConnection() {
         try {
             logger.info("start initialise");
-            gsonFormatter=new Gson();
+            gsonFormatter=new GsonBuilder().setFieldNamingStrategy(f -> f.getName().toLowerCase()).create();
+            //gsonFormatter = new Gson();
             connection=new Socket(host,port);
             output=new PrintWriter(connection.getOutputStream());
             output.flush();
@@ -346,6 +351,7 @@ public class ChatServicesJsonProxy implements IService {
     }
     private void sendRequest(Request request) throws AppException {
         String reqLine=gsonFormatter.toJson(request);
+        logger.info("request trimis din proxy: " + reqLine);
         try {
             output.println(reqLine);
             output.flush();
@@ -359,6 +365,7 @@ public class ChatServicesJsonProxy implements IService {
         logger.info("start read response");
         try{
             response=qresponses.take();
+            logger.info(response.toString());
         } catch (InterruptedException e) {
             logger.error(e);
             logger.error(e.getStackTrace());

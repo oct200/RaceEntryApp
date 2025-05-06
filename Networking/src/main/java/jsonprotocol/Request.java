@@ -1,6 +1,7 @@
 package jsonprotocol;
 
 
+import com.google.gson.annotations.SerializedName;
 import org.model.Cursa;
 import org.model.Participant;
 import org.model.User;
@@ -10,8 +11,10 @@ import java.util.Arrays;
 public class Request {
     private RequestType type;
     private User user;
+    @SerializedName("listaUseri")
     private User[] listaUseri;
     private String echipa;
+    @SerializedName("capMotor")
     private int capMotor;
     private Participant participant;
     private Cursa cursa;

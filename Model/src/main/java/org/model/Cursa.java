@@ -1,7 +1,10 @@
 package org.model;
+import com.google.gson.annotations.SerializedName;
 
 public class Cursa extends Entity<Long>{
+    @SerializedName("numarParticipanti")
     int numarParticipanti;
+    @SerializedName("capMotor")
     int capMotor;
 
     public Cursa(Long id, int numarParticipanti, int capMotor) {

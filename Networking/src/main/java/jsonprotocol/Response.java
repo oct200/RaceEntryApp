@@ -1,6 +1,7 @@
 package jsonprotocol;
 
 
+import com.google.gson.annotations.SerializedName;
 import org.model.Cursa;
 import org.model.Participant;
 import org.model.User;
@@ -12,9 +13,13 @@ import java.util.List;
 
 public class Response implements Serializable {
     private ResponseType type;
+
+    @SerializedName("errorMessage")
     private String errorMessage;
     private User user;
     private List<String> echipe;
+
+    @SerializedName("capacitatiMotor")
     private List<Integer> capacitatiMotor;
     private List<Participant> participanti;
     private List<Cursa> curse;

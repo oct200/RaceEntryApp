@@ -26,7 +26,7 @@ public class UserDBRepository implements UserRepositoryInterface {
         try (PreparedStatement prepStmt = conn.prepareStatement(
                 "INSERT INTO user(username, parola) VALUES (?, ?)", Statement.RETURN_GENERATED_KEYS)) {
             prepStmt.setString(1, entity.getUsername());
-            prepStmt.setString(2, entity.getPassword());
+            prepStmt.setString(2, entity.getParola());
             int result = prepStmt.executeUpdate();
 
             if (result > 0) {
@@ -53,7 +53,7 @@ public class UserDBRepository implements UserRepositoryInterface {
         try (PreparedStatement prepStmt = conn.prepareStatement(
                 "UPDATE user SET username = ?, parola = ? WHERE id = ?")) {
             prepStmt.setString(1, entity.getUsername());
-            prepStmt.setString(2, entity.getPassword());
+            prepStmt.setString(2, entity.getParola());
             prepStmt.setLong(3, id);
             int updated = prepStmt.executeUpdate();
             if (updated > 0) {

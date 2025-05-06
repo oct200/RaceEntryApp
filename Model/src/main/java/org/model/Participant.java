@@ -1,7 +1,10 @@
 package org.model;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Participant extends Entity<Long>{
     String nume;
+    @SerializedName("capMotor")
     int capMotor;
     String echipa;
     String cnp;
