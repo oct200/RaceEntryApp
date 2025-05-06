@@ -1,0 +1,11 @@
+2025-05-06 18:17:02,172 [1] INFO StartServer - Starting chat server
+2025-05-06 18:17:02,189 [1] INFO StartServer - Reading properties from app.config ...
+2025-05-06 18:17:02,198 [1] INFO StartServer - Resolved SQLite DB path: C:\Users\Octa\Downloads\CSharp_ChatSockets2025-octa\ChatSockets2025\server\bin\Debug\net8.0\mydatabase.db
+2025-05-06 18:17:02,199 [1] INFO StartServer - Configuration Settings for database Data Source=mydatabase.db
+2025-05-06 18:17:02,202 [1] INFO persistence.CursaDBRepository - RepositoryDBUser initialized
+2025-05-06 18:17:02,204 [1] INFO persistence.ParticipantDBRepository - ParticipantDBRepository initialized
+2025-05-06 18:17:02,205 [1] INFO persistence.InscriereDBRepository - InscriereDBRepository initialized
+2025-05-06 18:17:02,205 [1] INFO persistence.RepositoryDBUser - RepositoryDBUser initialized
+2025-05-06 18:17:02,206 [1] DEBUG StartServer - Starting server on IP 127.0.0.1 and port 55556
+2025-05-06 18:17:02,207 [1] DEBUG JsonChatServer - Creating JsonChatServer...
+2025-05-06 18:17:02,214 [1] DEBUG networking.AbstractServer - Waiting for clients ...
