@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Text.Json;
-using model;
+using model.ORMModel;
 using services;
 using log4net;
 using log4net.Repository.Hierarchy;
@@ -26,6 +26,7 @@ public class ChatServerJsonProxy : IService
     private static readonly ILog log = LogManager.GetLogger(typeof(ChatServerJsonProxy));
     private static readonly JsonSerializerOptions JsonOptions = new()
     {
+        ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve,
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
         Converters = { new JsonStringEnumConverter() }
     };
@@ -164,7 +165,7 @@ public class ChatServerJsonProxy : IService
         log.Info("start userExists");
         if (connection == null || !connection.Connected)
             initializeConnection();
-        User user = new User(1L, username, pass);
+        User user = new User() { Id = 1, Username = username, Parola = pass };
         Request req = JsonProtocolUtils.CreateLoginRequest(user);
         sendRequest(req);
         Response response = readResponse();
@@ -193,7 +194,7 @@ public class ChatServerJsonProxy : IService
         log.Info("start insertUser");
         if (connection == null || !connection.Connected)
             initializeConnection();
-        User user = new User(1L, username, pass);
+        User user = new User() { Id = 1, Username = username, Parola = pass };
         Request req = JsonProtocolUtils.CreateAdaugaUserRequest(user);
         sendRequest(req);
         Response response = readResponse();
@@ -252,7 +253,7 @@ public class ChatServerJsonProxy : IService
     public void InscrieParticipant(string nume, string cnp, int cap, string echipa)
     {
         log.Info("start inscrieParticipant");
-        Request req = JsonProtocolUtils.CreateAdaugaParticipantRequest(new Participant(1L, nume, cap, echipa, cnp));
+        Request req = JsonProtocolUtils.CreateAdaugaParticipantRequest(new Participant() { Id = 1, Nume = nume, CapMotor = cap, Echipa = echipa, Cnp = cnp });
         sendRequest(req);
         Response response = readResponse();
         if (response.Type == ResponseType.OK)

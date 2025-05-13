@@ -76,7 +76,7 @@ class StartServer
             IRepositoryInscriere inscrieri = new InscriereDBRepository(dbProperties, participanti, curse);
             IRepositoryUser useri = new RepositoryDBUser(dbProperties);
 
-            return new ChatServerImpl(curse, inscrieri, participanti, useri);
+            return new ServerImplWithORM();
         }
 
 

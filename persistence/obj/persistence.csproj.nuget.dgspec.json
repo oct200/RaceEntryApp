@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Octa\\Downloads\\CSharp_ChatSockets2025-octa\\ChatSockets2025\\persistence\\persistence.csproj": {}
+    "D:\\GithubRepos\\mpp-proiect-csharp-oct200\\persistence\\persistence.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Octa\\Downloads\\CSharp_ChatSockets2025-octa\\ChatSockets2025\\model\\model.csproj": {
+    "D:\\GithubRepos\\mpp-proiect-csharp-oct200\\model\\model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Octa\\Downloads\\CSharp_ChatSockets2025-octa\\ChatSockets2025\\model\\model.csproj",
+        "projectUniqueName": "D:\\GithubRepos\\mpp-proiect-csharp-oct200\\model\\model.csproj",
         "projectName": "model",
-        "projectPath": "C:\\Users\\Octa\\Downloads\\CSharp_ChatSockets2025-octa\\ChatSockets2025\\model\\model.csproj",
+        "projectPath": "D:\\GithubRepos\\mpp-proiect-csharp-oct200\\model\\model.csproj",
         "packagesPath": "C:\\Users\\Octa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Octa\\Downloads\\CSharp_ChatSockets2025-octa\\ChatSockets2025\\model\\obj\\",
+        "outputPath": "D:\\GithubRepos\\mpp-proiect-csharp-oct200\\model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Octa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,18 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -59,14 +71,14 @@
         }
       }
     },
-    "C:\\Users\\Octa\\Downloads\\CSharp_ChatSockets2025-octa\\ChatSockets2025\\persistence\\persistence.csproj": {
+    "D:\\GithubRepos\\mpp-proiect-csharp-oct200\\persistence\\persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Octa\\Downloads\\CSharp_ChatSockets2025-octa\\ChatSockets2025\\persistence\\persistence.csproj",
+        "projectUniqueName": "D:\\GithubRepos\\mpp-proiect-csharp-oct200\\persistence\\persistence.csproj",
         "projectName": "persistence",
-        "projectPath": "C:\\Users\\Octa\\Downloads\\CSharp_ChatSockets2025-octa\\ChatSockets2025\\persistence\\persistence.csproj",
+        "projectPath": "D:\\GithubRepos\\mpp-proiect-csharp-oct200\\persistence\\persistence.csproj",
         "packagesPath": "C:\\Users\\Octa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Octa\\Downloads\\CSharp_ChatSockets2025-octa\\ChatSockets2025\\persistence\\obj\\",
+        "outputPath": "D:\\GithubRepos\\mpp-proiect-csharp-oct200\\persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Octa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -83,8 +95,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Octa\\Downloads\\CSharp_ChatSockets2025-octa\\ChatSockets2025\\model\\model.csproj": {
-                "projectPath": "C:\\Users\\Octa\\Downloads\\CSharp_ChatSockets2025-octa\\ChatSockets2025\\model\\model.csproj"
+              "D:\\GithubRepos\\mpp-proiect-csharp-oct200\\model\\model.csproj": {
+                "projectPath": "D:\\GithubRepos\\mpp-proiect-csharp-oct200\\model\\model.csproj"
               }
             }
           }

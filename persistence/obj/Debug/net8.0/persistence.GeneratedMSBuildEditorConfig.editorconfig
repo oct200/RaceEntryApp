@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = persistence
-build_property.ProjectDir = C:\Users\Octa\Downloads\CSharp_ChatSockets2025-octa\ChatSockets2025\persistence\
+build_property.ProjectDir = D:\GithubRepos\mpp-proiect-csharp-oct200\persistence\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -1,4 +1,4 @@
-using model;
+using model.ORMModel;
 
 namespace networking.jsonprotocol;
 
