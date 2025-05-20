@@ -1,6 +1,4 @@
-
-using model.ORMModel;
-
+using model;
 namespace networking.jsonprotocol;
 
 public class Response

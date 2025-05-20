@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using model.ORMModel;
+using model;
 using services;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Collections;
@@ -157,7 +157,7 @@ namespace ChatClientGTK
         {
             try
             {
-                service.Logout(new User() { Id = 1, Username = "sf", Parola = "sd" });
+                service.Logout(new User(1, "sf", "sd"));
                 FormAutentificare fa = new FormAutentificare(service);
                 this.Hide();
                 fa.ShowDialog();

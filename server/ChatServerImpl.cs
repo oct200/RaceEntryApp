@@ -8,7 +8,7 @@ using networking.jsonprotocol;
 
 namespace chat.server;
 
-/*public class ChatServerImpl: IService
+public class ChatServerImpl: IService
 {
    private IRepositoryCursa repoCursa;
    private IRepositoryInscriere repoInscriere;
@@ -135,8 +135,8 @@ namespace chat.server;
        }
    }
 
-}*/
-
+}
+/*
 public class ChatServerImpl : IService
 {
     public void AdaugaInscriere(model.ORMModel.Participant participant, model.ORMModel.Cursa cursa)
@@ -198,4 +198,4 @@ public class ChatServerImpl : IService
     {
         throw new NotImplementedException();
     }
-}
+}*/

@@ -1,4 +1,4 @@
-using model.ORMModel;
+using model;
 
 namespace services;
 

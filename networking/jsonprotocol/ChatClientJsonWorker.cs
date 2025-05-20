@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Text.Json;
-using model.ORMModel;
+using model;
 using services;
 using log4net;
 using services;
@@ -23,7 +23,7 @@ public class ChatClientJsonWorker : IClientObserver
     private static readonly ILog log = LogManager.GetLogger(typeof(ChatClientJsonWorker));
     private static readonly JsonSerializerOptions JsonOptions = new()
     {
-        ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve,
+        //ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve,
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
         Converters = { new JsonStringEnumConverter() }
     };

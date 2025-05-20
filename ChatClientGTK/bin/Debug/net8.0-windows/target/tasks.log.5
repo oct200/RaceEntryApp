@@ -1,96 +1,46 @@
-2025-05-12 17:27:44,508 [1] DEBUG ChatClientGTK.StartClient - Reading properties from app.config ...
-2025-05-12 17:27:44,539 [1] INFO ChatClientGTK.StartClient - Using  server on IP 127.0.0.1 and port 55556
-2025-05-12 17:27:50,335 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - start userExists
-2025-05-12 17:27:50,440 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Sending request {"type":"LOGIN","user":{"id":1,"username":"octa","parola":"pass"},"listaUseri":null,"echipa":null,"capMotor":0,"participant":null,"cursa":null}
-2025-05-12 17:27:51,402 [11] DEBUG networking.jsonprotocol.ChatServerJsonProxy - response received networking.jsonprotocol.Response
-2025-05-12 17:27:51,403 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Raspuns primit networking.jsonprotocol.Response
-2025-05-12 17:27:51,405 [1] INFO ChatClientGTK.FormPrincipal - Incepere initializareCombobox
-2025-05-12 17:27:51,406 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - start getAllTeams
-2025-05-12 17:27:51,407 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Sending request {"type":"GET_ALL_TEAMS","user":null,"listaUseri":null,"echipa":null,"capMotor":0,"participant":null,"cursa":null}
-2025-05-12 17:27:51,428 [11] DEBUG networking.jsonprotocol.ChatServerJsonProxy - response received networking.jsonprotocol.Response
-2025-05-12 17:27:51,429 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Raspuns primit networking.jsonprotocol.Response
-2025-05-12 17:27:51,429 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - echipe returnate: 10
-2025-05-12 17:27:51,430 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - start getCapacitati
-2025-05-12 17:27:51,431 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Sending request {"type":"GET_CAPACITATI","user":null,"listaUseri":null,"echipa":null,"capMotor":0,"participant":null,"cursa":null}
-2025-05-12 17:27:51,466 [11] DEBUG networking.jsonprotocol.ChatServerJsonProxy - response received networking.jsonprotocol.Response
-2025-05-12 17:27:51,466 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Raspuns primit networking.jsonprotocol.Response
-2025-05-12 17:27:51,467 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - capacitati returnate: 2
-2025-05-12 17:27:51,477 [1] INFO ChatClientGTK.FormPrincipal - Incepere loadTabelParticipanti
-2025-05-12 17:27:51,481 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - start getAllParticipanti
-2025-05-12 17:27:51,481 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Sending request {"type":"GET_ALL_PARTICIPANTI","user":null,"listaUseri":null,"echipa":null,"capMotor":0,"participant":null,"cursa":null}
-2025-05-12 17:27:51,522 [11] DEBUG networking.jsonprotocol.ChatServerJsonProxy - response received networking.jsonprotocol.Response
-2025-05-12 17:27:51,523 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Raspuns primit networking.jsonprotocol.Response
-2025-05-12 17:27:51,523 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - participanti returnati: 21
-2025-05-12 17:27:51,540 [1] INFO ChatClientGTK.FormPrincipal - final loadTabelParticipanti
-2025-05-12 17:27:51,550 [1] INFO ChatClientGTK.FormPrincipal - Incepere loadTabelCurse
-2025-05-12 17:27:51,551 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - start getAllCurse
-2025-05-12 17:27:51,552 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Sending request {"type":"GET_ALL_CURSE","user":null,"listaUseri":null,"echipa":null,"capMotor":0,"participant":null,"cursa":null}
-2025-05-12 17:27:51,573 [11] DEBUG networking.jsonprotocol.ChatServerJsonProxy - response received networking.jsonprotocol.Response
-2025-05-12 17:27:51,574 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Raspuns primit networking.jsonprotocol.Response
-2025-05-12 17:27:51,574 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - curse returnate: 2
-2025-05-12 17:27:51,576 [1] INFO ChatClientGTK.FormPrincipal - final loadTabelCurse
-2025-05-12 17:27:51,577 [1] INFO ChatClientGTK.FormPrincipal - final initializareCombobox
-2025-05-12 17:27:51,577 [1] INFO ChatClientGTK.FormPrincipal - Incepere loadTabelParticipanti
-2025-05-12 17:27:51,578 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - start getAllParticipanti
-2025-05-12 17:27:51,578 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Sending request {"type":"GET_ALL_PARTICIPANTI","user":null,"listaUseri":null,"echipa":null,"capMotor":0,"participant":null,"cursa":null}
-2025-05-12 17:27:51,614 [11] DEBUG networking.jsonprotocol.ChatServerJsonProxy - response received networking.jsonprotocol.Response
-2025-05-12 17:27:51,614 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Raspuns primit networking.jsonprotocol.Response
-2025-05-12 17:27:51,615 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - participanti returnati: 21
-2025-05-12 17:27:51,617 [1] INFO ChatClientGTK.FormPrincipal - final loadTabelParticipanti
-2025-05-12 17:27:51,618 [1] INFO ChatClientGTK.FormPrincipal - Incepere loadTabelCurse
-2025-05-12 17:27:51,618 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - start getAllCurse
-2025-05-12 17:27:51,618 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Sending request {"type":"GET_ALL_CURSE","user":null,"listaUseri":null,"echipa":null,"capMotor":0,"participant":null,"cursa":null}
-2025-05-12 17:27:51,642 [11] DEBUG networking.jsonprotocol.ChatServerJsonProxy - response received networking.jsonprotocol.Response
-2025-05-12 17:27:51,642 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Raspuns primit networking.jsonprotocol.Response
-2025-05-12 17:27:51,643 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - curse returnate: 2
-2025-05-12 17:27:51,645 [1] INFO ChatClientGTK.FormPrincipal - final loadTabelCurse
-2025-05-12 17:28:03,184 [1] INFO ChatClientGTK.FormPrincipal - Incepere buttonInscriere_Click
-2025-05-12 17:28:03,187 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - start inscrieParticipant
-2025-05-12 17:28:03,191 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Sending request {"type":"ADAUGA_PARTICIPANT","user":null,"listaUseri":null,"echipa":null,"capMotor":0,"participant":{"id":1,"nume":"veskan","capMotor":125,"echipa":"Bursucii","cnp":"38412391231","cursas":[]},"cursa":null}
-2025-05-12 17:28:03,344 [11] DEBUG networking.jsonprotocol.ChatServerJsonProxy - response received networking.jsonprotocol.Response
-2025-05-12 17:28:03,344 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Raspuns primit networking.jsonprotocol.Response
-2025-05-12 17:28:03,344 [11] DEBUG networking.jsonprotocol.ChatServerJsonProxy - response received networking.jsonprotocol.Response
-2025-05-12 17:28:03,345 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - participant inscris
-2025-05-12 17:28:03,346 [6] INFO ChatClientGTK.FormPrincipal - Incepere initializareCombobox
-2025-05-12 17:28:03,348 [6] INFO networking.jsonprotocol.ChatServerJsonProxy - start getAllTeams
-2025-05-12 17:28:03,349 [6] INFO networking.jsonprotocol.ChatServerJsonProxy - Sending request {"type":"GET_ALL_TEAMS","user":null,"listaUseri":null,"echipa":null,"capMotor":0,"participant":null,"cursa":null}
-2025-05-12 17:28:03,392 [11] DEBUG networking.jsonprotocol.ChatServerJsonProxy - response received networking.jsonprotocol.Response
-2025-05-12 17:28:03,393 [6] INFO networking.jsonprotocol.ChatServerJsonProxy - Raspuns primit networking.jsonprotocol.Response
-2025-05-12 17:28:03,394 [6] INFO networking.jsonprotocol.ChatServerJsonProxy - echipe returnate: 11
-2025-05-12 17:28:03,394 [6] INFO networking.jsonprotocol.ChatServerJsonProxy - start getCapacitati
-2025-05-12 17:28:03,395 [6] INFO networking.jsonprotocol.ChatServerJsonProxy - Sending request {"type":"GET_CAPACITATI","user":null,"listaUseri":null,"echipa":null,"capMotor":0,"participant":null,"cursa":null}
-2025-05-12 17:28:03,427 [11] DEBUG networking.jsonprotocol.ChatServerJsonProxy - response received networking.jsonprotocol.Response
-2025-05-12 17:28:03,427 [6] INFO networking.jsonprotocol.ChatServerJsonProxy - Raspuns primit networking.jsonprotocol.Response
-2025-05-12 17:28:03,428 [6] INFO networking.jsonprotocol.ChatServerJsonProxy - capacitati returnate: 2
-2025-05-12 17:28:03,429 [1] INFO ChatClientGTK.FormPrincipal - Incepere loadTabelParticipanti
-2025-05-12 17:28:03,430 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - start getAllParticipanti
-2025-05-12 17:28:03,431 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Sending request {"type":"GET_ALL_PARTICIPANTI","user":null,"listaUseri":null,"echipa":null,"capMotor":0,"participant":null,"cursa":null}
-2025-05-12 17:28:03,463 [11] DEBUG networking.jsonprotocol.ChatServerJsonProxy - response received networking.jsonprotocol.Response
-2025-05-12 17:28:03,464 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Raspuns primit networking.jsonprotocol.Response
-2025-05-12 17:28:03,465 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - participanti returnati: 22
-2025-05-12 17:28:03,514 [1] INFO ChatClientGTK.FormPrincipal - final loadTabelParticipanti
-2025-05-12 17:28:03,729 [1] INFO ChatClientGTK.FormPrincipal - Incepere loadTabelCurse
-2025-05-12 17:28:03,730 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - start getAllCurse
-2025-05-12 17:28:03,730 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Sending request {"type":"GET_ALL_CURSE","user":null,"listaUseri":null,"echipa":null,"capMotor":0,"participant":null,"cursa":null}
-2025-05-12 17:28:03,738 [11] DEBUG networking.jsonprotocol.ChatServerJsonProxy - response received networking.jsonprotocol.Response
-2025-05-12 17:28:03,738 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Raspuns primit networking.jsonprotocol.Response
-2025-05-12 17:28:03,740 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - curse returnate: 2
-2025-05-12 17:28:03,746 [1] INFO ChatClientGTK.FormPrincipal - final loadTabelCurse
-2025-05-12 17:28:03,747 [6] INFO ChatClientGTK.FormPrincipal - final initializareCombobox
-2025-05-12 17:28:03,748 [6] INFO ChatClientGTK.FormPrincipal - Incepere loadTabelParticipanti
-2025-05-12 17:28:03,750 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - start getAllParticipanti
-2025-05-12 17:28:03,750 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Sending request {"type":"GET_ALL_PARTICIPANTI","user":null,"listaUseri":null,"echipa":null,"capMotor":0,"participant":null,"cursa":null}
-2025-05-12 17:28:03,776 [11] DEBUG networking.jsonprotocol.ChatServerJsonProxy - response received networking.jsonprotocol.Response
-2025-05-12 17:28:03,776 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Raspuns primit networking.jsonprotocol.Response
-2025-05-12 17:28:03,778 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - participanti returnati: 22
-2025-05-12 17:28:03,820 [6] INFO ChatClientGTK.FormPrincipal - final loadTabelParticipanti
-2025-05-12 17:28:03,821 [6] INFO ChatClientGTK.FormPrincipal - Incepere loadTabelCurse
-2025-05-12 17:28:04,017 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - start getAllCurse
-2025-05-12 17:28:04,018 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Sending request {"type":"GET_ALL_CURSE","user":null,"listaUseri":null,"echipa":null,"capMotor":0,"participant":null,"cursa":null}
-2025-05-12 17:28:04,026 [11] DEBUG networking.jsonprotocol.ChatServerJsonProxy - response received networking.jsonprotocol.Response
-2025-05-12 17:28:04,026 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Raspuns primit networking.jsonprotocol.Response
-2025-05-12 17:28:04,027 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - curse returnate: 2
-2025-05-12 17:28:04,031 [6] INFO ChatClientGTK.FormPrincipal - final loadTabelCurse
-2025-05-12 17:28:07,059 [1] INFO ChatClientGTK.FormPrincipal - starting tabelParticipantiClick
-2025-05-12 17:28:07,061 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - start getCurseForParticipant
-2025-05-12 17:28:07,062 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Sending request {"type":"GET_CURSE_BY_PARTICIPANT","user":null,"listaUseri":null,"echipa":null,"capMotor":0,"participant":{"id":22,"nume":"veskan","capMotor":125,"echipa":"Bursucii","cnp":"38412391231","cursas":[]},"cursa":null}
+2025-05-20 15:01:16,147 [1] DEBUG ChatClientGTK.StartClient - Reading properties from app.config ...
+2025-05-20 15:01:16,198 [1] INFO ChatClientGTK.StartClient - Using  server on IP 127.0.0.1 and port 55556
+2025-05-20 15:01:20,829 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - start userExists
+2025-05-20 15:01:21,076 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Sending request {"$id":"1","type":"LOGIN","user":{"$id":"2","username":"octa","parola":"pass","id":1},"listaUseri":null,"echipa":null,"capMotor":0,"participant":null,"cursa":null}
+2025-05-20 15:01:21,704 [11] DEBUG networking.jsonprotocol.ChatServerJsonProxy - response received networking.jsonprotocol.Response
+2025-05-20 15:01:21,705 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Raspuns primit networking.jsonprotocol.Response
+2025-05-20 15:01:21,707 [1] INFO ChatClientGTK.FormPrincipal - Incepere initializareCombobox
+2025-05-20 15:01:21,708 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - start getAllTeams
+2025-05-20 15:01:21,709 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Sending request {"$id":"1","type":"GET_ALL_TEAMS","user":null,"listaUseri":null,"echipa":null,"capMotor":0,"participant":null,"cursa":null}
+2025-05-20 15:01:21,718 [11] DEBUG networking.jsonprotocol.ChatServerJsonProxy - response received networking.jsonprotocol.Response
+2025-05-20 15:01:21,719 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Raspuns primit networking.jsonprotocol.Response
+2025-05-20 15:01:21,719 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - echipe returnate: 12
+2025-05-20 15:01:21,720 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - start getCapacitati
+2025-05-20 15:01:21,720 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Sending request {"$id":"1","type":"GET_CAPACITATI","user":null,"listaUseri":null,"echipa":null,"capMotor":0,"participant":null,"cursa":null}
+2025-05-20 15:01:21,760 [11] DEBUG networking.jsonprotocol.ChatServerJsonProxy - response received networking.jsonprotocol.Response
+2025-05-20 15:01:21,760 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Raspuns primit networking.jsonprotocol.Response
+2025-05-20 15:01:21,761 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - capacitati returnate: 2
+2025-05-20 15:01:21,771 [1] INFO ChatClientGTK.FormPrincipal - Incepere loadTabelParticipanti
+2025-05-20 15:01:21,773 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - start getAllParticipanti
+2025-05-20 15:01:21,774 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Sending request {"$id":"1","type":"GET_ALL_PARTICIPANTI","user":null,"listaUseri":null,"echipa":null,"capMotor":0,"participant":null,"cursa":null}
+2025-05-20 15:01:21,792 [11] DEBUG networking.jsonprotocol.ChatServerJsonProxy - response received networking.jsonprotocol.Response
+2025-05-20 15:01:21,792 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Raspuns primit networking.jsonprotocol.Response
+2025-05-20 15:01:21,793 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - participanti returnati: 23
+2025-05-20 15:01:21,806 [1] INFO ChatClientGTK.FormPrincipal - final loadTabelParticipanti
+2025-05-20 15:01:21,808 [1] INFO ChatClientGTK.FormPrincipal - Incepere loadTabelCurse
+2025-05-20 15:01:21,809 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - start getAllCurse
+2025-05-20 15:01:21,809 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Sending request {"$id":"1","type":"GET_ALL_CURSE","user":null,"listaUseri":null,"echipa":null,"capMotor":0,"participant":null,"cursa":null}
+2025-05-20 15:01:21,819 [11] DEBUG networking.jsonprotocol.ChatServerJsonProxy - response received networking.jsonprotocol.Response
+2025-05-20 15:01:21,820 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Raspuns primit networking.jsonprotocol.Response
+2025-05-20 15:01:21,821 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - curse returnate: 2
+2025-05-20 15:01:21,822 [1] INFO ChatClientGTK.FormPrincipal - final loadTabelCurse
+2025-05-20 15:01:21,823 [1] INFO ChatClientGTK.FormPrincipal - final initializareCombobox
+2025-05-20 15:01:21,824 [1] INFO ChatClientGTK.FormPrincipal - Incepere loadTabelParticipanti
+2025-05-20 15:01:21,824 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - start getAllParticipanti
+2025-05-20 15:01:21,825 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Sending request {"$id":"1","type":"GET_ALL_PARTICIPANTI","user":null,"listaUseri":null,"echipa":null,"capMotor":0,"participant":null,"cursa":null}
+2025-05-20 15:01:21,851 [11] DEBUG networking.jsonprotocol.ChatServerJsonProxy - response received networking.jsonprotocol.Response
+2025-05-20 15:01:21,851 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Raspuns primit networking.jsonprotocol.Response
+2025-05-20 15:01:21,852 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - participanti returnati: 23
+2025-05-20 15:01:21,855 [1] INFO ChatClientGTK.FormPrincipal - final loadTabelParticipanti
+2025-05-20 15:01:21,855 [1] INFO ChatClientGTK.FormPrincipal - Incepere loadTabelCurse
+2025-05-20 15:01:21,856 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - start getAllCurse
+2025-05-20 15:01:21,856 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Sending request {"$id":"1","type":"GET_ALL_CURSE","user":null,"listaUseri":null,"echipa":null,"capMotor":0,"participant":null,"cursa":null}
+2025-05-20 15:01:21,877 [11] DEBUG networking.jsonprotocol.ChatServerJsonProxy - response received networking.jsonprotocol.Response
+2025-05-20 15:01:21,878 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - Raspuns primit networking.jsonprotocol.Response
+2025-05-20 15:01:21,879 [1] INFO networking.jsonprotocol.ChatServerJsonProxy - curse returnate: 2
+2025-05-20 15:01:21,880 [1] INFO ChatClientGTK.FormPrincipal - final loadTabelCurse

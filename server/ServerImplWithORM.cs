@@ -10,7 +10,7 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
 namespace chat.server;
-
+/*
 public class ServerImplWithORM : IService
 {
     private MydatabaseContext mydatabaseContext;
@@ -137,4 +137,5 @@ public class ServerImplWithORM : IService
         }
     }
 
-}
+}*/
+public class ServerImplWithORM { }

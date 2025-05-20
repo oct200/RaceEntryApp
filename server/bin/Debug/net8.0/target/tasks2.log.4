@@ -1,244 +1,30 @@
-2025-05-12 17:31:04,963 [1] INFO StartServer - Starting chat server
-2025-05-12 17:31:04,977 [1] INFO StartServer - Reading properties from app.config ...
-2025-05-12 17:31:04,986 [1] INFO StartServer - Resolved SQLite DB path: D:\GithubRepos\mpp-proiect-csharp-oct200\server\bin\Debug\net8.0\mydatabase.db
-2025-05-12 17:31:04,987 [1] INFO StartServer - Configuration Settings for database Data Source=mydatabase.db
-2025-05-12 17:31:04,991 [1] INFO persistence.CursaDBRepository - RepositoryDBUser initialized
-2025-05-12 17:31:04,995 [1] INFO persistence.ParticipantDBRepository - ParticipantDBRepository initialized
-2025-05-12 17:31:04,996 [1] INFO persistence.InscriereDBRepository - InscriereDBRepository initialized
-2025-05-12 17:31:04,997 [1] INFO persistence.RepositoryDBUser - RepositoryDBUser initialized
-2025-05-12 17:31:05,074 [1] DEBUG StartServer - Starting server on IP 127.0.0.1 and port 55556
-2025-05-12 17:31:05,076 [1] DEBUG JsonChatServer - Creating JsonChatServer...
-2025-05-12 17:31:05,083 [1] DEBUG networking.AbstractServer - Waiting for clients ...
-2025-05-12 17:31:09,175 [1] DEBUG networking.AbstractServer - Client connected ...
-2025-05-12 17:31:09,177 [1] DEBUG networking.AbstractServer - Waiting for clients ...
-2025-05-12 17:31:09,246 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Received json request {"type":"LOGIN","user":{"id":1,"username":"octa","parola":"pass"},"listaUseri":null,"echipa":null,"capMotor":0,"participant":null,"cursa":null}
-2025-05-12 17:31:09,318 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Deserializaed Request networking.jsonprotocol.Request 
-2025-05-12 17:31:09,320 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Login request ...{}model.ORMModel.User
-2025-05-12 17:31:10,019 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - sending response {"type":"OK","errorMessage":null,"user":{"id":13,"username":"octa","parola":"pass"},"echipe":null,"capacitatiMotor":null,"participanti":null,"curse":null}
-2025-05-12 17:31:10,048 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Received json request {"type":"GET_ALL_TEAMS","user":null,"listaUseri":null,"echipa":null,"capMotor":0,"participant":null,"cursa":null}
-2025-05-12 17:31:10,048 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Deserializaed Request networking.jsonprotocol.Request 
-2025-05-12 17:31:10,066 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - sending response {"type":"OK","errorMessage":null,"user":null,"echipe":["Seat","Yamaha","Wawa","echipa1","Volvo","Skoda","Dacia","matiz","6","badhuiw","Bursucii"],"capacitatiMotor":null,"participanti":null,"curse":null}
-2025-05-12 17:31:10,090 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Received json request {"type":"GET_CAPACITATI","user":null,"listaUseri":null,"echipa":null,"capMotor":0,"participant":null,"cursa":null}
-2025-05-12 17:31:10,090 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Deserializaed Request networking.jsonprotocol.Request 
-2025-05-12 17:31:10,101 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - sending response {"type":"OK","errorMessage":null,"user":null,"echipe":null,"capacitatiMotor":[125,250],"participanti":null,"curse":null}
-2025-05-12 17:31:10,135 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Received json request {"type":"GET_ALL_PARTICIPANTI","user":null,"listaUseri":null,"echipa":null,"capMotor":0,"participant":null,"cursa":null}
-2025-05-12 17:31:10,136 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Deserializaed Request networking.jsonprotocol.Request 
-2025-05-12 17:31:10,164 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - sending response {"type":"OK","errorMessage":null,"user":null,"echipe":null,"capacitatiMotor":null,"participanti":[{"id":1,"nume":"Ion","capMotor":125,"echipa":"Seat","cnp":"125","cursas":[]},{"id":2,"nume":"Adi","capMotor":250,"echipa":"Yamaha","cnp":"250","cursas":[]},{"id":3,"nume":"Vali","capMotor":125,"echipa":"Seat","cnp":"123456932","cursas":[]},{"id":4,"nume":"Marius","capMotor":250,"echipa":"Wawa","cnp":"2348219882","cursas":[]},{"id":5,"nume":"nou","capMotor":125,"echipa":"echipa1","cnp":"8238912","cursas":[]},{"id":6,"nume":"Raul","capMotor":125,"echipa":"Volvo","cnp":"2139219399","cursas":[]},{"id":7,"nume":"Vescan","capMotor":125,"echipa":"Skoda","cnp":"50920193019","cursas":[]},{"id":8,"nume":"nou1","capMotor":125,"echipa":"Skoda","cnp":"1983120901","cursas":[]},{"id":9,"nume":"Valee","capMotor":125,"echipa":"Dacia","cnp":"6123920023","cursas":[]},{"id":10,"nume":"valee2","capMotor":125,"echipa":"matiz","cnp":"288279729","cursas":[]},{"id":11,"nume":"nou","capMotor":125,"echipa":"Dacia","cnp":"83128381283","cursas":[]},{"id":12,"nume":"6","capMotor":125,"echipa":"6","cnp":"6","cursas":[]},{"id":13,"nume":"testFinal","capMotor":125,"echipa":"Seat","cnp":"73490210","cursas":[]},{"id":14,"nume":"partNou","capMotor":125,"echipa":"Skoda","cnp":"230293","cursas":[]},{"id":15,"nume":"nouu","capMotor":125,"echipa":"Dacia","cnp":"03848120","cursas":[]},{"id":16,"nume":"Inoel","capMotor":125,"echipa":"Dacia","cnp":"29039120","cursas":[]},{"id":17,"nume":"yaaaman","capMotor":125,"echipa":"Seat","cnp":"2130391120","cursas":[]},{"id":18,"nume":"nosudug","capMotor":125,"echipa":"badhuiw","cnp":"6782939","cursas":[]},{"id":19,"nume":"qwertyuio","capMotor":250,"echipa":"Seat","cnp":"1234567","cursas":[]},{"id":20,"nume":"Inca unu","capMotor":125,"echipa":"Seat","cnp":"209381203","cursas":[]},{"id":21,"nume":"iar","capMotor":125,"echipa":"Seat","cnp":"233424","cursas":[]},{"id":22,"nume":"veskan","capMotor":125,"echipa":"Bursucii","cnp":"38412391231","cursas":[]}],"curse":null}
-2025-05-12 17:31:10,196 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Received json request {"type":"GET_ALL_CURSE","user":null,"listaUseri":null,"echipa":null,"capMotor":0,"participant":null,"cursa":null}
-2025-05-12 17:31:10,198 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Deserializaed Request networking.jsonprotocol.Request 
-2025-05-12 17:31:10,211 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - sending response {"type":"OK","errorMessage":null,"user":null,"echipe":null,"capacitatiMotor":null,"participanti":null,"curse":[{"id":1,"numarParticipanti":20,"capMotor":125,"participants":[]},{"id":2,"numarParticipanti":8,"capMotor":250,"participants":[]}]}
-2025-05-12 17:31:10,243 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Received json request {"type":"GET_ALL_PARTICIPANTI","user":null,"listaUseri":null,"echipa":null,"capMotor":0,"participant":null,"cursa":null}
-2025-05-12 17:31:10,255 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Deserializaed Request networking.jsonprotocol.Request 
-2025-05-12 17:31:10,257 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - sending response {"type":"OK","errorMessage":null,"user":null,"echipe":null,"capacitatiMotor":null,"participanti":[{"id":1,"nume":"Ion","capMotor":125,"echipa":"Seat","cnp":"125","cursas":[]},{"id":2,"nume":"Adi","capMotor":250,"echipa":"Yamaha","cnp":"250","cursas":[]},{"id":3,"nume":"Vali","capMotor":125,"echipa":"Seat","cnp":"123456932","cursas":[]},{"id":4,"nume":"Marius","capMotor":250,"echipa":"Wawa","cnp":"2348219882","cursas":[]},{"id":5,"nume":"nou","capMotor":125,"echipa":"echipa1","cnp":"8238912","cursas":[]},{"id":6,"nume":"Raul","capMotor":125,"echipa":"Volvo","cnp":"2139219399","cursas":[]},{"id":7,"nume":"Vescan","capMotor":125,"echipa":"Skoda","cnp":"50920193019","cursas":[]},{"id":8,"nume":"nou1","capMotor":125,"echipa":"Skoda","cnp":"1983120901","cursas":[]},{"id":9,"nume":"Valee","capMotor":125,"echipa":"Dacia","cnp":"6123920023","cursas":[]},{"id":10,"nume":"valee2","capMotor":125,"echipa":"matiz","cnp":"288279729","cursas":[]},{"id":11,"nume":"nou","capMotor":125,"echipa":"Dacia","cnp":"83128381283","cursas":[]},{"id":12,"nume":"6","capMotor":125,"echipa":"6","cnp":"6","cursas":[]},{"id":13,"nume":"testFinal","capMotor":125,"echipa":"Seat","cnp":"73490210","cursas":[]},{"id":14,"nume":"partNou","capMotor":125,"echipa":"Skoda","cnp":"230293","cursas":[]},{"id":15,"nume":"nouu","capMotor":125,"echipa":"Dacia","cnp":"03848120","cursas":[]},{"id":16,"nume":"Inoel","capMotor":125,"echipa":"Dacia","cnp":"29039120","cursas":[]},{"id":17,"nume":"yaaaman","capMotor":125,"echipa":"Seat","cnp":"2130391120","cursas":[]},{"id":18,"nume":"nosudug","capMotor":125,"echipa":"badhuiw","cnp":"6782939","cursas":[]},{"id":19,"nume":"qwertyuio","capMotor":250,"echipa":"Seat","cnp":"1234567","cursas":[]},{"id":20,"nume":"Inca unu","capMotor":125,"echipa":"Seat","cnp":"209381203","cursas":[]},{"id":21,"nume":"iar","capMotor":125,"echipa":"Seat","cnp":"233424","cursas":[]},{"id":22,"nume":"veskan","capMotor":125,"echipa":"Bursucii","cnp":"38412391231","cursas":[]}],"curse":null}
-2025-05-12 17:31:10,290 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Received json request {"type":"GET_ALL_CURSE","user":null,"listaUseri":null,"echipa":null,"capMotor":0,"participant":null,"cursa":null}
-2025-05-12 17:31:10,293 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Deserializaed Request networking.jsonprotocol.Request 
-2025-05-12 17:31:10,295 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - sending response {"type":"OK","errorMessage":null,"user":null,"echipe":null,"capacitatiMotor":null,"participanti":null,"curse":[{"id":1,"numarParticipanti":20,"capMotor":125,"participants":[]},{"id":2,"numarParticipanti":8,"capMotor":250,"participants":[]}]}
-2025-05-12 17:31:12,193 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Received json request {"type":"GET_CURSE_BY_PARTICIPANT","user":null,"listaUseri":null,"echipa":null,"capMotor":0,"participant":{"id":2,"nume":"Adi","capMotor":250,"echipa":"Yamaha","cnp":"250","cursas":[]},"cursa":null}
-2025-05-12 17:31:12,199 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Deserializaed Request networking.jsonprotocol.Request 
-2025-05-12 17:31:12,288 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - sending response {"type":"OK","errorMessage":null,"user":null,"echipe":null,"capacitatiMotor":null,"participanti":null,"curse":[]}
-2025-05-12 17:31:14,116 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Received json request {"type":"GET_CURSE_BY_PARTICIPANT","user":null,"listaUseri":null,"echipa":null,"capMotor":0,"participant":{"id":4,"nume":"Marius","capMotor":250,"echipa":"Wawa","cnp":"2348219882","cursas":[]},"cursa":null}
-2025-05-12 17:31:14,118 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Deserializaed Request networking.jsonprotocol.Request 
-2025-05-12 17:31:14,126 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - sending response {"type":"OK","errorMessage":null,"user":null,"echipe":null,"capacitatiMotor":null,"participanti":null,"curse":[]}
-2025-05-12 17:31:25,609 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Received json request {"type":"GET_CURSE_BY_PARTICIPANT","user":null,"listaUseri":null,"echipa":null,"capMotor":0,"participant":{"id":22,"nume":"veskan","capMotor":125,"echipa":"Bursucii","cnp":"38412391231","cursas":[]},"cursa":null}
-2025-05-12 17:31:25,611 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Deserializaed Request networking.jsonprotocol.Request 
-2025-05-12 17:31:25,667 [10] ERROR networking.jsonprotocol.ChatClientJsonWorker - run eroare A possible object cycle was detected. This can either be due to a cycle or if the object depth is larger than the maximum allowed depth of 64. Consider using ReferenceHandler.Preserve on JsonSerializerOptions to support cycles. Path: $.Curse.Participants.Cursas.Participants.Cursas.Participants.Cursas.Participants.Cursas.Participants.Cursas.Participants.Cursas.Participants.Cursas.Participants.Cursas.Participants.Cursas.Participants.Cursas.Participants.Cursas.Participants.Cursas.Participants.Cursas.Participants.Cursas.Participants.Cursas.Participants.
-2025-05-12 17:31:25,671 [10] ERROR networking.jsonprotocol.ChatClientJsonWorker -    at System.Text.Json.ThrowHelper.ThrowJsonException_SerializerCycleDetected(Int32 maxDepth)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Converters.ListOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
-   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
-   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Serialize(Utf8JsonWriter writer, T& rootValue, Object rootValueBoxed)
-   at System.Text.Json.JsonSerializer.WriteString[TValue](TValue& value, JsonTypeInfo`1 jsonTypeInfo)
-   at System.Text.Json.JsonSerializer.Serialize[TValue](TValue value, JsonSerializerOptions options)
-   at networking.jsonprotocol.ChatClientJsonWorker.sendResponse(Response response) in D:\GithubRepos\mpp-proiect-csharp-oct200\networking\jsonprotocol\ChatClientJsonWorker.cs:line 264
-   at networking.jsonprotocol.ChatClientJsonWorker.run() in D:\GithubRepos\mpp-proiect-csharp-oct200\networking\jsonprotocol\ChatClientJsonWorker.cs:line 61
+2025-05-20 15:05:29,719 [1] INFO StartServer - Starting chat server
+2025-05-20 15:05:29,737 [1] INFO StartServer - Reading properties from app.config ...
+2025-05-20 15:05:29,758 [1] INFO StartServer - Resolved SQLite DB path: D:\GithubRepos\mpp-proiect-csharp-oct200\server\bin\Debug\net8.0\mydatabase.db
+2025-05-20 15:05:29,759 [1] INFO StartServer - Configuration Settings for database Data Source=mydatabase.db
+2025-05-20 15:05:29,766 [1] INFO persistence.CursaDBRepository - RepositoryDBUser initialized
+2025-05-20 15:05:29,768 [1] INFO persistence.ParticipantDBRepository - ParticipantDBRepository initialized
+2025-05-20 15:05:29,769 [1] INFO persistence.InscriereDBRepository - InscriereDBRepository initialized
+2025-05-20 15:05:29,770 [1] INFO persistence.RepositoryDBUser - RepositoryDBUser initialized
+2025-05-20 15:05:29,770 [1] DEBUG StartServer - Starting server on IP 127.0.0.1 and port 55556
+2025-05-20 15:05:29,771 [1] DEBUG JsonChatServer - Creating JsonChatServer...
+2025-05-20 15:05:29,781 [1] DEBUG networking.AbstractServer - Waiting for clients ...
+2025-05-20 15:05:46,393 [1] DEBUG networking.AbstractServer - Client connected ...
+2025-05-20 15:05:46,396 [1] DEBUG networking.AbstractServer - Waiting for clients ...
+2025-05-20 15:05:46,417 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Received json request {"type":"LOGIN","user":{"username":"octa","parola":"pass","id":1},"capMotor":0}
+2025-05-20 15:05:46,696 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Deserializaed Request networking.jsonprotocol.Request 
+2025-05-20 15:05:46,700 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Login request ...{}model.User
+2025-05-20 15:05:46,707 [10] INFO persistence.RepositoryDBUser - Retrieving user with username octa
+2025-05-20 15:05:46,708 [10] INFO persistence.DBUtils - Accessing connection
+2025-05-20 15:05:46,709 [10] INFO persistence.DBUtils - Opening connection
+2025-05-20 15:05:46,735 [10] INFO persistence.DBUtils - Connection opened
+2025-05-20 15:05:46,761 [10] INFO persistence.DBUtils - Connection accessed
+2025-05-20 15:05:46,847 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - sending response {"$id":"1","type":"OK","errorMessage":null,"user":{"$id":"2","username":"octa","parola":"pass","id":13},"echipe":null,"capacitatiMotor":null,"participanti":null,"curse":null}
+2025-05-20 15:05:46,881 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Received json request {"type":"GET_ALL_TEAMS","capMotor":0}
+2025-05-20 15:05:46,885 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Deserializaed Request networking.jsonprotocol.Request 
+2025-05-20 15:05:46,887 [10] INFO persistence.ParticipantDBRepository - fetching all team names
+2025-05-20 15:05:46,888 [10] INFO persistence.DBUtils - Accessing connection
+2025-05-20 15:05:46,889 [10] INFO persistence.DBUtils - Opening connection
+2025-05-20 15:05:46,890 [10] INFO persistence.DBUtils - Connection opened
+2025-05-20 15:05:46,891 [10] INFO persistence.DBUtils - Connection accessed
+2025-05-20 15:05:46,899 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - sending response {"$id":"1","type":"OK","errorMessage":null,"user":null,"echipe":{"$id":"2","$values":["Seat","Yamaha","Wawa","echipa1","Volvo","Skoda","Dacia","matiz","6","badhuiw","Bursucii","dfwef"]},"capacitatiMotor":null,"participanti":null,"curse":null}
