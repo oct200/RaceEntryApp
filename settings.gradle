@@ -5,4 +5,5 @@ include 'Server'
 include 'Service'
 include 'Networking'
 include 'GUI'
+include 'rest-services'
 

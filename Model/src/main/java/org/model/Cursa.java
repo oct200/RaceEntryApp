@@ -7,6 +7,12 @@ public class Cursa extends Entity<Long>{
     @SerializedName("capMotor")
     int capMotor;
 
+    public Cursa() {
+        super.setId(id);
+        this.numarParticipanti = numarParticipanti;
+        this.capMotor = capMotor;
+    }
+
     public Cursa(Long id, int numarParticipanti, int capMotor) {
         super.setId(id);
         this.numarParticipanti = numarParticipanti;

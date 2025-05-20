@@ -3,15 +3,32 @@ package org.example;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.model.Cursa;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
+import java.io.FileReader;
+import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+@Repository
 public class CursaDBRepository implements CursaRepositoryInterface {
     private static final Logger logger = LogManager.getLogger(CursaDBRepository.class);
     private final JdbcUtils dbUtils;
+
+    public CursaDBRepository() {
+        Properties props = new Properties();
+        try {
+            props.load(new FileReader("db.config"));
+            dbUtils = new JdbcUtils(props);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        };
+        logger.info("CursaDBRepository initialized");
+    }
 
     public CursaDBRepository(Properties properties) {
         dbUtils = new JdbcUtils(properties);
@@ -45,14 +62,46 @@ public class CursaDBRepository implements CursaRepositoryInterface {
 
     @Override
     public void updateById(Long id, Cursa entity) {
-        throw new UnsupportedOperationException();
+        logger.info("Updating Cursa with id {}", id);
+        Connection conn = dbUtils.getConnection();
+
+        String sql = "UPDATE Cursa SET numarParticipanti = ?, capMotor = ? WHERE id = ?";
+
+        try (PreparedStatement prepStmt = conn.prepareStatement(sql)) {
+            prepStmt.setInt(1, entity.getNumarParticipanti());
+            prepStmt.setInt(2, entity.getCapMotor());
+            prepStmt.setLong(3, id);
+            int rowsAffected = prepStmt.executeUpdate();
+            if (rowsAffected == 0) {
+                logger.warn("No Cursa found with id {}", id);
+            } else {
+                logger.info("Updated Cursa with id {}", id);
+            }
+        } catch (SQLException e) {
+            logger.error("Error updating Cursa with id {}: {}", id, e.getMessage());
+        }
     }
+
 
     @Override
     public void deleteById(Long id) {
-        throw new UnsupportedOperationException();
-    }
+        logger.info("Deleting Cursa with id {}", id);
+        Connection conn = dbUtils.getConnection();
 
+        String sql = "DELETE FROM Cursa WHERE id = ?";
+
+        try (PreparedStatement prepStmt = conn.prepareStatement(sql)) {
+            prepStmt.setLong(1, id);
+            int rowsAffected = prepStmt.executeUpdate();
+            if (rowsAffected == 0) {
+                logger.warn("No Cursa found with id {}", id);
+            } else {
+                logger.info("Deleted Cursa with id {}", id);
+            }
+        } catch (SQLException e) {
+            logger.error("Error deleting Cursa with id {}: {}", id, e.getMessage());
+        }
+    }
     @Override
     public Cursa getById(Long id) {
         logger.info("Fetching Cursa with id {}", id);

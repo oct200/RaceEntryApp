@@ -1,4 +1,80 @@
-06 May 2025 18:16:28,585 DEBUG org.example.StartClient 28 start - In start
-06 May 2025 18:16:28,590 INFO  org.example.StartClient 32 start - Client properties set {chat.server.port=55556, chat.server.host=localhost} 
-06 May 2025 18:16:28,590 INFO  org.example.StartClient 48 start - Using server IP localhost
-06 May 2025 18:16:28,591 INFO  org.example.StartClient 49 start - Using server port 55556
+20 May 2025 15:22:17,901 DEBUG org.example.StartClient 28 start - In start
+20 May 2025 15:22:17,905 INFO  org.example.StartClient 32 start - Client properties set {chat.server.port=55556, chat.server.host=localhost} 
+20 May 2025 15:22:17,905 INFO  org.example.StartClient 48 start - Using server IP localhost
+20 May 2025 15:22:17,905 INFO  org.example.StartClient 49 start - Using server port 55556
+20 May 2025 15:22:24,773 INFO  org.example.AutentificareController 44 clickLogIn - 1
+20 May 2025 15:22:24,849 INFO  org.example.AutentificareController 48 clickLogIn - 2
+20 May 2025 15:22:24,849 INFO  org.example.AutentificareController 49 clickLogIn - 3
+20 May 2025 15:22:24,850 INFO  jsonprotocol.ChatServicesJsonProxy 96 userExists - start userExists
+20 May 2025 15:22:24,850 INFO  jsonprotocol.ChatServicesJsonProxy 299 initializeConnection - start initialise
+20 May 2025 15:22:24,928 INFO  jsonprotocol.ChatServicesJsonProxy 307 initializeConnection - before start reader
+20 May 2025 15:22:24,959 INFO  jsonprotocol.ChatServicesJsonProxy 354 sendRequest - request trimis din proxy: {"type":"LOGIN","user":{"username":"octa","parola":"pass","id":1},"capMotor":0}
+20 May 2025 15:22:24,961 INFO  jsonprotocol.ChatServicesJsonProxy 365 readResponse - start read response
+20 May 2025 15:22:25,575 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 334 run - response received {"type":"OK","user":{"username":"octa","parola":"pass","id":23}}
+20 May 2025 15:22:25,582 INFO  jsonprotocol.ChatServicesJsonProxy 368 readResponse - jsonprotocol.Response@6aadecf9
+20 May 2025 15:22:25,583 INFO  jsonprotocol.ChatServicesJsonProxy 106 userExists - response ok00
+20 May 2025 15:22:25,583 INFO  org.example.Principal 102 initializareCombobox - Incepere initializareCombobox
+20 May 2025 15:22:25,583 INFO  jsonprotocol.ChatServicesJsonProxy 121 getAllTeams - start getallTeams
+20 May 2025 15:22:25,584 INFO  jsonprotocol.ChatServicesJsonProxy 354 sendRequest - request trimis din proxy: {"type":"GET_ALL_TEAMS","capMotor":0}
+20 May 2025 15:22:25,584 INFO  jsonprotocol.ChatServicesJsonProxy 365 readResponse - start read response
+20 May 2025 15:22:25,639 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 334 run - response received {"type":"OK","echipe":["Seat","Yamaha","Skoda","VW","1","2","3","4","5","6","fierarii","10","dji","wertyuio"]}
+20 May 2025 15:22:25,640 INFO  jsonprotocol.ChatServicesJsonProxy 368 readResponse - jsonprotocol.Response@5843862c
+20 May 2025 15:22:25,640 INFO  jsonprotocol.ChatServicesJsonProxy 126 getAllTeams - echipe returnate: 14
+20 May 2025 15:22:25,642 INFO  jsonprotocol.ChatServicesJsonProxy 139 getCapacitati - start getCapacitati
+20 May 2025 15:22:25,642 INFO  jsonprotocol.ChatServicesJsonProxy 354 sendRequest - request trimis din proxy: {"type":"GET_CAPACITATI","capMotor":0}
+20 May 2025 15:22:25,642 INFO  jsonprotocol.ChatServicesJsonProxy 365 readResponse - start read response
+20 May 2025 15:22:25,703 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 334 run - response received {"type":"OK","capacitatiMotor":[125,250]}
+20 May 2025 15:22:25,703 INFO  jsonprotocol.ChatServicesJsonProxy 368 readResponse - jsonprotocol.Response@2b8ba52d
+20 May 2025 15:22:25,704 INFO  jsonprotocol.ChatServicesJsonProxy 144 getCapacitati - echipe returnate: 2
+20 May 2025 15:22:25,707 INFO  org.example.Principal 111 initializareCombobox - final initializareCombobox
+20 May 2025 15:22:25,709 INFO  org.example.Principal 120 loadTabelParticipanti - Incepere loadTabelParticipanti
+20 May 2025 15:22:25,709 INFO  jsonprotocol.ChatServicesJsonProxy 174 getAllParticipanti - start getAllParticipanti
+20 May 2025 15:22:25,710 INFO  jsonprotocol.ChatServicesJsonProxy 354 sendRequest - request trimis din proxy: {"type":"GET_ALL_PARTICIPANTI","capMotor":0}
+20 May 2025 15:22:25,710 INFO  jsonprotocol.ChatServicesJsonProxy 365 readResponse - start read response
+20 May 2025 15:22:25,762 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 334 run - response received {"type":"OK","participanti":[{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1},{"nume":"adrian","capMotor":125,"echipa":"Yamaha","cnp":"8028283819","id":2},{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3},{"nume":"Octa","capMotor":250,"echipa":"Skoda","cnp":"82901832302","id":4},{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5},{"nume":"1","capMotor":125,"echipa":"1","cnp":"12323","id":6},{"nume":"2","capMotor":125,"echipa":"2","cnp":"2","id":7},{"nume":"3","capMotor":125,"echipa":"3","cnp":"3","id":8},{"nume":"4","capMotor":125,"echipa":"4","cnp":"4","id":9},{"nume":"5","capMotor":125,"echipa":"5","cnp":"5","id":10},{"nume":"6","capMotor":125,"echipa":"6","cnp":"6","id":11},{"nume":"claudiu","capMotor":125,"echipa":"fierarii","cnp":"1223432439","id":12},{"nume":"10","capMotor":125,"echipa":"10","cnp":"2193090213","id":13},{"nume":"isadj","capMotor":125,"echipa":"dji","cnp":"93210","id":14},{"nume":"qwertyuio","capMotor":125,"echipa":"wertyuio","cnp":"12345678","id":15}]}
+20 May 2025 15:22:25,763 INFO  jsonprotocol.ChatServicesJsonProxy 368 readResponse - jsonprotocol.Response@3ba2de78
+20 May 2025 15:22:25,764 INFO  jsonprotocol.ChatServicesJsonProxy 179 getAllParticipanti - participanti returnati: 15
+20 May 2025 15:22:25,764 INFO  org.example.Principal 130 loadTabelParticipanti - final loadTabelParticipanti
+20 May 2025 15:22:25,764 INFO  org.example.Principal 143 loadTabelCurse - Incepere loadTabelCurse
+20 May 2025 15:22:25,764 INFO  jsonprotocol.ChatServicesJsonProxy 210 getAllCurse - start getallCurse
+20 May 2025 15:22:25,765 INFO  jsonprotocol.ChatServicesJsonProxy 354 sendRequest - request trimis din proxy: {"type":"GET_ALL_CURSE","capMotor":0}
+20 May 2025 15:22:25,765 INFO  jsonprotocol.ChatServicesJsonProxy 365 readResponse - start read response
+20 May 2025 15:22:25,826 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 334 run - response received {"type":"OK","curse":[{"numarParticipanti":19,"capMotor":125,"id":1},{"numarParticipanti":9,"capMotor":250,"id":2}]}
+20 May 2025 15:22:25,828 INFO  jsonprotocol.ChatServicesJsonProxy 368 readResponse - jsonprotocol.Response@250ef5b6
+20 May 2025 15:22:25,828 INFO  jsonprotocol.ChatServicesJsonProxy 215 getAllCurse - participanti returnati: 2
+20 May 2025 15:22:25,828 INFO  org.example.Principal 154 loadTabelCurse - final loadTabelCurse
+20 May 2025 15:22:31,724 INFO  org.example.Principal 162 tabelParticipantiClick - starting tabelParticipantiClick
+20 May 2025 15:22:31,724 INFO  jsonprotocol.ChatServicesJsonProxy 246 getCurseForParticipant - start getCurseForParticipant
+20 May 2025 15:22:31,725 INFO  jsonprotocol.ChatServicesJsonProxy 354 sendRequest - request trimis din proxy: {"type":"GET_CURSE_BY_PARTICIPANT","capMotor":0,"participant":{"nume":"Ionut","capMotor":125,"echipa":"Seat","cnp":"509103913003","id":1}}
+20 May 2025 15:22:31,725 INFO  jsonprotocol.ChatServicesJsonProxy 365 readResponse - start read response
+20 May 2025 15:22:31,733 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 334 run - response received {"type":"OK","curse":[]}
+20 May 2025 15:22:31,734 INFO  jsonprotocol.ChatServicesJsonProxy 368 readResponse - jsonprotocol.Response@3c2dacd8
+20 May 2025 15:22:31,734 INFO  jsonprotocol.ChatServicesJsonProxy 251 getCurseForParticipant - curse returnati: 0
+20 May 2025 15:22:32,430 INFO  org.example.Principal 162 tabelParticipantiClick - starting tabelParticipantiClick
+20 May 2025 15:22:32,431 INFO  jsonprotocol.ChatServicesJsonProxy 246 getCurseForParticipant - start getCurseForParticipant
+20 May 2025 15:22:32,432 INFO  jsonprotocol.ChatServicesJsonProxy 354 sendRequest - request trimis din proxy: {"type":"GET_CURSE_BY_PARTICIPANT","capMotor":0,"participant":{"nume":"Vali","capMotor":125,"echipa":"Yamaha","cnp":"5020810400055","id":3}}
+20 May 2025 15:22:32,433 INFO  jsonprotocol.ChatServicesJsonProxy 365 readResponse - start read response
+20 May 2025 15:22:32,438 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 334 run - response received {"type":"OK","curse":[]}
+20 May 2025 15:22:32,439 INFO  jsonprotocol.ChatServicesJsonProxy 368 readResponse - jsonprotocol.Response@501cfa8a
+20 May 2025 15:22:32,439 INFO  jsonprotocol.ChatServicesJsonProxy 251 getCurseForParticipant - curse returnati: 0
+20 May 2025 15:22:33,043 INFO  org.example.Principal 162 tabelParticipantiClick - starting tabelParticipantiClick
+20 May 2025 15:22:33,045 INFO  jsonprotocol.ChatServicesJsonProxy 246 getCurseForParticipant - start getCurseForParticipant
+20 May 2025 15:22:33,045 INFO  jsonprotocol.ChatServicesJsonProxy 354 sendRequest - request trimis din proxy: {"type":"GET_CURSE_BY_PARTICIPANT","capMotor":0,"participant":{"nume":"partnou","capMotor":125,"echipa":"VW","cnp":"8429011301","id":5}}
+20 May 2025 15:22:33,045 INFO  jsonprotocol.ChatServicesJsonProxy 365 readResponse - start read response
+20 May 2025 15:22:33,049 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 334 run - response received {"type":"OK","curse":[]}
+20 May 2025 15:22:33,049 INFO  jsonprotocol.ChatServicesJsonProxy 368 readResponse - jsonprotocol.Response@6c0c4021
+20 May 2025 15:22:33,049 INFO  jsonprotocol.ChatServicesJsonProxy 251 getCurseForParticipant - curse returnati: 0
+20 May 2025 15:22:34,707 INFO  org.example.Principal 162 tabelParticipantiClick - starting tabelParticipantiClick
+20 May 2025 15:22:34,707 INFO  jsonprotocol.ChatServicesJsonProxy 246 getCurseForParticipant - start getCurseForParticipant
+20 May 2025 15:22:34,708 INFO  jsonprotocol.ChatServicesJsonProxy 354 sendRequest - request trimis din proxy: {"type":"GET_CURSE_BY_PARTICIPANT","capMotor":0,"participant":{"nume":"qwertyuio","capMotor":125,"echipa":"wertyuio","cnp":"12345678","id":15}}
+20 May 2025 15:22:34,708 INFO  jsonprotocol.ChatServicesJsonProxy 365 readResponse - start read response
+20 May 2025 15:22:34,714 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 334 run - response received {"type":"OK","curse":[]}
+20 May 2025 15:22:34,715 INFO  jsonprotocol.ChatServicesJsonProxy 368 readResponse - jsonprotocol.Response@198b8b38
+20 May 2025 15:22:34,715 INFO  jsonprotocol.ChatServicesJsonProxy 251 getCurseForParticipant - curse returnati: 0
+20 May 2025 15:22:35,330 INFO  org.example.Principal 162 tabelParticipantiClick - starting tabelParticipantiClick
+20 May 2025 15:22:35,330 INFO  jsonprotocol.ChatServicesJsonProxy 246 getCurseForParticipant - start getCurseForParticipant
+20 May 2025 15:22:35,330 INFO  jsonprotocol.ChatServicesJsonProxy 354 sendRequest - request trimis din proxy: {"type":"GET_CURSE_BY_PARTICIPANT","capMotor":0,"participant":{"nume":"isadj","capMotor":125,"echipa":"dji","cnp":"93210","id":14}}
+20 May 2025 15:22:35,331 INFO  jsonprotocol.ChatServicesJsonProxy 365 readResponse - start read response
+20 May 2025 15:22:35,334 DEBUG jsonprotocol.ChatServicesJsonProxy$ReaderThread 334 run - response received {"type":"OK","curse":[]}
+20 May 2025 15:22:35,335 INFO  jsonprotocol.ChatServicesJsonProxy 368 readResponse - jsonprotocol.Response@2f85078f
+20 May 2025 15:22:35,335 INFO  jsonprotocol.ChatServicesJsonProxy 251 getCurseForParticipant - curse returnati: 0
