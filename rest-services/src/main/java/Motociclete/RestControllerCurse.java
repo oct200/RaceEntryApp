@@ -7,13 +7,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("motociclete/curse")
 public class RestControllerCurse {
+    @Autowired
+    private SimpMessagingTemplate messagingTemplate;
     @Autowired
     private CursaRepositoryInterface repoCursa;
 
@@ -30,6 +34,7 @@ public class RestControllerCurse {
             return new ResponseEntity<>("Cursa could not be added.", HttpStatus.INTERNAL_SERVER_ERROR);
         }
         Cursa created = repoCursa.getById(id);
+        messagingTemplate.convertAndSend("/topic/updates", "Inserted: " + created);
         return new ResponseEntity<>(created, HttpStatus.CREATED);
     }
 
@@ -55,6 +60,7 @@ public class RestControllerCurse {
         System.out.println("PUT /motociclete/curse/" + id);
         try {
             repoCursa.updateById(id, cursa);
+            messagingTemplate.convertAndSend("/topic/updates", "Updated ID: " + id);
             return new ResponseEntity<>("Cursa updated", HttpStatus.OK);
         } catch (UnsupportedOperationException e) {
             e.printStackTrace();
@@ -67,6 +73,7 @@ public class RestControllerCurse {
         System.out.println("DELETE /motociclete/curse/" + id);
         try {
             repoCursa.deleteById(id);
+            messagingTemplate.convertAndSend("/topic/updates", "Deleted ID: " + id);
             return new ResponseEntity<>("Cursa deleted", HttpStatus.OK);
         } catch (UnsupportedOperationException e) {
             return new ResponseEntity<>("Delete not supported", HttpStatus.INTERNAL_SERVER_ERROR);
