@@ -1,0 +1,17 @@
+namespace networking.jsonprotocol;
+
+public enum RequestType
+{
+    LOGIN,
+    ADAUGA_USER,
+    GET_ALL_TEAMS,
+    GET_CAPACITATI,
+    GET_ALL_PARTICIPANTI,
+    GET_ALL_CURSE,
+    GET_CURSE_BY_CAP,
+    GET_PARTICIPANTI_BY_ECHIPE,
+    LOGOUT,
+    GET_CURSE_BY_PARTICIPANT,
+    ADAUGA_INSCRIERE,
+    ADAUGA_PARTICIPANT
+}

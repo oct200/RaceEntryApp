@@ -1,0 +1,15 @@
+D:\GithubRepos\mpp-proiect-csharp-oct200\CursaRestClient\bin\Debug\net8.0\CursaRestClient.exe
+D:\GithubRepos\mpp-proiect-csharp-oct200\CursaRestClient\bin\Debug\net8.0\CursaRestClient.deps.json
+D:\GithubRepos\mpp-proiect-csharp-oct200\CursaRestClient\bin\Debug\net8.0\CursaRestClient.runtimeconfig.json
+D:\GithubRepos\mpp-proiect-csharp-oct200\CursaRestClient\bin\Debug\net8.0\CursaRestClient.dll
+D:\GithubRepos\mpp-proiect-csharp-oct200\CursaRestClient\bin\Debug\net8.0\CursaRestClient.pdb
+D:\GithubRepos\mpp-proiect-csharp-oct200\CursaRestClient\obj\Debug\net8.0\CursaRestClient.GeneratedMSBuildEditorConfig.editorconfig
+D:\GithubRepos\mpp-proiect-csharp-oct200\CursaRestClient\obj\Debug\net8.0\CursaRestClient.AssemblyInfoInputs.cache
+D:\GithubRepos\mpp-proiect-csharp-oct200\CursaRestClient\obj\Debug\net8.0\CursaRestClient.AssemblyInfo.cs
+D:\GithubRepos\mpp-proiect-csharp-oct200\CursaRestClient\obj\Debug\net8.0\CursaRestClient.csproj.CoreCompileInputs.cache
+D:\GithubRepos\mpp-proiect-csharp-oct200\CursaRestClient\obj\Debug\net8.0\CursaRestClient.sourcelink.json
+D:\GithubRepos\mpp-proiect-csharp-oct200\CursaRestClient\obj\Debug\net8.0\CursaRestClient.dll
+D:\GithubRepos\mpp-proiect-csharp-oct200\CursaRestClient\obj\Debug\net8.0\refint\CursaRestClient.dll
+D:\GithubRepos\mpp-proiect-csharp-oct200\CursaRestClient\obj\Debug\net8.0\CursaRestClient.pdb
+D:\GithubRepos\mpp-proiect-csharp-oct200\CursaRestClient\obj\Debug\net8.0\CursaRestClient.genruntimeconfig.cache
+D:\GithubRepos\mpp-proiect-csharp-oct200\CursaRestClient\obj\Debug\net8.0\ref\CursaRestClient.dll

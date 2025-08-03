@@ -1,0 +1,11 @@
+2025-05-20 17:14:21,606 [1] INFO StartServer - Starting chat server
+2025-05-20 17:14:21,626 [1] INFO StartServer - Reading properties from app.config ...
+2025-05-20 17:14:21,637 [1] INFO StartServer - Resolved SQLite DB path: D:\GithubRepos\mpp-proiect-csharp-oct200\server\bin\Debug\net8.0\mydatabase.db
+2025-05-20 17:14:21,639 [1] INFO StartServer - Configuration Settings for database Data Source=mydatabase.db
+2025-05-20 17:14:21,642 [1] INFO persistence.CursaDBRepository - RepositoryDBUser initialized
+2025-05-20 17:14:21,644 [1] INFO persistence.ParticipantDBRepository - ParticipantDBRepository initialized
+2025-05-20 17:14:21,644 [1] INFO persistence.InscriereDBRepository - InscriereDBRepository initialized
+2025-05-20 17:14:21,645 [1] INFO persistence.RepositoryDBUser - RepositoryDBUser initialized
+2025-05-20 17:14:21,645 [1] DEBUG StartServer - Starting server on IP 127.0.0.1 and port 55556
+2025-05-20 17:14:21,646 [1] DEBUG JsonChatServer - Creating JsonChatServer...
+2025-05-20 17:14:21,657 [1] DEBUG networking.AbstractServer - Waiting for clients ...

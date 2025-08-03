@@ -1,0 +1,30 @@
+2025-05-20 15:05:29,719 [1] INFO StartServer - Starting chat server
+2025-05-20 15:05:29,737 [1] INFO StartServer - Reading properties from app.config ...
+2025-05-20 15:05:29,758 [1] INFO StartServer - Resolved SQLite DB path: D:\GithubRepos\mpp-proiect-csharp-oct200\server\bin\Debug\net8.0\mydatabase.db
+2025-05-20 15:05:29,759 [1] INFO StartServer - Configuration Settings for database Data Source=mydatabase.db
+2025-05-20 15:05:29,766 [1] INFO persistence.CursaDBRepository - RepositoryDBUser initialized
+2025-05-20 15:05:29,768 [1] INFO persistence.ParticipantDBRepository - ParticipantDBRepository initialized
+2025-05-20 15:05:29,769 [1] INFO persistence.InscriereDBRepository - InscriereDBRepository initialized
+2025-05-20 15:05:29,770 [1] INFO persistence.RepositoryDBUser - RepositoryDBUser initialized
+2025-05-20 15:05:29,770 [1] DEBUG StartServer - Starting server on IP 127.0.0.1 and port 55556
+2025-05-20 15:05:29,771 [1] DEBUG JsonChatServer - Creating JsonChatServer...
+2025-05-20 15:05:29,781 [1] DEBUG networking.AbstractServer - Waiting for clients ...
+2025-05-20 15:05:46,393 [1] DEBUG networking.AbstractServer - Client connected ...
+2025-05-20 15:05:46,396 [1] DEBUG networking.AbstractServer - Waiting for clients ...
+2025-05-20 15:05:46,417 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Received json request {"type":"LOGIN","user":{"username":"octa","parola":"pass","id":1},"capMotor":0}
+2025-05-20 15:05:46,696 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Deserializaed Request networking.jsonprotocol.Request 
+2025-05-20 15:05:46,700 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Login request ...{}model.User
+2025-05-20 15:05:46,707 [10] INFO persistence.RepositoryDBUser - Retrieving user with username octa
+2025-05-20 15:05:46,708 [10] INFO persistence.DBUtils - Accessing connection
+2025-05-20 15:05:46,709 [10] INFO persistence.DBUtils - Opening connection
+2025-05-20 15:05:46,735 [10] INFO persistence.DBUtils - Connection opened
+2025-05-20 15:05:46,761 [10] INFO persistence.DBUtils - Connection accessed
+2025-05-20 15:05:46,847 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - sending response {"$id":"1","type":"OK","errorMessage":null,"user":{"$id":"2","username":"octa","parola":"pass","id":13},"echipe":null,"capacitatiMotor":null,"participanti":null,"curse":null}
+2025-05-20 15:05:46,881 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Received json request {"type":"GET_ALL_TEAMS","capMotor":0}
+2025-05-20 15:05:46,885 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - Deserializaed Request networking.jsonprotocol.Request 
+2025-05-20 15:05:46,887 [10] INFO persistence.ParticipantDBRepository - fetching all team names
+2025-05-20 15:05:46,888 [10] INFO persistence.DBUtils - Accessing connection
+2025-05-20 15:05:46,889 [10] INFO persistence.DBUtils - Opening connection
+2025-05-20 15:05:46,890 [10] INFO persistence.DBUtils - Connection opened
+2025-05-20 15:05:46,891 [10] INFO persistence.DBUtils - Connection accessed
+2025-05-20 15:05:46,899 [10] DEBUG networking.jsonprotocol.ChatClientJsonWorker - sending response {"$id":"1","type":"OK","errorMessage":null,"user":null,"echipe":{"$id":"2","$values":["Seat","Yamaha","Wawa","echipa1","Volvo","Skoda","Dacia","matiz","6","badhuiw","Bursucii","dfwef"]},"capacitatiMotor":null,"participanti":null,"curse":null}
